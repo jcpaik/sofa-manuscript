@@ -1,3 +1,3 @@
 # A draft on the moving sofa problem
 
-This is a draft on the moving sofa problem. This is an Obsidian Vault, a collection of Markdown documents and an `.obsidian` configuration file for a Markdown editor named [Obsidian](https://obsidian.md/). With this, we recommend you to view the files with Obsidian as of now. This vault adheres to a specific [[Markdown Style|style]] to 
+This is a draft on the moving sofa problem. It is an Obsidian Vault, a collection of Markdown documents and an `.obsidian` configuration file for a Markdown editor named [Obsidian](https://obsidian.md/). With this, we recommend you to view the files with Obsidian as of now. This vault adheres to a specific [[Markdown Style|style]] to make it look like a LaTeX math draft, and also to export them as a webpage.
