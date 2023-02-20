@@ -35,9 +35,9 @@ The main thing here is a _theorem environment_. It mimics the look of the `amsth
 | Remark     | rem      |
 | Remark     | rem      |
 
-A _proof environment_ is simply a series of paragraphs, with the first one starting with `_Proof._`, and the last one ending with □ (&#9633). 
+_Proof._ A _proof environment_ is simply a series of paragraphs, with the first one starting with `_Proof._`, and the last one ending with □ (&#9633).  □
 
-Obsidian allows us to 
+Typing these manually do not make sense. I use the [obsidian-latex-suite](https://github.com/artisticat1/obsidian-latex-suite) plugin to make them easily typeable. Simply typing `> thm` expands to a `Theorem` environment. Then by typing the name of the environment name, and pressing tab, it autopopulates the name.
 
 ## Alternatives
 
