@@ -1,0 +1,11 @@
+- Monotone Sofas
+	- [ ] Definition of Caps
+	- [ ] Monotone 
+- Writeup of `SofaDesigner`
+	- [ ] What it does
+	- [ ] The algorithm
+	- [ ] Its certificate
+- Positive-definiteness of A_1
+	- [ ] Mamikon's Theorem
+		- [ ] General Theory of Riemann-Stieltjes
+	- [ ] ???

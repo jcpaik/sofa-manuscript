@@ -55,4 +55,10 @@ Instead of using the Unicode square, we might use the letters `QED` or `Q.E.D.`.
 
 ## File Structure
 
-- Any 
+- Any directory/file that is meant to be in the draft should start with `[0-9A][0-9]. ` (including whitespace). A directory is a section, and 
+
+## Ideas
+
+To add an interactive javascript app, use `<iframe>`:
+
+<iframe height="600" width="100%" src="https://bitcraftlab.github.io/p5.gui/examples/slider-range-2/index.html"></iframe>
