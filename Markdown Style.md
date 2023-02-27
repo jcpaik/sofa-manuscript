@@ -51,6 +51,8 @@ The square root of two is $\sqrt{2}$
 > [!thm] square-root-two
 The square root of two is $\sqrt{2}$
 
+Callouts also have an advantage that it can be folded by default. So if I ever have some technical lemma that I'm not really interested in, then I can just fold it by default and let the reader check them if needed.
+
 Instead of using the Unicode square, we might use the letters `QED` or `Q.E.D.`.
 
 ## File Structure

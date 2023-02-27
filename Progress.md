@@ -1,3 +1,16 @@
+Chores
+- Move all the notes in the LaTeX manuscript to here.
+
+
+- Gauss-Minkowski
+	- Construction of Measure
+		- [ ] Right-continuity of $v_K^+$
+		- [ ] Using Lebesgue-Stiltjes measure to construct a signed measure
+		- [ ] Integral formula for retrieving vertices
+
+Today's Goal
+- [ ] Kill all elementary geometry definitions
+
 - Monotone Sofas
 	- [ ] Definition of Caps
 	- [ ] Monotone 
@@ -8,4 +21,4 @@
 - Positive-definiteness of A_1
 	- [ ] Mamikon's Theorem
 		- [ ] General Theory of Riemann-Stieltjes
-	- [ ] ???
+	- [ ] Gauss-Minkowski Theorem
