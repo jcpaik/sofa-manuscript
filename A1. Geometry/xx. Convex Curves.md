@@ -4,15 +4,6 @@ Here, we develop our definition of _convex curves_. Informally, a convex curve i
 
 # Measure
 
-A curve is described by $t$ (tangential angle) and $s$ (arc-length). The problem here is that the relationship between $t$ and $s$ are not necessarily bijective. Instead, we have the following 
-
-> __Definition [reparametrizations].__ Let $\beta$ be a measure on some interval $[a, b]$ with $B = \beta([a, b])$. Define the following functions $F_\beta : [a, b] \to [0, B]$ and $G_\beta : [0, B] \to [a, b]$. ^def-reparametrizations
-$$
-\begin{gather}
-F_{\beta} (t) = \beta([a, t]) \\
-G_{\beta} (s) = \inf \left\{ t \in [a, b] : F_\beta(t) \geq s \right\} 
-\end{gather}
-$$
 
 > __Theorem [reparametrizations-right-continuous].__ For any measure $\beta$ on $[a, b]$, the functions $F_\beta$ and $G_\beta$ are right-continuous. ^thm-reparametrizations-right-continuous
 
