@@ -4,7 +4,7 @@ Chores
 
 - Gauss-Minkowski
 	- Construction of Measure
-		- [ ] Right-continuity of $v_K^+$
+		- [x] Right-continuity of $v_K^+$
 		- [ ] Using Lebesgue-Stiltjes measure to construct a signed measure
 		- [ ] Integral formula for retrieving vertices
 	- Arc-length parametrization of the boundary
