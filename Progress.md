@@ -15,7 +15,7 @@ Chores
 	- [ ] The algorithm
 	- [ ] Its certificate
 - Positive-definiteness of A_1
-	- [ ] Mamikon's Theorem
+	- [ ] Proof of Mamikon's Theorem
 	- [ ] Gauss-Minkowski Theorem
 	- [ ] Formally define what is a _positive definite_ functional on sofas
 		- [ ] Convex subset of an affine plane?
