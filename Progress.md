@@ -1,8 +1,11 @@
-Chores
-- Move all the notes in the LaTeX manuscript to here.
-
+- [ ] Talk about monotone sofas
+	- [ ] How to talk about a cap?
+	- [ ] How do I make the space of all caps into some convex set embedded in an affine space?
+		- [ ] And how do I make sure that it is closed?
 
 - Gauss-Minkowski
+	- [ ] Supported version of Gauss-Minkowski
+		- Required to construct caps from/to its boundary measure
 	- Arc-length parametrization of the boundary
 		- [ ] Equation for parametrization $\mathbf{x}(s)$
 		- [ ] Well-definedness $\mathbf{x}(s) \in \partial K$.
