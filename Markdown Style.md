@@ -39,7 +39,7 @@ _Proof._ A _proof environment_ is simply a series of paragraphs, with the first 
 
 Typing these manually do not make sense. I use the [obsidian-latex-suite](https://github.com/artisticat1/obsidian-latex-suite) plugin to make them easily typeable. Simply typing `> thm` expands to a `Theorem` environment. Then by typing the name of the environment name, and pressing tab, it autopopulates the name.
 
-## Alternatives
+## Drawbacks & Alternatives
 
 I think [callouts](https://help.obsidian.md/Editing+and+formatting/Callouts) in Obsidian can be modified easily to look like theorem environment using CSS. It also looks minimal and better in plain text, exactly like the spirit of Markdown. But so far I don't know [their CSS](https://help.obsidian.md/Editing+and+formatting/Callouts#Customize+callouts) or just CSS enough to make it work.
 
@@ -54,6 +54,8 @@ The square root of two is $\sqrt{2}$
 Callouts also have an advantage that it can be folded by default. So if I ever have some technical lemma that I'm not really interested in, then I can just fold it by default and let the reader check them if needed.
 
 Instead of using the Unicode square, we might use the letters `QED` or `Q.E.D.`.
+
+Right now, modifying theorem names requires you to manually locate every usage of the theorem and modify.
 
 ## File Structure
 
