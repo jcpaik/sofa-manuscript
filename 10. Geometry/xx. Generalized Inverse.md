@@ -18,3 +18,8 @@ This information is equivalent to the following informations as well.
 Here note that $F$ and $G$ are not actual function-inverse to each other.
 
 TODO: add parametrization $w=t+s$ and mention that $t(w)$ and $s(w)$ are Lipschitz.
+
+%%
+THE ISOPERIMETRIC INEQUALIT Y FO R CURVE S WITH SELF-INTERSECTIONS BY ANDREW VOGT
+dfdf
+%%
