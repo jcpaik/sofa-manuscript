@@ -57,6 +57,14 @@ Instead of using the Unicode square, we might use the letters `QED` or `Q.E.D.`.
 
 Right now, modifying theorem names requires you to manually locate every usage of the theorem and modify.
 
+`mdmath` VSCode extension:
+https://marketplace.visualstudio.com/items?itemName=goessner.mdmath
+Markdown extension is easy in VSCode:
+https://code.visualstudio.com/api/extension-guides/markdown-extension
+This person knows a lot about writing apps (maybe No. 1 in the world):
+https://bicycleforyourmind.com/
+- He hates when editors render the text in editing mode. When we usually work with text, this is totally understandable. But editing LaTeX files full of equations, 
+
 ## File Structure
 
 - Any directory/file that is meant to be in the draft should start with `[0-9A][0-9]. ` (including whitespace). A directory is a section, and 
