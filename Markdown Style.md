@@ -33,15 +33,19 @@ The main thing here is a _theorem environment_. It mimics the look of the `amsth
 | Definition | def      |
 | Corollary  | cor      |
 | Remark     | rem      |
-| Remark     | rem      |
+| Figure     | fig      |
 
 _Proof._ A _proof environment_ is simply a series of paragraphs, with the first one starting with `_Proof._`, and the last one ending with □ (&#9633).  □
 
 Typing these manually do not make sense. I use the [obsidian-latex-suite](https://github.com/artisticat1/obsidian-latex-suite) plugin to make them easily typeable. Simply typing `> thm` expands to a `Theorem` environment. Then by typing the name of the environment name, and pressing tab, it autopopulates the name.
 
+> __Figure [sample].__ This is a sample figure. ^fig-sample
+![70%](images/sample.jpeg)
+
+
 ## Drawbacks & Alternatives
 
-I think [callouts](https://help.obsidian.md/Editing+and+formatting/Callouts) in Obsidian can be modified easily to look like theorem environment using CSS. It also looks minimal and better in plain text, exactly like the spirit of Markdown. But so far I don't know [their CSS](https://help.obsidian.md/Editing+and+formatting/Callouts#Customize+callouts) or just CSS enough to make it work.
+I think [callouts](https://help.obsidian.md/Editing+and+formatting/Callouts) in Obsidian can be modified easily to look like theorem environment using CSS. It also looks minimal and better in plain text, exactly like the spirit of Markdown. But so far I don't know [their CSS](https://help.obsidian.md/Editing+and+formatting/Callouts#Customize+callouts) or just CSS enough to make it work. Another drawback of this is that using this makes you stick to Obsidian.
 
 ```markdown
 > [!thm] square-root-two
@@ -63,7 +67,7 @@ Markdown extension is easy in VSCode:
 https://code.visualstudio.com/api/extension-guides/markdown-extension
 This person knows a lot about writing apps (maybe No. 1 in the world):
 https://bicycleforyourmind.com/
-- He hates when editors render the text in editing mode. When we usually work with text, this is totally understandable. But editing LaTeX files full of equations, 
+- He hates when editors render the text in editing mode. When we usually work with text, this is totally understandable. But editing LaTeX files full of equations, I'm desparate for a WYSIWIG. Obsidian does a good job at that.
 
 ## File Structure
 
