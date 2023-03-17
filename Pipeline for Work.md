@@ -14,3 +14,7 @@
 - Best webpage theme: [Minimal Mistakes]
 - Web tooling: Hugo
 - Current theme: XMin
+
+# Structure
+
+- Want to add to Hugo pages

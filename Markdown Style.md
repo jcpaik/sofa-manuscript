@@ -30,6 +30,7 @@ The main thing here is a _theorem environment_. It mimics the look of the `amsth
 | EnvType    | EnvAbbr  |
 |------------|----------|
 | Theorem    | thm      |
+| Lemma      | lem      |
 | Definition | def      |
 | Corollary  | cor      |
 | Remark     | rem      |
