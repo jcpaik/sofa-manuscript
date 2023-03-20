@@ -1,1 +1,0 @@
-> __Theorem [asdf].__  ^thm-asdf
