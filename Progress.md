@@ -41,3 +41,8 @@ References
 
 ^ HELP NEEDED!!! Experts will help a lot here.
 
+How to write something?
+- Of course back and forth.
+- If I really need to do A, and for that I need B, and for that I need C ....
+	- do I have to write starting with Z?
+	- Or, how about I start writing A first?
