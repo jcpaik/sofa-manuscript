@@ -21,7 +21,7 @@ $$
 $$
 - To generate the 'sum-of-squares' term $\int_a^b f_t(K)^2 \, dt$, we need to use _Mamikon's theorem_
 	- The shaded black region is a 'sum-of-squares'
-	- Had to formalize this precisely [[08. Mamikon's Theorem#^thm-mamikon|here]].
+	- Had to formalize this precisely [[07. Mamikon's Theorem#^thm-mamikon|here]].
 > __Figure [mamikon].__  ^fig-mamikon
 ![70%](images/mamikon.png)
 
