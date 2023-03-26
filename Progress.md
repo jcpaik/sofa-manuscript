@@ -1,7 +1,7 @@
-- [ ] Talk about monotone sofas
-	- [ ] How to talk about a cap?
-	- [ ] How do I make the space of all caps into some convex set embedded in an affine space?
-		- [ ] And how do I make sure that it is closed?
+- [x] Talk about monotone sofas
+	- [x] How to talk about a cap?
+	- [x] How do I make the space of all caps into some convex set embedded in an affine space?
+		- [x] And how do I make sure that it is closed?
 
 - Gauss-Minkowski
 	- [ ] Supported version of Gauss-Minkowski
