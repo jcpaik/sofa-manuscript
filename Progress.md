@@ -1,27 +1,8 @@
-- [x] Talk about monotone sofas
-	- [x] How to talk about a cap?
-	- [x] How do I make the space of all caps into some convex set embedded in an affine space?
-		- [x] And how do I make sure that it is closed?
-
-- Gauss-Minkowski
-	- [ ] Supported version of Gauss-Minkowski
-		- Required to construct caps from/to its boundary measure
-	- Arc-length parametrization of the boundary
-		- [ ] Equation for parametrization $\mathbf{x}(s)$
-		- [ ] Well-definedness $\mathbf{x}(s) \in \partial K$.
-
-- Monotone Sofas
-	- [ ] Definition of Caps
-	- [ ] Monotone 
 - Writeup of `SofaDesigner`
 	- [ ] What it does
 	- [ ] The algorithm
 	- [ ] Its certificate
 - Positive-definiteness of A_1
-	- [ ] Proof of Mamikon's Theorem
-	- [ ] Gauss-Minkowski Theorem
-	- [ ] Formally define what is a _positive definite_ functional on sofas
-		- [ ] Convex subset of an affine plane?
 
 
 ### Scrapebook
