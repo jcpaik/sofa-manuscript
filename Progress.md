@@ -1,4 +1,5 @@
 - Expose the API for using convex sets.
+- Complete the implementation of the convex sets API.
 
 - Writeup of `SofaDesigner`
 	- [ ] What it does
