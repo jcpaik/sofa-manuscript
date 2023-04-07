@@ -1,3 +1,5 @@
+- Expose the API for using convex sets.
+
 - Writeup of `SofaDesigner`
 	- [ ] What it does
 	- [ ] The algorithm
