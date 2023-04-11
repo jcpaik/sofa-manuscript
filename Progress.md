@@ -1,11 +1,10 @@
-- Expose the API for using convex sets.
-- Complete the implementation of the convex sets API.
-
+- Make the ideas transparent and simple
+	- Generate a figure of monotonization
 - Writeup of `SofaDesigner`
 	- [ ] What it does
 	- [ ] The algorithm
 	- [ ] Its certificate
-- Positive-definiteness of A_1
+- Complete the implementation of the convex sets API.
 
 
 ### Scrapebook
