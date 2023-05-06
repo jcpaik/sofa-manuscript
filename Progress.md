@@ -6,6 +6,8 @@
 	- [ ] Its certificate
 - Complete the implementation of the convex sets API.
 
+> __Figure [something].__ Some caption. ^fig-something
+> ![70%](images/sample.jpeg)
 
 ### Scrapebook
 
