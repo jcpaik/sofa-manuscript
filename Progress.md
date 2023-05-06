@@ -17,6 +17,7 @@
 		- Use balancedness on lower sides
 	- Which is more effective? 
 		- It depends on experimentation results
+		- Need better toolings of `SofaDesigner`
 
 - How to deal with balancedness?
 	- Current path:
