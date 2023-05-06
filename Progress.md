@@ -9,12 +9,14 @@
 
 ### Scrapebook
 
-- What should I write?
-	- Prospective plan for structure theorem?
-		- Takes too much words
-		- Depends on a technique that I never talked about
-			- Using KKT to solve for quadratic optimization in function space.
-	- Effective and simple bound for arm lengths?
+- Injectivity, strict interior : Use `SofaDesinger`
+- Prove strict interior upper bound $\mathcal{A}_{1, a, b}$ using a similar technique.
+- Use $\mathcal{A}_{1, a, b}$ to prove full injectivity?
+	- Two possible paths:
+		- Prove an density upper bound of boundary measure, or
+		- Use balancedness on lower sides
+	- Which is more effective? 
+		- It depends on experimentation results
 
 - How to deal with balancedness?
 	- Current path:
