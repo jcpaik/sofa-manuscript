@@ -16,7 +16,8 @@ Unfortunately, I'm a PhD student already struggling with a thesis. To this end, 
 The main thing here is a _theorem environment_. It mimics the look of the `amsthm` LaTeX package. We follow the specification of [CommonMark 0.30](https://spec.commonmark.org/0.30/).
 
 > __Definition [theorem-environment].__ A _theorem environment_ is a [block quote](https://spec.commonmark.org/0.30/#block-quotes) that contains the following elements. ^def-theorem-environment
-> - Right after the block quote marker, the text ` __EnvType [EnvName].__ ` (including the whitespace at the end) follows. 
+> 
+> - Right after the block quote marker, the text ` __EnvType [EnvName].__  ` (including the whitespace at the end) follows. 
 > 	- `EnvType` should be one of the followings in the table. 
 > 	- `EnvName` can be any name, but it only consists of lowercase alphabets, dash `-`, and should start with an alphabet.
 > - Then any contents can be inside the block quote.
@@ -33,7 +34,7 @@ The main thing here is a _theorem environment_. It mimics the look of the `amsth
 | Remark     | rem      |
 | Figure     | fig      |
 
-_Proof._ A _proof environment_ is simply a series of paragraphs, with the first one starting with `_Proof._`, and the last one ending with the symbol `□` (&#9633). □
+_Proof._ A _proof environment_ is simply a series of paragraphs, with the first letters of the first paragraph starting with `_Proof._`, and the last string of the last paragraph ending with the symbol `□` (&#9633). □
 
 > __Figure [sample].__ This is a sample figure. A figure environment should end with a single paragraph of image. ^fig-sample
 > 
