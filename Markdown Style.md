@@ -1,25 +1,22 @@
 > Note: the following is written in an informal tone with personal opinions. This is not related at all related to the research draft itself.
 
-This vault adheres to a local style of writing Markdown. With this we aim to make it look very close to LaTeX documents in Obsidian/Typora with no additional setup.
+This vault adheres to a local style of writing Markdown that is transpiled to LaTeX using a niche [piece](https://github.com/jcpaik/mathmd) of software.
 
-## Motivation
+# Motivation
 
- So far, we don't have the perfect editor for math papers/books that is
-- easy to write (like Markdown, not LaTeX)
-- has capacity to use mathematical theorem environments with auto labeling / references (like LaTeX and potentially with Pandoc, not plain Markdown)
-- and you can see the final, beaultiful result right after writing in real-time with no compilation (like Typora, not Pandoc).
+LaTeX takes too much mental space for drafting by having to adhere to specific grammars with no proper WYSIWYG support. 
 
 Obsidian checks the mark for the first and the last item, and do have some reference functionality. But it does not have good math environments yet. A perfectionist solution could be to 
 1. extend the [CommonMark](https://commonmark.org/) spec very carefully the right way to support theorem environment + cross-references
 2. and make a good Obsidian/VSCode plugin or a nice editor to render them correctly in real-time. 
 Unfortunately, I'm a PhD student already struggling with a thesis. To this end, I am devising a lazy/minimal grammar of Markdown that renders right away in Obsidian like a basic LaTeX file with theorem environments.
 
-## Spec
+# Spec
 
 The main thing here is a _theorem environment_. It mimics the look of the `amsthm` LaTeX package. We follow the specification of [CommonMark 0.30](https://spec.commonmark.org/0.30/).
 
 > __Definition [theorem-environment].__ A _theorem environment_ is a [block quote](https://spec.commonmark.org/0.30/#block-quotes) that contains the following elements. ^def-theorem-environment
-> - Right after the block quote marker, the text ` __EnvType [EnvName].__ ` (including padding whitespaces) follows. 
+> - Right after the block quote marker, the text ` __EnvType [EnvName].__ ` (including the whitespace at the end) follows. 
 > 	- `EnvType` should be one of the followings in the table. 
 > 	- `EnvName` can be any name, but it only consists of lowercase alphabets, dash `-`, and should start with an alphabet.
 > - Then any contents can be inside the block quote.
@@ -36,46 +33,22 @@ The main thing here is a _theorem environment_. It mimics the look of the `amsth
 | Remark     | rem      |
 | Figure     | fig      |
 
-_Proof._ A _proof environment_ is simply a series of paragraphs, with the first one starting with `_Proof._`, and the last one ending with □ (&#9633).  □
+_Proof._ A _proof environment_ is simply a series of paragraphs, with the first one starting with `_Proof._`, and the last one ending with the symbol `□` (&#9633). □
 
-Typing these manually do not make sense. I use the [obsidian-latex-suite](https://github.com/artisticat1/obsidian-latex-suite) plugin to make them easily typeable. Simply typing `> thm` expands to a `Theorem` environment. Then by typing the name of the environment name, and pressing tab, it autopopulates the name.
+> __Figure [sample].__ This is a sample figure. A figure environment should end with a single paragraph of image. ^fig-sample
+> 
+> ![70%](images/sample.jpeg)
 
-> __Figure [sample].__ This is a sample figure. ^fig-sample
-![70%](images/sample.jpeg)
+To refer to a theorem of a figure, we use Obsidian's way to refer a block identifier like [[#^def-theorem-environment]] or [[#^fig-sample]].
 
+## Typing
 
-## Drawbacks & Alternatives
+By typing the environment manually, we fail to solve the problem we had in LaTeX. I use the [obsidian-latex-suite](https://github.com/artisticat1/obsidian-latex-suite) plugin to make them easily typeable. Simply typing `> thm` expands to a `Theorem` environment. Then by typing the name of the environment name, and pressing tab, it autopopulates the name.
 
-I think [callouts](https://help.obsidian.md/Editing+and+formatting/Callouts) in Obsidian can be modified easily to look like theorem environment using CSS. It also looks minimal and better in plain text, exactly like the spirit of Markdown. But so far I don't know [their CSS](https://help.obsidian.md/Editing+and+formatting/Callouts#Customize+callouts) or just CSS enough to make it work. Another drawback of this is that using this makes you stick to Obsidian.
+# File Structure
 
-```markdown
-> [!thm] square-root-two
-The square root of two is $\sqrt{2}$
-```
+- Any directory/file that is a part of the draft should start with `[0-9A][0-9]. ` (including whitespace).
 
-> [!thm] square-root-two
-The square root of two is $\sqrt{2}$
+# Drawbacks
 
-Callouts also have an advantage that it can be folded by default. So if I ever have some technical lemma that I'm not really interested in, then I can just fold it by default and let the reader check them if needed.
-
-Instead of using the Unicode square, we might use the letters `QED` or `Q.E.D.`.
-
-Right now, modifying theorem names requires you to manually locate every usage of the theorem and modify.
-
-`mdmath` VSCode extension:
-https://marketplace.visualstudio.com/items?itemName=goessner.mdmath
-Markdown extension is easy in VSCode:
-https://code.visualstudio.com/api/extension-guides/markdown-extension
-This person knows a lot about writing apps (maybe No. 1 in the world):
-https://bicycleforyourmind.com/
-- He hates when editors render the text in editing mode. When we usually work with text, this is totally understandable. But editing LaTeX files full of equations, I'm desparate for a WYSIWIG. Obsidian does a good job at that.
-
-## File Structure
-
-- Any directory/file that is meant to be in the draft should start with `[0-9A][0-9]. ` (including whitespace). A directory is a section, and 
-
-## Ideas
-
-To add an interactive javascript app, use `<iframe>`:
-
-<iframe height="600" width="100%" src="https://bitcraftlab.github.io/p5.gui/examples/slider-range-2/index.html"></iframe>
+This method essentially _constraints_ the way how we use markdown, sacrificing some of its capability. For example, images are always included in figure environment. 
