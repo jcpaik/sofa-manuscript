@@ -1,13 +1,6 @@
-- Make the ideas transparent and simple
-	- Generate a figure of monotonization
-- Writeup of `SofaDesigner`
-	- [ ] What it does
-	- [ ] The algorithm
-	- [ ] Its certificate
-- Complete the implementation of the convex sets API.
-
-> __Figure [something].__ Some caption. ^fig-something
-> ![70%](images/sample.jpeg)
+- [ ] Make the section on monotone sofas more brief and to the point.
+- [ ] Add proper figures of convex bodies.
+- [ ] s
 
 ### Scrapebook
 
