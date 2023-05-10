@@ -1,8 +1,14 @@
 - [ ] Make the section on monotone sofas more brief and to the point.
 - [ ] Add proper figures of convex bodies.
-- [ ] s
+- [ ] Add an exaggerated, better looking version of Gerver's sofa
+	- For demonstrating how it looks like
+	- For demonstrating the fact that the contact type more or less stay the same for its neighborhood
+	- [ ] Use path-to-sofa code that I made. Romik's rendering of Gerver's sofa has 300 vertices in total.
+- [ ] Add support for building a sofa from its support function.
 
 ### Scrapebook
+
+The contact type structure essentially do not change in a neighborhood of Gerver's sofa when the Hausdorff measure is taken. Observe that the condition of structure theorem is immediately satisfied by a sufficient nbhd of Gerver's sofa. And what Romik-Kallus has essentially shown is that IF there is a single unique maximum, we can identify the epsilon nbhd of the maximum as close as possible under the Hausdorff measure.
 
 - Injectivity, strict interior : Use `SofaDesinger`
 - Prove strict interior upper bound $\mathcal{A}_{1, a, b}$ using a similar technique.
