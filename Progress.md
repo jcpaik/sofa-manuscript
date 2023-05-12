@@ -1,10 +1,9 @@
-- [ ] Make the section on monotone sofas more brief and to the point.
-- [ ] Add proper figures of convex bodies.
-- [ ] Add an exaggerated, better looking version of Gerver's sofa
-	- For demonstrating how it looks like
-	- For demonstrating the fact that the contact type more or less stay the same for its neighborhood
-	- [ ] Use path-to-sofa code that I made. Romik's rendering of Gerver's sofa has 300 vertices in total.
-- [ ] Add support for building a sofa from its support function.
+- [ ] Revise the monotone sofas section
+	- [ ] Make the monotonization process simpler
+- [ ] Add figures for the monotone sofas section
+	- [ ] Monotonization of a sofa
+	- [ ] Monotone sofas with rotation angle less than 90
+- [ ] 
 
 ### Scrapebook
 
