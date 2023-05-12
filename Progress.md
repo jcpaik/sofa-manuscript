@@ -1,9 +1,15 @@
-- [ ] Revise the monotone sofas section
-	- [ ] Make the monotonization process simpler
-- [ ] Add figures for the monotone sofas section
-	- [ ] Monotonization of a sofa
-	- [ ] Monotone sofas with rotation angle less than 90
-- [ ] 
+- Revising (more urgent and important)
+	- [ ] Revise the monotone sofas section
+		- [ ] Make the monotonization process simpler
+	- [ ] Add figures for the monotone sofas section
+		- [ ] Monotonization of a sofa
+		- [ ] Monotone sofas with rotation angle less than 90
+		- [ ] Name the curves on Mamikon's theorem figure
+- Future plan?
+	- [ ] Write about finite version of monotone sofa
+- SofaDesigner
+	- [ ] Extract QP program
+	- [ ] Write equation parser
 
 ### Scrapebook
 
