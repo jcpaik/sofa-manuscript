@@ -1,12 +1,6 @@
-Monotone sofas outline
-1. Define the parallelogram and standard position. Put a sofa in standard position.
-2. Introduce generalization of sofas with a general set of angles -- hallway intersection. Mention that a sofa is a hallway intersection with angle set from 0 to omega. We work with hallway intersections from now on.
-3. Define what is a pushed hallway. Show that pushed hallway contains the hallway intersection. Now the intersection is both in the parallelogram and all the intersection of pushed hallways.
-4. Define what is a cap. Define what is a cap of an arbitrary shape in standard position. Show that it is indeed a cap.
-5. Mention that a hallway intersection is inside the parallelogram and pushed hallways. This breaks down into the cap of $S$ and the niche. Define the niche of a curve or a cap. Define the monotonization.
-6. First, we show that if $K$ is the cap of a hallway intersection $S$, then the monotonization $K \setminus \mathcal{M}(K)$ is also connected so it's also a hallway intersection.
-	1. Whenever some $\mathbf{x}_K(t)$ is in $K$, then $T_K(t)$ is inside $K \setminus \delta K$ as well.
-	2. $\mathcal{N}(K)$ inside $K \setminus \delta(K)$ -> connected.
+First, we show that if $K$ is the cap of a hallway intersection $S$, then the monotonization $K \setminus \mathcal{M}(K)$ is also connected so it's also a hallway intersection.
+- [ ] $\mathbf{x}_K(t)$ is in $K$ iff $T_K(t)$ is inside $K \setminus \delta K$.
+- [ ] $\mathcal{N}(K)$ inside $K \setminus \delta(K)$ -> connected.
 
 Perturbation of x -> x still contained in new cap K.
 x contained in new cap K -> triangular set also contained in K. 
