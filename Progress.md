@@ -36,6 +36,13 @@ What do I want?
 
 ### Scrapebook
 
+### Presentation
+
+Why does a maximum sofa have to have such five stages?
+We don't answer that question.
+Maybe, it just happens to be that way. The problem is in some sense artificial. The answer should be in some sense artificial as well.
+Instead, we ask computers to find that it happens to be that way approximately.
+
 The contact type structure essentially do not change in a neighborhood of Gerver's sofa when the Hausdorff measure is taken. Observe that the condition of structure theorem is immediately satisfied by a sufficient nbhd of Gerver's sofa. And what Romik-Kallus has essentially shown is that IF there is a single unique maximum, we can identify the epsilon nbhd of the maximum as close as possible under the Hausdorff measure.
 
 - Injectivity, strict interior : Use `SofaDesinger`
