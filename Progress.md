@@ -36,6 +36,8 @@ What do I want?
 
 ### Scrapebook
 
+This illusts the main idea of our proof. The area $\mathcal{A}(K)$ of any monotone sofa $\mathcal{M}(K)$ is difficult to understand. So we instead work on an upper bound $\mathcal{A}_1(K)$ of the area $\mathcal{A}(K)$. In doing so, we only need to ensure that $\mathcal{A} \leq \mathcal{A}_1$ for the maximizer $K_m$. That is, (i) we can exploit any property of a maximizer $K = K_m$ to construct a new upper bound, and (ii) new upper bound $\mathcal{A}_1$ only needs to be greater than $\mathcal{A}$ at the point $K = K_m$. Once done so, we unlock an extra property of the maximizer $K_m$ that $\mathcal{A}_1(K_m)$ has to be at least the value of $\mathcal{A}(K_m)$. As $\mathcal{A}_1$ is well-behaved, the property $\mathcal{A}_1(K) \geq \mathcal{A}(K_m)$ is a useful property. Using this property, we prove further properties of the maximizer $K_m$ and construct finer and finer upper bounds of $\mathcal{A}(K)$.
+
 ### Presentation
 
 Why does a maximum sofa have to have such five stages?
