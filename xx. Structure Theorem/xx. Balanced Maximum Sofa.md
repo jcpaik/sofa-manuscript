@@ -1,0 +1,5 @@
+- Show that the corners are strictly inside for any maximizer.
+- So local perturbation is safe, and maximizer is balanced
+- Take more and more refined angles. Take limit.
+- Show that the limiting shape is monotone
+- 
