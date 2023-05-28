@@ -65,3 +65,26 @@ The contact type structure essentially do not change in a neighborhood of Gerver
 		- Use that and SofaDesigner again to show that niche contains the down-left corner of $P_\omega$.
 	- New path:
 		- Use that any sofa of angle $\omega$ can be made into a sofa of angle 90 degrees by cutting some region of the sofa.
+
+
+%%
+
+We also give the space $\mathcal{K}_\Theta$ a metric. We can identify a cap with its support function.
+
+> __Definition [cap-support-function].__ For any cap $K$ with angle set $\Theta$, define $p_K^0$ as the support function $p_K$ restricted to the domain $\Theta \cup (\Theta + \pi/2)$. ^def-cap-support-function
+
+> __Theorem [cap-support-function].__ The map $K \mapsto p_K^0$ from $\mathcal{K}_\Theta$ to the space of continuous functions $\mathcal{C}^0(\Theta \cup (\Theta + \pi/2))$ is injective. ^thm-cap-support-function
+
+_Proof._ Any cap $K$ is supported by the set $\Pi = \Theta \cup (\Theta + \pi/2) \cup \{\pi + \omega, 3\pi/2\}$, so the support function $p_K$ on $\Pi$ determines $K$. Note that $p_K$ has value zero on $\{\pi + \omega, 3\pi/2\}$ by the defintion of a cap. □
+
+> __Definition [cap-space-metric].__ Identifying $\mathcal{K}_\Theta$ as a subset of $\mathcal{C}^0(\Theta \cup (\Theta + \pi/2))$ under the map $K \mapsto p_K^0$, give $\mathcal{K}_\Theta$ the uniform norm. ^def-cap-space-metric
+
+> __Corollary [cap-space-metric].__ The uniform metric of $\mathcal{K}_\Theta$ is equivalent to the Hausdorff norm of $\mathcal{K}_\Theta$. ^cor-cap-space-metric
+
+We give the space $\mathcal{K}_\Theta$ more structures. We can identify each $K \in \mathcal{K}_\Theta$ with the support function 
+
+> __Definition [cap-space-restriction].__ Let $\omega \in [0, \pi/2]$ and $\left\{ 0, \omega \right\} \subseteq \Theta_1 \subseteq \Theta_2 \subseteq [0, \omega]$ be two angle sets. Define the map $\iota_{\Theta_2, \Theta_1} : \mathcal{K}_{\Theta_2} \to \mathcal{K}_{\Theta_1}$ as the mapping from $K \in \mathcal{K}_{\Theta_2}$ to $P_\omega \bigcap \cap_{t \in \Theta_1} Q^+_{K}(t)$. ^def-cap-space-restriction
+
+From now on, we will define and prove the geometric properties of caps in $K_\Theta$. Note that we have defined [[02. Monotone Sofas#^def-cap-vertices|vertices]] and [[02. Monotone Sofas#^def-cap-lines|walls of the rotating hallway]] for any cap $K$ previously.
+
+%%
