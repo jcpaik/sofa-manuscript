@@ -1,21 +1,26 @@
-Perturbation of x -> x still contained in new cap K.
-x contained in new cap K -> triangular set also contained in K. 
-
 - Revising (more urgent and important)
 	- [ ] Add figures for the monotone sofas section
 		- [ ] Monotonization of a sofa
 		- [ ] Monotone sofas with rotation angle less than 90
 		- [ ] Name the curves on Mamikon's theorem figure
-- Future plan?
-	- [ ] Write about finite version of monotone sofa
-- SofaDesigner
-	- [ ] Extract QP program
-		- [ ] Add reference IDs
-		- [ ] Think about how to represent each inequality
-			- [ ] Change all ineq symbol le's to ge's
-		- [ ] Understand how NonnegativeQP certificate works
-		- [ ] 
-	- [ ] Write equation parser
+- [ ] Future plan for software part
+- [ ] SofaDesigner
+	- [ ] Programming
+		- [ ] Extract QP program
+			- [ ] Add reference IDs
+			- [ ] Think about how to represent each inequality
+				- [ ] Change all ineq symbol le's to ge's
+			- [ ] Understand how NonnegativeQP certificate works
+		- [ ] Write equation parser
+	- [ ] Writing
+		- [ ] Branching
+		- [ ] Certificate Generation
+- [ ] Injectivity Theorem
+	- [ ] Injectivity on smaller interval
+		- [ ] Inequality
+		- [ ] Actual computation
+	- [ ] Balancedness
+		- [ ] Niche
 
 ### Scrapebook
 
