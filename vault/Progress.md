@@ -57,6 +57,9 @@ How to show that?
 	- A sofa of rotation angle $\omega$ with area $A$ can be cut and lifted to a sofa of rotation angle 90 degrees with area $A + f(\omega)$ where $f(\omega)$ = area trimmed by slight cut of rotation 90 - $\omega$.
 	- Use weaker upper bound $\mathcal{A}_{1, 15^\circ}$ to analytically solve for the lower bounds of $\tau$
 
+- Multiple ways to bound the gap
+	- Bound $l_K(\pi/2) \cap l_K(\pi/2 - \theta)$ 
+
 - Use the lower bound of $\tau$ and show that for those sofas, actually the cut area is absorbed by some niche.
 	- Kills sofas that rotate by less than 90 degrees.
 - Use lower bounds of $\tau$ to have lower bounds of $g^+$ and $h^+$ near critical angles.
