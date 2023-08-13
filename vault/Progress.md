@@ -1,20 +1,10 @@
-- Revising (more urgent and important)
-	- [ ] Add figures for the monotone sofas section
-		- [ ] Monotone sofas with rotation angle less than 90
-		- [ ] Name the curves on Mamikon's theorem figure
-- [ ] Future plan for software part
-- [ ] SofaDesigner
-	- [ ] Programming
-		- [ ] Write equation parser
-	- [ ] Writing
-		- [ ] Branching
-		- [ ] Certificate Generation
-- [ ] Injectivity Theorem
-	- [ ] Injectivity on smaller interval
-		- [ ] Inequality
-		- [ ] Actual computation
-	- [ ] Balancedness
-		- [ ] Niche
+- [ ] Issues with parametrization (using $\mathbf{x}_{p, q}$ is wrong, because of the case $p = q$. stick to $\mathbf{x}_{t_1, t_2}$ and $\mathbf{x}_{t_1 - , t_2}$.
+- [ ] Structure check on Space of Caps
+	- [ ] Support equivalent conditions
+- [ ] Upper bound 
+	- [ ] Structure check
+	- [ ] 
+- [ ] Detailed proof read-through
 
 Let's write the future plan later as I actually start working on writing the details. For now, let's set the aim to put the preprint online.
 
