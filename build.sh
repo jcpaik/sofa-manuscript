@@ -1,3 +1,4 @@
+rm -r out
 mathmd vault out
 
 pdflatex -shell-escape main
