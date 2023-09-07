@@ -1,10 +1,10 @@
-- [ ] Issues with parametrization (using $\mathbf{x}_{p, q}$ is wrong, because of the case $p = q$. stick to $\mathbf{x}_{t_1, t_2}$ and $\mathbf{x}_{t_1 - , t_2}$.
-- [ ] Structure check on Space of Caps
-	- [ ] Support equivalent conditions
-- [ ] Upper bound 
-	- [ ] Structure check
-	- [ ] 
+- [ ] Convert $\mathbf{x}_{p, q}$ to $\mathbf{x}_{t_1, t_2}$ and $\mathbf{x}_{t_1 - , t_2}$ in the calculus of variation parts.
 - [ ] Detailed proof read-through
+
+- Key fact
+	- Instead of maximizing sofa area in sofa space $\mathcal{S}$, embed $\mathcal{S}$ to a subspace of $\mathcal{K}_\omega$ and extend the function $\mathcal{A}$. Maximizer of $\mathcal{A}$ in $\mathcal{K}_\omega$ happen to be an actual sofa. 
+	- This also holds in later steps as well. We need $\mathcal{K}_{\omega}^{\phi_1, \phi_2}$ with the information of left and right wing, and extension $\mathcal{K}_\omega \to \mathcal{K}_\omega^{\phi_1, \phi_2}$. The maximizer just happen to be an actual sofa, but the domain of search is larger.
+	- 
 
 Let's write the future plan later as I actually start working on writing the details. For now, let's set the aim to put the preprint online.
 
