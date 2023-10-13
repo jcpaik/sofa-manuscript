@@ -1,12 +1,8 @@
-- [ ] Convert $\mathbf{x}_{p, q}$ to $\mathbf{x}_{t_1, t_2}$ and $\mathbf{x}_{t_1 - , t_2}$ in the calculus of variation parts.
-- [ ] Detailed proof read-through
 
-- Key fact
-	- Instead of maximizing sofa area in sofa space $\mathcal{S}$, embed $\mathcal{S}$ to a subspace of $\mathcal{K}_\omega$ and extend the function $\mathcal{A}$. Maximizer of $\mathcal{A}$ in $\mathcal{K}_\omega$ happen to be an actual sofa. 
-	- This also holds in later steps as well. We need $\mathcal{K}_{\omega}^{\phi_1, \phi_2}$ with the information of left and right wing, and extension $\mathcal{K}_\omega \to \mathcal{K}_\omega^{\phi_1, \phi_2}$. The maximizer just happen to be an actual sofa, but the domain of search is larger.
-	- 
-
-Let's write the future plan later as I actually start working on writing the details. For now, let's set the aim to put the preprint online.
+- Dot notation
+- Sofa -> Moving sofa
+- Name of the paper
+- Calling definitions unnecessary when they are really required
 
 ### Scrapebook
 
@@ -96,6 +92,6 @@ We give the space $\mathcal{K}_\Theta$ more structures. We can identify each $K 
 
 > __Definition [cap-space-restriction].__ Let $\omega \in [0, \pi/2]$ and $\left\{ 0, \omega \right\} \subseteq \Theta_1 \subseteq \Theta_2 \subseteq [0, \omega]$ be two angle sets. Define the map $\iota_{\Theta_2, \Theta_1} : \mathcal{K}_{\Theta_2} \to \mathcal{K}_{\Theta_1}$ as the mapping from $K \in \mathcal{K}_{\Theta_2}$ to $P_\omega \bigcap \cap_{t \in \Theta_1} Q^+_{K}(t)$. ^def-cap-space-restriction
 
-From now on, we will define and prove the geometric properties of caps in $K_\Theta$. Note that we have defined [[02. Monotone Sofas#^def-cap-vertices|vertices]] and [[02. Monotone Sofas#^def-cap-lines|walls of the rotating hallway]] for any cap $K$ previously.
+From now on, we will define and prove the geometric properties of caps in $K_\Theta$. Note that we have defined [[yy. Monotone Sofas#^def-cap-vertices|vertices]] and [[yy. Monotone Sofas#^def-cap-lines|walls of the rotating hallway]] for any cap $K$ previously.
 
 %%
