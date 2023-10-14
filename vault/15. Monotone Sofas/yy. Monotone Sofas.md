@@ -26,7 +26,7 @@ We define the _upper boundary_ of an arbitrary cap $K$.
 
 > __Definition [upper-boundary-of-cap].__ Define the _upper boundary_ $\delta K$ of a cap $K$ with rotation angle $\omega \in [0, \pi/2]$ as the set $\delta K = \bigcup_{t \in [0, \omega + \pi/2]} e_K(t)$. ^def-upper-boundary-of-cap
 
-By [[02. Geometric Results#^thm-convex-set-support-disjoint]], we have the followings.
+By [[00. Geometric Results#^thm-convex-set-support-disjoint]], we have the followings.
 - if $\omega = \pi/2$, then $K$ is a convex body with the upper edges of normal vector $u_t$ for $t \in \Theta \cup \Theta + \pi/2$, and the lower edge $e_K(3\pi/2)$ on the $x$-axis connecting $A^-_K(0)$ and $C^+_K(\pi/2)$.
 - if $\omega < \pi / 2$, then $K$ is a convex body with the upper edges of normal vector $u_t$ for $t \in \Theta \cup \Theta + \pi/2$, and the two lower edges $e_K(\pi + \omega)$ connecting $C^+_K(\omega)$ and the origin, and $e_K(3\pi/2)$ connecting the origin and $A^-_K(0)$.
 
@@ -38,7 +38,7 @@ $$
 $$
 > Then $\mathcal{C}(S)$ is a cap with rotation angle $\omega$ and angle set $\Theta$. We call $\mathcal{C}(S)$ as the _cap_ of $S$. ^thm-cap-hallway-intersection
 
-_Proof._ As $Q^+_S(t)$ is the intersection of two half-planes of normal angle $t$ and $t + \pi/2$, the set $K = \mathcal{C}(S)$ is a convex set supported by the set $\Theta \cup (\Theta + \pi/2) \cup \{\pi + \omega, 3\pi/2\}$ ([[02. Geometric Results#^thm-convex-set-support]]). Moreover, $p_K(\omega) = p_K(\pi/2) = 1$ because $S$ is in standard position so $p_{S}(\omega)=p_S(\pi/2)=1$. It remains to verify $p_K(\pi + \omega) = p_K(3\pi/2) = 0$.
+_Proof._ As $Q^+_S(t)$ is the intersection of two half-planes of normal angle $t$ and $t + \pi/2$, the set $K = \mathcal{C}(S)$ is a convex set supported by the set $\Theta \cup (\Theta + \pi/2) \cup \{\pi + \omega, 3\pi/2\}$ ([[00. Geometric Results#^thm-convex-set-support]]). Moreover, $p_K(\omega) = p_K(\pi/2) = 1$ because $S$ is in standard position so $p_{S}(\omega)=p_S(\pi/2)=1$. It remains to verify $p_K(\pi + \omega) = p_K(3\pi/2) = 0$.
 
 We first handle the case $\omega = \pi/2$. For this we only need to prove $p_{K}(3\pi/2) = 0$. As $p_{S}(\pi/2)=1$, we have some point $(x_0, 1)$ which is in $S$ and thus $K$. Observe that $(x_0, 0)$ is also in $K$ as the set $\bigcap_{t \in \Theta} Q^+_S(t)$ is [[01. Notations and Conventions#^def-closed-in-direction|closed in the downwards direction]]. This implies that $p_{K}(3\pi/2) = 0$.
 
@@ -102,7 +102,7 @@ We show that for any monotone sofa with cap $K$, the niche $\mathcal{N}(K)$ is c
 
 > __Lemma [cap-empty-interior].__ A cap $K$ with rotation angle $\omega \in [0, \pi/2]$ has empty interior if and only if $\omega = \pi/2$ and $K$ is a vertical line segment of length 1. ^lem-cap-empty-interior
 
-> __Corollary [upper-boundary-arc].__ If $K$ has nonempty interior, by [[02. Geometric Results#^thm-boundary-parametrization-segment]] the function $\mathbf{x}_{K, A^-_K(0), C^+_K(\omega)}$ is a Jordan arc parametrization of $\delta K$ from $A_K^-(0)$ to $C^+_K(\omega)$. In particular, $\delta K$ is connected. ^cor-upper-boundary-arc
+> __Corollary [upper-boundary-arc].__ If $K$ has nonempty interior, by [[00. Geometric Results#^thm-boundary-parametrization-segment]] the function $\mathbf{x}_{K, A^-_K(0), C^+_K(\omega)}$ is a Jordan arc parametrization of $\delta K$ from $A_K^-(0)$ to $C^+_K(\omega)$. In particular, $\delta K$ is connected. ^cor-upper-boundary-arc
 
 > __Lemma [cap-fan-topology].__ For any cap $K$ with rotation angle $\omega \in [0, \pi/2]$, the set $\delta K$ is the boundary of $K$ in the subspace topology of $F_\omega \subseteq \mathbb{R}^2$. ^lem-cap-fan-topology
 
