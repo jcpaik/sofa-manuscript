@@ -6,20 +6,25 @@
 - Control Theory
 - Intuitive Geometry
 
-### Scrapebook
+# Structure
 
-Simple calculation:
+- 
 
-What is the gradient of $\mathbf{x}^T A \mathbf{x}$? It is $\sum_{i, j} a_{ij} x_i x_j = \sum_i a_{ii} x_i^2 + \sum_{i < j} 2a_{ij} x_i x_j$ so differentiation w.r.t $x_i$ is $2a_{ii}x_i + \sum_{j > i} 2a_{ij} x_j$.... $2A \mathbf{x}$. Expressing the gradient of the original function as convex combination of normal vectors of constraints is sufficient to prove the optimality.
+# How to deal with balancedness?
 
-How do I actually solve for the optimality with given constraints?
-(i) calculate gradient analytically/exactly
-(ii) do numerical approximation solve + get certificates
-(iii) interpolate them by working symbollically?
+- Relax the problem to optimizing $\mathcal{A}(K)$ for any $K$ (even including the case where $\mathcal{N}(K)$ is not a subset of $K$)
+- Balancedness works in this setup very well. 
+- Show $w_K(t) \geq 9/32$ for any $t$ using `SofaDesigner`
+- This is done by finding a discrete lower bound of $w_K(t)$. We utilize this in later stages as well.
 
-> Need to solve for at least a couple continuous sofa area functionals and automate the process/how to write it.
+- Now we tackle the angle = pi/2 problem.
+- Either $p_K(0)$ or $p_K(\omega + \pi/2)$ are large enough, larger than say $1.1$. WLOG let $p_K(0) \geq 1.1$.
+- Enlarge $t$ just enough from 0 so that $Q^-_K(t)$ consumes all the lower corner of $P_\omega$. Now the sofa has full rotation angle.
 
-### How to deal with balancedness?
+- We use the discrete lower bound found above to support $g^+_K(t)$ from below as well.
+	- Numbers are not sufficient, though...
+
+%%
 
 The question is, how do I find the lower bound on the distance $l$ between 
 - $A^-(\pi/2)$ and $C^+(0)$ for angle of rotation by 90 degrees
@@ -53,14 +58,10 @@ How to show that?
 - Use lower bounds of $\tau$ to have lower bounds of $g^+$ and $h^+$ near critical angles.
 	- Use that to finish the injectivity theorem.
 
+%%
+
 ### Presentation
 
 - Part 1: We reduce the full Gerver's conjecture to a much weaker conjecture. We name it as _injectivity conjecture_. 
 - Part 2: We reduce injectivity conjecture using computer assistance. Basically, the conjecture will be reduced to a bunch of statements on finite angles, that can be verified by enumerating all possible combinations of .
 - Part 3: We describe the inner workings of `SofaDesigner` in full details.
-
-
-- Dot notation
-- Sofa -> Moving sofa
-- Name of the paper
-- Calling definitions unnecessary when they are really required

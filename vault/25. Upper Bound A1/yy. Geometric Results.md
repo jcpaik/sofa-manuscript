@@ -66,7 +66,7 @@ The following theorems use the angular support of a convex body $K$.
 > 2. $v_K^+(t_1) = v_K^-(t_2)$
 > 3. Both $v_K^+(t_1)$ and $v_K^-(t_2)$ are equal to a point $p$. Also, $p = v_K^{\pm}(t)$ for every $t \in (t_1, t_2)$ and $p = l_K(a) \cap l_K(b)$ for every $a, b \in [t_1, t_2]$ where $a \neq b$.
 
-_Proof._ (of [[00. Geometric Results#^thm-convex-set-support-disjoint]]) 
+_Proof._ (of [[yy. Geometric Results#^thm-convex-set-support-disjoint]]) 
 
 (1 $\Leftrightarrow$ 2) From $\int_{t \in (t_1, t_2)} v_t \, \beta(dt) = v_K^-(t_2) - v_K^+(t_1)$ we have (1 $\Rightarrow$ 2). Conversely, if $\beta$ is not zero on $(t_1, t_2)$ then the integral $\int_{t \in (t_1, t_2)} v_t \, \beta(dt)$ is nonzero when measured in the direction of $u_{t_1}$.
 
@@ -78,11 +78,21 @@ _Proof._ (of [[00. Geometric Results#^thm-convex-set-support-disjoint]])
 
 %% TODO: I know that the argument below is faulty, but the theorem is not worth thinking too much in all petty details. %%
 
-_Proof._ (of [[00. Geometric Results#^thm-convex-set-support]]) We have $K = \bigcap_{t \in S^1} H_K(t) \subseteq \bigcap_{t \in \Pi} H_K(t)$ always. The equality holds if and only if for every $t$ not in $\Pi$, $H_K(t)$ contains the set $\bigcap_{t \in \Pi} H_K(t)$. Let $(t_1, t_2)$ be any connected component of $S^1 \setminus \Pi$. Then the interval has length $< \pi$ by assumption. Now take any $t \in (t_1, t_2)$. Observe that $\bigcap_{t \in \Pi} H_K(t) \subseteq H_K(t)$ if and only if $p = l_K(t_1) \cap l_K(t_2) \in H_K(t)$, as $p$ is the point of $\bigcap_{t \in \Pi} H_K(t)$ farthest in the direction of $u_t$. Then $p \in H_K(t)$ holds for every $t \in (t_1, t_2)$ if and only if $(t_1, t_2)$ is disjoint from the angular support of $K$ by [[00. Geometric Results#^thm-convex-set-support-disjoint]]. This completes the proof. □
+_Proof._ (of [[yy. Geometric Results#^thm-convex-set-support]]) We have $K = \bigcap_{t \in S^1} H_K(t) \subseteq \bigcap_{t \in \Pi} H_K(t)$ always. The equality holds if and only if for every $t$ not in $\Pi$, $H_K(t)$ contains the set $\bigcap_{t \in \Pi} H_K(t)$. Let $(t_1, t_2)$ be any connected component of $S^1 \setminus \Pi$. Then the interval has length $< \pi$ by assumption. Now take any $t \in (t_1, t_2)$. Observe that $\bigcap_{t \in \Pi} H_K(t) \subseteq H_K(t)$ if and only if $p = l_K(t_1) \cap l_K(t_2) \in H_K(t)$, as $p$ is the point of $\bigcap_{t \in \Pi} H_K(t)$ farthest in the direction of $u_t$. Then $p \in H_K(t)$ holds for every $t \in (t_1, t_2)$ if and only if $(t_1, t_2)$ is disjoint from the angular support of $K$ by [[yy. Geometric Results#^thm-convex-set-support-disjoint]]. This completes the proof. □
 
-The following follows immediately from [[00. Geometric Results#^def-convex-set-support]].
+The following follows immediately from [[yy. Geometric Results#^def-convex-set-support]].
 
 > __Theorem [supported-gauss-measure].__ Let $\Pi$ be any closed subset of $S^1$ such that $S^1 \setminus \Pi$ is the disjoint union of open intervals of length $< \pi$. The correspondence in [[#^thm-gauss-minkowski]] maps the convex bodies $K$ with angular support in $\Pi$ bijectively to arbitrary (nonnegative) measure $\beta$ on $S^1$ with support in $\Pi$ such that $\int_{S^1} v_t \, \beta (dt) = 0$. ^thm-supported-gauss-measure
+
+# Convex Curve
+
+A _convex curve_ $\mathbf{x} : [a, b] \to \mathbb{R}^2$ with normal angles in a closed interval $[t_1, t_2]$ of $S^1$. It is a connected subset of the boundary 
+
+Define its boundary measure $\beta_\mathbf{x}$ on the interval $I = [t_1, t_2]$. Then the following holds.
+
+$I(\mathbf{x}) = \left< p_\mathbf{x}, \beta_\mathbf{x} \right>_I$
+
+So we can do convex-linear interpolation between two different curves.
 
 # Jordan Curve
 
@@ -103,53 +113,9 @@ Any Jordan curve is either positively or negatively oriented. Although we won't 
 
 _Proof._ (sketch) We first show that it is safe to assume the case where $J$ only intersects $l$ at two points $p$ and $q$. Observe that $H_i$ has a deformation retract to some subset $S_i \subseteq H_i$ with $S_i \cap l = \left\{ p, q \right\}$ (push the three segments of $l \setminus \{p, q\}$ towards the interior of $H_i$). Using the retracts, we may continuously deform the arcs $\Gamma_0$ and $\Gamma_1$ inside $S_0$ and $S_1$ respectively without chainging the orientation of $J$. Now take any point $r$ inside the segment connecting $p$ and $q$. Continuously move a point $x$ inside $J$ in the orientation of $J$ starting with $x = p$. As $x$ moves along $\Gamma_0$ from $p$ to $q$ the argument of $x$ with respect to $r$ increases by $\pi$. And as $x$ moves along $\Gamma_1$ the argument of $x$ with respect to $r$ again increases by $\pi$. So the total increase in the argument of $x \in J$ is $2\pi$ and $J$ is positively oriented. □
 
-# Mamikon's Theorem
-
-Mamikon devised a way to calculate the area swept by tangent segments of a curve [[@mnatsakanianAnnularRingsEqual1997]]. Here, we introduce a formalization of his theorem that works for arbitrary convex bodies and rectifiable curves.
-
-> __Theorem [mamikon].__ (Mamikon) Let $K$ be an arbitrary convex body. Let $t_0, t_1 \in \mathbb{R}$ be the angles such that $t_0 \leq t_1 \leq t_0 + 2 \pi$. Let $\mathbf{y} : [t_0, t_1] \to \mathbb{R}^2$ be some parametrization of a rectifiable curve with a function $f : [t_0, t_1] \to \mathbb{R}$ such that $\mathbf{y}(t) = v_K^+(t) + f(t)v_t$ for all $t \in [t_0, t_1]$, so that $\mathbf{y}(t)$ is on the tangent line $l_K(t)$ with the distance $f(t)$ from $v_K^+(t)$. Then the following holds. ^thm-mamikon
-$$
-I(\mathbf{y}) + I\left( \mathbf{y}(t_1), v_K^+(t_1) \right) - I(\mathbf{x}_{K, t_0, t_1}) - I\left( \mathbf{y}(t_0), v_K^+(t_0) \right) =  \frac{1}{2}\int_{t_0}^{t_1} f(t) ^2 \, dt
-$$
-> If $t_1 < t_0 + 2\pi$, then we also have the following variant.
-$$
-I(\mathbf{y}) + I\left( \mathbf{y}(t_1), v_K^+(t_1) \right) - I(\mathbf{x}_{K, t_0 -, t_1}) - I\left( \mathbf{y}(t_0), v_K^-(t_0) \right) =  \frac{1}{2}\int_{t_0}^{t_1} f(t) ^2 \, dt
-$$
-
-> __Figure [mamikon].__ An illustration of [[00. Geometric Results#^thm-mamikon]]. ^fig-mamikon
-> 
-> ![70%](images/mamikon.svg)
-
-This is a variant of Mamikon's theorem where $\mathbf{y}(t) = l_K(t) \cap l_K(t_q)$ parametrizes a segment of the tangent line $l_K(t_q)$. It is almost an immediate consequence of [[#^thm-mamikon]] but is slightly different in the details.
-
-> __Theorem [mamikon-tangent-line].__ Let $K$ be an arbitrary convex body.  Let $t_0, t_1 \in \mathbb{R}$ be the angles such that $t_0 \leq t_1 < t_0 + \pi$. For every $t \in [t_0, t_1)$, define $f(t)$ to be the value such that $l_K(t) \cap l_K(t_1) = v_K^+(t) + f(t) v_t$. Let $r = l_K(t_0) \cap l_K(t_1)$. Then $f$ is integrable and the following holds. ^thm-mamikon-tangent-line
-$$
-I(r, v_K^+(t_1)) - I(\mathbf{x}_{K, t_0, t_1}) - I\left(r, v_K^+(t_0) \right) =  \frac{1}{2}\int_{t_0}^{t_1} f(t) ^2 \, dt
-$$
-
 # Calculus of Variations
 
 The following calculations are used as subroutines for the calculus of variation on sofas.
-
-> __Theorem [boundary-measure-area-variation].__ For any convex bodies $K_1, K_2$, let $K = (1 - \lambda) K_1 + \lambda K_2$ be the linear interpolation between them. Then we have the following. ^thm-boundary-measure-area-variation
-$$
-\left. \frac{d}{d\lambda} \right|_{\lambda=0} |K| = \int_{S^1} (p_{K_2}(t) - p_{K_1}(t)) \, \beta_{K_1}(dt)
-$$
-
-_Proof._ Define the following for two convex bodies $K_1$ and $K_2$.
-$$
-V(K_1, K_2) = \frac{1}{2} \int_{S^1}p_{K_1}(t)\,\beta_{K_2}(dt)
-$$
-By [[00. Geometric Results#^thm-boundary-measure-area]] we have $V(K, K)$ equal to the area $|K|$ of $K$ for any $K$, and by [[00. Geometric Results#^thm-convex-body-linear]] $V(K_1, K_2)$ is multilinear with respect to each variable. So $V(K_1, K_2)$ is the mixed volume [[@sangwine-yagerMixedVolumes1993]] of $K_1$ and $K_2$ (say, because $2V(K_1, K_2) = |K_1 + K_2| - |K_1| - |K_2|$). By multilinearlity and reflexivity of the mixed volume $V$, for $K = (1 - \lambda) K_1 + \lambda K_2$ we have the following.
-$$
-\begin{align*}
-\left. \frac{d}{d\lambda} \right|_{\lambda=0} |K| & = \left. \frac{d}{d\lambda} \right|_{\lambda=0} V(K, K) =  \\
-& = \left. \frac{d}{d\lambda} \right|_{\lambda=0} (1-\lambda)^2 V(K_1, K_1) + 2 \lambda (1 - \lambda) V(K_1, K_2) + \lambda^2 V(K_2, K_2)  \\
-& = - 2 V(K_1, K_1) + 2 V(K_1, K_2)  \\
-& = \int_{S^1} (p_{K_2}(t) - p_{K_1}(t)) \, \beta_{K_1}(dt)
-\end{align*}
-$$
-□
 
 > __Theorem [variation-curve].__ Let $\mathbf{x}_1, \mathbf{x}_2 : [a, b]\to\mathbb{R}^2$ be two rectifiable curves. Let $\mathbf{x} = (1 - \lambda) \mathbf{x}_1 + \lambda \mathbf{x}_2$ be the interpolation between $\mathbf{x}_1$ and $\mathbf{x}_2$ where $\lambda \in [0, 1]$. Then the following holds. ^thm-variation-curve
 $$

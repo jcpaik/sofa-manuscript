@@ -1,4 +1,4 @@
-We have just shown that any sofa $S$ with rotation angle $\omega \in [0, \pi/2]$ is essentially a hallway intersection in standard position with angle set $[0, \omega]$ up to rigid transformation ([[01. Monotone Sofas#^cor-sofa-iff-hallway-intersection]]), and that it admits a monotonized sofa movement $f_S$ with tangent hallways $L_S(t)$ containing $S$ ([[01. Monotone Sofas#^thm-hallway-intersection-is-sofa]]). In this subsection, we define the _monotonization_ of $S$ as the intersection $\mathcal{M}(S) = P_\omega \cap \bigcap_{t \in [0, \omega]} L_S(t)$ of the parallelogram and all the tangent hallways ([[yy. Monotone Sofas#^def-monotonization]]). It turns out that $\mathcal{M}(S)$ is itself a sofa containing $S$ ([[yy. Monotone Sofas#^thm-monotonization-is-hallway-intersection]]), so we call $\mathcal{M}(S)$ a _monotone sofa_ ([[yy. Monotone Sofas#^def-monotone-sofa]]) and safely assume that a sofa of maximum area is monotone.
+We have just shown that any sofa $S$ with rotation angle $\omega \in [0, \pi/2]$ is essentially a hallway intersection in standard position with angle set $[0, \omega]$ up to rigid transformation ([[02. Monotone Sofas#^cor-sofa-iff-hallway-intersection]]), and that it admits a monotonized sofa movement $f_S$ with tangent hallways $L_S(t)$ containing $S$ ([[02. Monotone Sofas#^thm-hallway-intersection-is-sofa]]). In this subsection, we define the _monotonization_ of $S$ as the intersection $\mathcal{M}(S) = P_\omega \cap \bigcap_{t \in [0, \omega]} L_S(t)$ of the parallelogram and all the tangent hallways ([[yy. Monotone Sofas#^def-monotonization]]). It turns out that $\mathcal{M}(S)$ is itself a sofa containing $S$ ([[yy. Monotone Sofas#^thm-monotonization-is-hallway-intersection]]), so we call $\mathcal{M}(S)$ a _monotone sofa_ ([[yy. Monotone Sofas#^def-monotone-sofa]]) and safely assume that a sofa of maximum area is monotone.
 
 Moreover, a monotone sofa $\mathcal{M}(S)$ is equal to a _cap_ $K$ subtracted by its _niche_ $\mathcal{N}(K)$ ([[yy. Monotone Sofas#^thm-monotonization-eq]]). The cap $K$ ([[yy. Monotone Sofas#^def-cap]]) is a convex body bounded from above by the outer walls $a_S(t), c_S(t)$ of $L_S(t)$ as tangent lines and from below by the bottom edges of $P_\omega$. The niche $\mathcal{N}(K)$ ([[yy. Monotone Sofas#^def-niche]]) is the union of triangular regions carved out by the inner corner $Q^-_S(t)$ of the hallway $L_S(t)$. The niche $\mathcal{N}(K)$ turns out to be a subset of the cap $K$ ([[yy. Monotone Sofas#^thm-niche-in-cap]]), so the area $\mathcal{A}(K) = |K| - |\mathcal{N}(K)|$ can be analyzed separately in terms of the cap $K$ and its niche $\mathcal{N}(K)$. In general, for any cap $K$ (which may not be the cap of a sofa) we show that the niche $\mathcal{N}(K)$ is contained in $K$ if and only if the set $K \setminus \mathcal{N}(K)$ is connected ([[yy. Monotone Sofas#^thm-monotonization-connected-iff]]).
 
@@ -10,7 +10,7 @@ $$
 $$
 > Say that a shape is _monotone_ with respect to rotation angle $\omega$ and angle set $\Theta$ if it is the monotonization $\mathcal{M}(S)$ of some hallway intersection $S$ with angle set $\Theta$. If $\Theta$ in the context is fixed, we simply denote the monotonization as $\mathcal{M}(S)$. ^def-monotonization
 
-The following is an immediate corollary of [[01. Monotone Sofas#^def-hallway-intersection]] and [[01. Monotone Sofas#^cor-sofa-is-hallway-intersection]].
+The following is an immediate corollary of [[02. Monotone Sofas#^def-hallway-intersection]] and [[02. Monotone Sofas#^cor-sofa-is-hallway-intersection]].
 
 > __Corollary [monotonization-contains].__ For any hallway intersection $S$, its monotonization $\mathcal{M}(S)$ contains $S$. ^cor-monotonization-contains
 
@@ -18,7 +18,7 @@ We also formally define what is a cap.
 
 > __Corollary [cap-in-standard-position].__ A cap $K$ with rotation angle $\omega \in [0, \pi/2]$ is in standard position respect to $\omega$. ^cor-cap-in-standard-position
 
-We describe the geometry of an arbitrary cap $K$ with angle set $\Theta$ and rotation angle $\omega$. We define geometric primitives derived from the cap $K$. By [[01. Monotone Sofas#^def-tangent-hallway]] and [[01. Monotone Sofas#^def-rotating-hallway-parts]], the tangent hallway $L_K(t)$ has the walls $a_K(t), b_K(t), c_K(t), d_K(t)$ where the outer walls $a_K(t) = l_K(t)$ and $c_K(t) = l_K(t+\pi/2)$ are the upper tangent lines of $K$. We also define the vertices of the cap $K$.
+We describe the geometry of an arbitrary cap $K$ with angle set $\Theta$ and rotation angle $\omega$. We define geometric primitives derived from the cap $K$. By [[02. Monotone Sofas#^def-tangent-hallway]] and [[02. Monotone Sofas#^def-rotating-hallway-parts]], the tangent hallway $L_K(t)$ has the walls $a_K(t), b_K(t), c_K(t), d_K(t)$ where the outer walls $a_K(t) = l_K(t)$ and $c_K(t) = l_K(t+\pi/2)$ are the upper tangent lines of $K$. We also define the vertices of the cap $K$.
 
 > __Definition [cap-vertices].__ Let $K$ be a cap with angle set $\Theta$ and rotation angle $\omega$. For any $t \in \Theta$, define the vertices $A^+_K(t) = v^+_K(t)$, $A^-_K(t) = v^-_K(t)$,  $C^+_K(t) = v^+_K(t + \pi/2)$, and $C^-_K(t) = v^-_K(t + \pi/2)$ of $K$. ^def-cap-vertices
 
@@ -26,7 +26,7 @@ We define the _upper boundary_ of an arbitrary cap $K$.
 
 > __Definition [upper-boundary-of-cap].__ Define the _upper boundary_ $\delta K$ of a cap $K$ with rotation angle $\omega \in [0, \pi/2]$ as the set $\delta K = \bigcup_{t \in [0, \omega + \pi/2]} e_K(t)$. ^def-upper-boundary-of-cap
 
-By [[00. Geometric Results#^thm-convex-set-support-disjoint]], we have the followings.
+By [[yy. Geometric Results#^thm-convex-set-support-disjoint]], we have the followings.
 - if $\omega = \pi/2$, then $K$ is a convex body with the upper edges of normal vector $u_t$ for $t \in \Theta \cup \Theta + \pi/2$, and the lower edge $e_K(3\pi/2)$ on the $x$-axis connecting $A^-_K(0)$ and $C^+_K(\pi/2)$.
 - if $\omega < \pi / 2$, then $K$ is a convex body with the upper edges of normal vector $u_t$ for $t \in \Theta \cup \Theta + \pi/2$, and the two lower edges $e_K(\pi + \omega)$ connecting $C^+_K(\omega)$ and the origin, and $e_K(3\pi/2)$ connecting the origin and $A^-_K(0)$.
 
@@ -38,7 +38,7 @@ $$
 $$
 > Then $\mathcal{C}(S)$ is a cap with rotation angle $\omega$ and angle set $\Theta$. We call $\mathcal{C}(S)$ as the _cap_ of $S$. ^thm-cap-hallway-intersection
 
-_Proof._ As $Q^+_S(t)$ is the intersection of two half-planes of normal angle $t$ and $t + \pi/2$, the set $K = \mathcal{C}(S)$ is a convex set supported by the set $\Theta \cup (\Theta + \pi/2) \cup \{\pi + \omega, 3\pi/2\}$ ([[00. Geometric Results#^thm-convex-set-support]]). Moreover, $p_K(\omega) = p_K(\pi/2) = 1$ because $S$ is in standard position so $p_{S}(\omega)=p_S(\pi/2)=1$. It remains to verify $p_K(\pi + \omega) = p_K(3\pi/2) = 0$.
+_Proof._ As $Q^+_S(t)$ is the intersection of two half-planes of normal angle $t$ and $t + \pi/2$, the set $K = \mathcal{C}(S)$ is a convex set supported by the set $\Theta \cup (\Theta + \pi/2) \cup \{\pi + \omega, 3\pi/2\}$ ([[yy. Geometric Results#^thm-convex-set-support]]). Moreover, $p_K(\omega) = p_K(\pi/2) = 1$ because $S$ is in standard position so $p_{S}(\omega)=p_S(\pi/2)=1$. It remains to verify $p_K(\pi + \omega) = p_K(3\pi/2) = 0$.
 
 We first handle the case $\omega = \pi/2$. For this we only need to prove $p_{K}(3\pi/2) = 0$. As $p_{S}(\pi/2)=1$, we have some point $(x_0, 1)$ which is in $S$ and thus $K$. Observe that $(x_0, 0)$ is also in $K$ as the set $\bigcap_{t \in \Theta} Q^+_S(t)$ is [[01. Notations and Conventions#^def-closed-in-direction|closed in the downwards direction]]. This implies that $p_{K}(3\pi/2) = 0$.
 
@@ -102,7 +102,7 @@ We show that for any monotone sofa with cap $K$, the niche $\mathcal{N}(K)$ is c
 
 > __Lemma [cap-empty-interior].__ A cap $K$ with rotation angle $\omega \in [0, \pi/2]$ has empty interior if and only if $\omega = \pi/2$ and $K$ is a vertical line segment of length 1. ^lem-cap-empty-interior
 
-> __Corollary [upper-boundary-arc].__ If $K$ has nonempty interior, by [[00. Geometric Results#^thm-boundary-parametrization-segment]] the function $\mathbf{x}_{K, A^-_K(0), C^+_K(\omega)}$ is a Jordan arc parametrization of $\delta K$ from $A_K^-(0)$ to $C^+_K(\omega)$. In particular, $\delta K$ is connected. ^cor-upper-boundary-arc
+> __Corollary [upper-boundary-arc].__ If $K$ has nonempty interior, by [[yy. Geometric Results#^thm-boundary-parametrization-segment]] the function $\mathbf{x}_{K, A^-_K(0), C^+_K(\omega)}$ is a Jordan arc parametrization of $\delta K$ from $A_K^-(0)$ to $C^+_K(\omega)$. In particular, $\delta K$ is connected. ^cor-upper-boundary-arc
 
 > __Lemma [cap-fan-topology].__ For any cap $K$ with rotation angle $\omega \in [0, \pi/2]$, the set $\delta K$ is the boundary of $K$ in the subspace topology of $F_\omega \subseteq \mathbb{R}^2$. ^lem-cap-fan-topology
 
