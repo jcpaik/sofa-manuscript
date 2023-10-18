@@ -136,7 +136,7 @@ $$
 \left. \frac{d}{d \lambda} \right|_{\lambda = 0} I(\mathbf{x}) = \frac{1}{2} \int_a^b  (\mathbf{x}_2 - \mathbf{x}_1) \times d\mathbf{x}_1 + \mathbf{x}_1 \times d(\mathbf{x}_2 - \mathbf{x}_1)
 $$
 
-Do [[01. Notations and Conventions#^thm-integration-by-parts|integration by parts]] on one integral.
+Do [[02. Notations and Conventions#^thm-integration-by-parts|integration by parts]] on one integral.
 $$
 \begin{align*}
 \int_a^b \mathbf{x}_1 \times d(\mathbf{x}_2 - \mathbf{x}_1) & = \left. \mathbf{x}_1 (t) \times (\mathbf{x}_2(t) - \mathbf{x}_1(t)) \right|_{t=a}^{b} 
