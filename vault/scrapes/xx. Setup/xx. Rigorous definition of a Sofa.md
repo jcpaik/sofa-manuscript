@@ -10,8 +10,6 @@ We rigorously define what is a sofa. We first set up the hallway.
 
 > __Definition [shape].__ A _shape_ is a nonempty compact subset of $\mathbb{R}^2$. Denote the area (Borel measure) of a shape $X$ as $|X|$. ^def-shape
 
-> __Definition [strip].__ Define the unit-width horizontal and vertical strips $H = \mathbb{R} \times [0, 1]$ and $V = [0, 1] \times \mathbb{R}$ respectively. ^def-strip
-
 To define a sofa, we need to define its rigid motion. A rigid motion is described by a continuous path of rigid transformations.
 
 > __Definition [rigid-motion].__ For any $\theta \in S^1 \simeq \mathbb{R}/2\pi\mathbb{Z}$, define the map $R_\theta : \mathbb{R}^2 \to \mathbb{R}^2$ as the rotation of $\mathbb{R}^2$ around the origin by a counterclockwise angle of $\theta$. For any $\mathbf{v} \in \mathbb{R}^2$, define the map $T_\mathbf{v} : \mathbb{R}^2 \to \mathbb{R}^2$ as the translation of $\mathbb{R}^2$ by the vector $\mathbf{v}$.
