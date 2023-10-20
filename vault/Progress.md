@@ -6,9 +6,10 @@
 - Control Theory
 - Intuitive Geometry
 
-# Structure
+# Current Goal
 
-- 
+- Finish what's just written and not add more mathematics
+- Ofc some parts are incomplete. But let's write it so that the rest of the arguments are easier for someone to fill out.
 
 # How to deal with balancedness?
 
