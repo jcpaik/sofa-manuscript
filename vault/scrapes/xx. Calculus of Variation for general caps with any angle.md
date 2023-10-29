@@ -21,3 +21,48 @@ $$
 D\mathcal{A}_1(K_1; K_2) = \left. \frac{d}{d\lambda} \right|_{\lambda = 0} \mathcal{A}_1((1 - \lambda) K_1 + \lambda K_2)
 = \left< p_{K_2} - p_{K_1}, \beta_{K_1} - \iota_{K_1} \right>_{J_\omega}
 $$
+
+> __Theorem [a1-negative-semidefinite].__ $\mathcal{A}_1$ is concave on $\mathcal{K}_\omega$. ^thm-a1-negative-semidefinite
+
+_Proof._ If $\omega = \pi/2$ then the vertex $p_\omega$ of the parallogram $P_\omega$ is undefined, so in this proof let $p_\omega = A^+_K(\pi/2) = C^+_K(0)$ for the case $\omega = \pi/2$. Define the path $\mathbf{b}_1$ from $A_K^-(0)$ to $p_\omega$ along the upper boundary $\delta K$. Define the path $\mathbf{b}_2$ from $p_\omega$ to $C_K^+(\omega)$ along the upper boundary $\delta K$. Then we have $|K| = I(\mathbf{b}_1) + I(\mathbf{b}_2)$ for all $K$ including the case when $K$ has empty interior.
+
+We stitch the following instances of Mamikon's theorem. First, by [[yy. Geometric Results#^thm-mamikon]] on the curve $\mathbf{b}_1$ and $\mathbf{y}_K(t)$ for $t \in [0, \omega]$, we get the following after some rearrangement.
+$$
+\begin{align*}
+I(\mathbf{y}_K) - I(\mathbf{b}_1) & = \frac{1}{2} \int_0^\omega h^+_K(t)^2 \, dt - (I(\mathbf{y}_K(\omega), p_\omega) - I(\mathbf{y}_K(0), A_K^-(0))) \\
+& = \frac{1}{2} \int_0^\omega h^+_K(t)^2 \, dt - \frac{1}{2} \left(\left( p_\omega - \mathbf{y}_K(\omega) \right) \cdot v_\omega + p_K(0) \right) 
+\end{align*}
+$$
+
+Second, by [[yy. Geometric Results#^thm-mamikon-tangent-line]] on the curve $\mathbf{b}_2$ we get the following after rearrangement. Here, for any $\omega < t < \omega + \pi/2$ define $\tau_K(t) \in \mathbb{R}$ as the value that satisfies $l_K(t) \cap l_K(\omega + \pi/2) = v_K^+(t) + \tau_K(t) v_t$. By [[yy. Geometric Results#^thm-convex-body-linear]] the value $\tau_K$ is convex-linear with respect to $K \in \mathcal{K}_\omega$.
+$$
+\begin{align*}
+- I(\mathbf{b}_2) & = \frac{1}{2} \int_{\omega}^{\pi/2 + \omega} \tau(t)^2 \, dt - I(\mathbf{y}_K(\omega), C^+_K(\omega)) - I(p_\omega, \mathbf{y}_K(\omega))  \\
+& = \frac{1}{2} \int_{\omega}^{\pi/2 + \omega} \tau(t)^2 \, dt - \frac{1}{2}\left( p_K(\omega + \pi/2) + \left( \mathbf{y}_K(\omega) - p_\omega \right) \cdot v_\omega \right) 
+\end{align*}
+$$
+
+Add the two equations together, and we get this.
+$$
+I(\mathbf{y}_K) - \left| K \right| = \frac{1}{2} \int_0^\omega h^+_K(t)^2 \, dt +  \frac{1}{2} \int_{\omega}^{\pi/2 + \omega} \tau_K(t)^2 \, dt - \frac{1}{2} \left( p_K(0) + p_K(\omega + \pi/2) \right) 
+$$
+
+Note that $\mathbf{y}_K(t) = \mathbf{x}_K(t) + u_t + v_t$. Using this, we can show that $I(\mathbf{y}_K) - I(\mathbf{x}_K)$ is convex-linear in terms of $K$.
+$$
+\begin{align*}
+I(\mathbf{y}_K) & = \frac{1}{2} \int_{0}^\omega \mathbf{y}_K(t) \times d \mathbf{y}_K(t) \\
+& = \frac{1}{2} \int_{0}^\omega (\mathbf{x}_K(t) + u_t + v_t) \times d (\mathbf{x}_K(t) + u_t + v_t)  \\
+& = I(\mathbf{x}_K) + \frac{1}{2} \left( \int_{0}^\omega (u_t + v_t) \times d \mathbf{x}_K(t) 
++ \int_{0}^\omega \mathbf{x}_K(t) \times d(u_t + v_t) + \int_{0}^\omega (u_t + v_t) \times d (u_t + v_t) \right) 
+\end{align*}
+$$
+
+Now we have the following formula. 
+$$
+\begin{gather}
+\mathcal{A}_1(K) = |K| - I(\mathbf{x}_K) =  \\
+ - \frac{1}{2} \int_0^\omega h^+_K(t)^2 \, dt - \frac{1}{2} \int_{\omega}^{\pi/2 + \omega} \tau_K(t)^2 \, dt  \\
+ + \frac{1}{2}\left( p_K(0) + p_K(\omega + \pi/2) \right) + \left( I(\mathbf{y}_K) - I(\mathbf{x}_K) \right) 
+\end{gather}
+$$
+As $h^+_K, \tau_K$, and the last term are convex-linear with respect to $K$, $\mathcal{A}_1$ is negative semidefinite using [[01. Space of Caps#^lem-negative-semidefinite]]. □
