@@ -66,3 +66,63 @@ $$
 \end{gather}
 $$
 As $h^+_K, \tau_K$, and the last term are convex-linear with respect to $K$, $\mathcal{A}_1$ is negative semidefinite using [[01. Space of Caps#^lem-negative-semidefinite]]. □
+
+> __Theorem [maximum-presofa-a1].__ The cap $K_1 \in \mathcal{K}_{\omega}$ attains the maximum value of $\mathcal{A}_1$. ^thm-maximum-presofa-a1
+
+_Proof._ By [[01. Space of Caps#^thm-variation-maximizer]] and [[#^thm-variation-a1]] it suffice to check that $\beta_{K_1}(dt) = i_{K_1}(t)dt$ on $J_\omega$ except for the points $t = \omega, \pi/2$. Take any $t \in (0, \omega)$, then we have the following.
+$$
+\begin{align*}
+g^+_K(t) & = \int_{u \in (t, t+\pi/2]} \cos (u-t)\, \beta(du) \\
+& = \cos(\omega - t) + \cos(\pi/2 - t) + \int_{t}^{\omega} \cos(u-t)(\omega-u)\,du + \int_{\pi/2}^{t + \pi/2} \cos(u-t)(u - \pi/2)\,du  \\
+& = 1 + t
+\end{align*}
+$$
+Note that this computation holds for both cases $\omega < \pi/2$ and $\omega = \pi/2$. So on the domain $t \in (\pi/2, \omega + \pi/2]$ the measure $\beta_{K_1}(dt) = (t - \pi/2) dt$ is equal to $i_K(t) dt = (g^+_K(t - \pi/2) - 1) dt$. Similarly, we can also check $\beta_{K_1}(dt) = i_K(t) dt$ on any $t \in [0, \omega)$. □
+
+> __Theorem [maximum-presofa-a1-area].__ The maximum value $\mathcal{A}_1(K_1)$ is $1 + \omega^2/2$.  ^thm-maximum-presofa-a1-area
+
+_Proof._ If $\omega = \pi/2$, let $p_\omega = (0, 1)$. Let $\tau = (\pi/2-\omega)/2$. Then we have $p_\omega = (\tan(\tau), 1)$ for any angle $\omega \leq \pi/2$. Note that $K_1$ has mirror symmetry along the line segment connecting $(0, 0)$ and $p_\omega$.
+
+Let us compute the value of $p_{K_1}(t)$ for $t \in [0, \omega]$. 
+$$
+\begin{align*}
+p_{K_1}(t) - p_\omega \cdot u_t & = (A^-_{K_1}(t) - p_\omega) \cdot u_t =  \\
+& = \sin(\omega - t) + \int_{t_0 \in [t, \omega] } (\omega - t_0) \sin \left( t_0 - t \right) \, dt_{0} \\
+& = \omega - t
+\end{align*}
+$$
+So $p_{K_1}(t) = \omega - t + p_{\omega} \cdot u_t$ on $t \in [0, \omega]$. By symmetry, $p_{K_1}(t) = t - \pi/2 + p_\omega \cdot u_t$ on $t \in [\pi/2, \omega + \pi/2]$. Now use the mirror symmetry to calculate half the area of $K_1$.
+$$
+\begin{align*}
+\frac{1}{2} \int_{t \in [0, \omega]} p_{K_1}(t) \, \beta(dt) & = 
+\frac{1}{2} + \frac{1}{2} \int_{t \in [0, \omega]} \left( \omega - t + p_\omega \cdot u_t \right)  (\omega-t) \, dt \\
+& = \frac{1}{2} + \frac{1}{2} \left( \omega^3 / 3 + p_\omega \cdot (1 - \cos(\omega), \omega - \sin(\omega)) \right) 
+\end{align*}
+$$
+So we have the following.
+$$
+\begin{align*}
+|K_1| & = 1 + \omega^3 / 3 + p_\omega \cdot (1 - \cos \omega, \omega - \sin \omega) \\
+& = \omega^3/3 + \omega + \cot\left( \pi/4 + \omega/2 \right)
+\end{align*}
+$$
+
+Next, we compute the area of the niche $I(\mathbf{x}_{K_1})$. We have 
+$$
+\mathbf{x}_{K_1}(t) = (p_{K_1}(t) - 1)u_t + (p_{K_1}(t + \pi/2) - 1) v_t
+$$
+and
+$$
+\mathbf{x}'_{K_1} = -(g_{K_1}^+(t) - 1) \cdot u_t + (h_{K_1}^+(t) - 1) \cdot v_t = 
+- t \cdot u_t + (\omega - t) \cdot v_t
+$$
+so
+$$
+\begin{align*}
+I(\mathbf{x}_{K_1}) & = \frac{1}{2} \int_0^\omega (p_{K_1}(t) - 1)(\omega - t) + (p_{K_1}(t+\pi/2) - 1) t \, dt  \\
+& = \frac{1}{2} \int_0^\omega (\omega - t + p_{\omega} \cdot u_t - 1) (\omega - t) \, dt + 
+\frac{1}{2} \int_0^\omega (t + p_{\omega} \cdot v_t - 1) t \, dt \\
+& = \omega^3 / 3 - \omega^2 / 2 + (-1 + \omega + \cot\left( \pi/4 + \omega/2 \right) )
+\end{align*}
+$$
+Finally, we compute $\mathcal{A}_1(K_1) = |K_1| - I(\mathbf{x}_{K_1}) = 1 + \omega^2 / 2$. □
