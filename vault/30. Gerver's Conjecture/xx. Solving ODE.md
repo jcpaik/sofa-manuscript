@@ -38,3 +38,4 @@ $$
 \end{align*}
 $$
 
+> __Theorem [balanced-ACDx].__ $\beta_{K} = \iota_{K}$ on $(t_1, t_2)$ and $2\beta_{K} - 1 = \iota_{K}$ on $(t_1 + \pi/2, t_2 + \pi/2)$ if and only if there is a constant $a_0$ and $c_0$ such that $\beta_K(t) = (a_0 + t) dt$ and $\beta_K(t + \pi/2) = (c_0 + t) dt$ on the interval $t \in (t_1, t_2)$. Moreover, for such $K$ we have $g^{\pm}(t) = g^{\pm}(t_1) + (t - t_0)$. ^thm-balanced-ACx
