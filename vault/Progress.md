@@ -1,3 +1,11 @@
+# TODOs
+
+- [ ] Polish introduction
+- [ ] Expand surface area measure section
+	- [ ] Vertex convergence
+	- [ ] Formula for legs $g_K^\pm$ and $h_K^{\pm}$
+- [ ] Finish calculation of maximizer
+
 # How to sell it?
 
 - Convex geometry / Convex analysis
