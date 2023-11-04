@@ -1,3 +1,5 @@
+set -e
+
 rm -r out
 mathmd vault out
 
