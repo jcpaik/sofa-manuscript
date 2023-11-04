@@ -38,4 +38,19 @@ $$
 \end{align*}
 $$
 
+> __Theorem [balanced-ACx].__ Let $K \in \mathcal{K}_{\pi/2}$ be any cap. Let $0 \leq t_1 < t_2 < \pi/2$ be two arbitrary angles. Then the followings are equivalent. ^thm-balanced-ACx
+> 
+> - We have $\beta_{K} = \iota_{K}$ on the set $(t_1, t_2) \cup (t_1 + \pi/2, t_2 + \pi/2)$
+> - We have $\beta_K(dt) = (a_0 - t) dt$ and $\beta_K(dt + \pi/2) = (c_0 + t) dt$ on the interval $t \in (t_1, t_2)$ where $a_0 = h_K^+(t_1) + t_1 - 1$ and $c_0 = g_K^+(t_1) - t_1 - 1$.
+> 
+> Moreover, for such $K$ we have $g_K(t) = g_K^+(t_1) + (t - t_1)$ and $h_K(t) = h_K^+(t_1) - (t - t_1)$ for $t \in (t_1, t_2)$, and $g_K^-(t_2) - g_K^+(t_1) = t_2 - t_1$ and $h_K^-(t_2) - h_K^+(t_1) = -(t_2 - t_1)$ consequently.
+
+> __Theorem [balanced-none].__ Let $K \in \mathcal{K}_{\pi/2}$ be any cap. Let $0 \leq t_1 < t_2 < \pi/2$ be two arbitrary angles. Say the following holds. ^thm-balanced-ACx
+> 
+> - We have $\beta_{K} = 0$ on the set $(t_1, t_2) \cup (t_1 + \pi/2, t_2 + \pi/2)$
+> 
+> For such $K$ we have $g_K(t) = g_K^+(t_1) + (t - t_1)$ and $h_K(t) = h_K^+(t_1) - (t - t_1)$ for $t \in (t_1, t_2)$, and $g_K^-(t_2) - g_K^+(t_1) = t_2 - t_1$ and $h_K^-(t_2) - h_K^+(t_1) = -(t_2 - t_1)$ consequently.
+
+
+
 > __Theorem [balanced-ACDx].__ $\beta_{K} = \iota_{K}$ on $(t_1, t_2)$ and $2\beta_{K} - 1 = \iota_{K}$ on $(t_1 + \pi/2, t_2 + \pi/2)$ if and only if there is a constant $a_0$ and $c_0$ such that $\beta_K(t) = (a_0 + t) dt$ and $\beta_K(t + \pi/2) = (c_0 + t) dt$ on the interval $t \in (t_1, t_2)$. Moreover, for such $K$ we have $g^{\pm}(t) = g^{\pm}(t_1) + (t - t_0)$. ^thm-balanced-ACx

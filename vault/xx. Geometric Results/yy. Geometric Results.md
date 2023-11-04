@@ -4,15 +4,6 @@ We will use the following results for the sofa problem. The proof of these resul
 
 We use the _surface area measure_ $\beta_K$ of a convex body $K$ [[@busemann1958convex]] [[@schneiderConvexSurfacesCurvature1993]]. Because we only work with two-dimensional convex bodies, we call such measure the _boundary measure_ of $K$.
 
-> __Theorem [boundary-measure].__ For any convex body $K$, there is a uniquely associated _boundary measure_ $\beta_K$ on $S^1$ such that it satisfies the _vertex formulas_: For any $a < b$ such that $b \leq a + 2\pi$, ^thm-boundary-measure
-$$
-\int_{(a, b]} v_t \, \beta_K(dt) = v_K^+(b) - v_K^+(a) 
-$$
-$$
-\int_{[a, b]} v_t \, \beta_K(dt) = v_K^+(b) - v_K^-(a) 
-$$
-> In short, $dv_K^+(t) = v_t \beta_K(dt)$.
-
 If every tangent line $l_K(t)$ of a convex body $K$ touches $K$ at the single point $v_K(t) = v_K^{\pm}(t)$, and the vertex $v_K(t)$ is a smooth function with respect to $t$, the measure $\beta_K$ is the measure on $S^1$ with distribution function $|| v_K'(t) ||$. That is, $\beta(dt) = || v_K'(t) || dt$. So essentially, $\beta_K$ measures the differential side lengths of $K$. $\beta_K$ generalizes naturally to $K$ with non-smooth boundary. For example, if $K$ is the unit square $[0, 1]^2$ then $\beta_K$ is concentrated on four points $t = 0, \pi/2, \pi, 3\pi/2$ each with a measure 1, measuring the exact lengths of each edge with a given normal angle.
 
 A lot of information of a convex body $K$, including $\beta_K$, is linear with respect to $K$.
