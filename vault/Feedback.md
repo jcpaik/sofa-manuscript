@@ -33,18 +33,8 @@ Page 9, paragraph after theorem 2.4: the sentence "After proving Theorem 2.4, it
 
   
 
-Page 10, bottom half of the page: from the paragraph above definition 2.15 to the bottom of the page, this is very unclear. You seem to overload the term "cap" with two different meanings, and definitions are given both in unscoped text paragraphs ("The set K will be called as the cap of S"), inside a proper Definition environment, and inside the body of proposition 2.5, leading the reader to wonder which definitions are the "official" ones and which are just informal comments. Inside definition 2.15 you also give a formal definition followed by a loose description labeled as "Geometrically speaking", which again causes confusion about whether those are two equivalent descriptions of the same thing, one formal and one informal, or two distinct parts of the definition that both are required for the set to be a cap.
-
-  
-
-Pages 11-12, proof of theorem 2.4. You talk about things being on the "left side" and "right side", that doesn't sound precise enough for a proof in a journal paper.
-
-I didn't read this proof in detail but on skimming through it it seems reasonable.
-
-  
-
 Page 12, last paragraph of section 2.3.2: you use the word "projection" as if it's a formal term with a precise meaning, but it's not explained anywhere what it means, or what it means to "project" a moving sofa to a monotone sofa.
 
-  
+
 
 Page 16, first line of section 3.1. Why is the injectivity hypothesis "a much weaker statement of Gerver's conjecture"? This characterization seems a bit misleading to me. (E.g., there are many results that are implied by the Riemann hypothesis, but it wouldn't be reasonable to refer to any such result as "a much weaker version of the Riemann hypothesis.)

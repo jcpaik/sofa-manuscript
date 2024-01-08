@@ -1,10 +1,19 @@
-# TODOs
+- (p8 of [[@schneider_2013]]) We end this section with a definition of the central notion of this book. A nonempty, compact, convex subset of Rn is called a convex body. (Thus, in our terminology, a convex body need not have interior points. We warn the reader that many authors reserve the term ‘body’ for sets with interior points. However, we prefer to avoid endless repetitions, in this book, of the expression ‘nonempty, compact, convex subset’.) By Kn we denote the set of all convex bodies in Rn and by Kn n the subset of convex bodies with interior points (thus, the lower index n stands for the dimension of the bodies). For ∅ A ⊂ Rn we write K(A) for the set of convex bodies contained in A and Kn(A) = K(A) ∩ Kn n . Further, Pn denotes the set of nonempty polytopes in Rn and Pn n = Pn ∩ Kn n is the subset of n-dimensional polytopes.
 
-- [ ] Polish introduction
-- [ ] Expand surface area measure section
-	- [ ] Vertex convergence
-	- [ ] Formula for legs $g_K^\pm$ and $h_K^{\pm}$
-- [ ] Finish calculation of maximizer
+
+- Take rest with NO internet
+	- Reward range
+		- Going out -> Pinball
+		- Rowing
+- Playtime _after_ work
+- Acknowledge the limit of concentration time / productivity
+	- Push a little bit more day by day
+	- Plan accordingly to my limit
+- Don't spend too much time on relatively not urgent/important things
+	- Notation
+	- Perfection of each sentence
+- Spend time on whole body
+	- 
 
 # How to sell it?
 
