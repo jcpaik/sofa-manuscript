@@ -2,15 +2,6 @@
   
 
 Page 6, line 3 of section 2.2: you have not defined what "a moving sofa with rotation angle \omega" means
-
-  
-
-Page 7 at top: theorems that say that several statements are equivalent usually use an enumerated list rather than an itemized list to list the equivalent statements
-
-  
-
-Page 7, def. 2.10: this definition is not precise enough, you haven't defined what "touches" means.
-
   
 
 Page 7: I didn't check the proof of theorem 2.1
