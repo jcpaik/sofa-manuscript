@@ -1,3 +1,6 @@
+Goal Jan 9 - 12: Reduce bound of $h_K(t)$ to concrete calculations in `SofaDesinger`. The writing could be rough, but should be 'fixable' with only minor adjustments.
+
+
 - (p8 of [[@schneider_2013]]) We end this section with a definition of the central notion of this book. A nonempty, compact, convex subset of Rn is called a convex body. (Thus, in our terminology, a convex body need not have interior points. We warn the reader that many authors reserve the term ‘body’ for sets with interior points. However, we prefer to avoid endless repetitions, in this book, of the expression ‘nonempty, compact, convex subset’.) By Kn we denote the set of all convex bodies in Rn and by Kn n the subset of convex bodies with interior points (thus, the lower index n stands for the dimension of the bodies). For ∅ A ⊂ Rn we write K(A) for the set of convex bodies contained in A and Kn(A) = K(A) ∩ Kn n . Further, Pn denotes the set of nonempty polytopes in Rn and Pn n = Pn ∩ Kn n is the subset of n-dimensional polytopes.
 
 
@@ -32,12 +35,6 @@
 
 - Relax the problem to optimizing $\mathcal{A}(K)$ for any $K$ (even including the case where $\mathcal{N}(K)$ is not a subset of $K$)
 - Balancedness works in this setup very well. 
-- Show $w_K(t) \geq 9/32$ for any $t$ using `SofaDesigner`
-- This is done by finding a discrete lower bound of $w_K(t)$. We utilize this in later stages as well.
-
-- Now we tackle the angle = pi/2 problem.
-- Either $p_K(0)$ or $p_K(\omega + \pi/2)$ are large enough, larger than say $1.1$. WLOG let $p_K(0) \geq 1.1$.
-- Enlarge $t$ just enough from 0 so that $Q^-_K(t)$ consumes all the lower corner of $P_\omega$. Now the sofa has full rotation angle.
 
 - We use the discrete lower bound found above to support $g^+_K(t)$ from below as well.
 	- Numbers are not sufficient, though...
