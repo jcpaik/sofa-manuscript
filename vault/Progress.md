@@ -1,8 +1,11 @@
-Goal Jan 9 - 12: Reduce bound of $h_K(t)$ to concrete calculations in `SofaDesinger`. The writing could be rough, but should be 'fixable' with only minor adjustments.
+Goal Jan 9 - 14: Reduce bound of $h_K(t)$ to concrete calculations in `SofaDesinger`. The writing could be rough, but should be 'fixable' with only minor adjustments.
 
 
-- (p8 of [[@schneider_2013]]) We end this section with a definition of the central notion of this book. A nonempty, compact, convex subset of Rn is called a convex body. (Thus, in our terminology, a convex body need not have interior points. We warn the reader that many authors reserve the term ‘body’ for sets with interior points. However, we prefer to avoid endless repetitions, in this book, of the expression ‘nonempty, compact, convex subset’.) By Kn we denote the set of all convex bodies in Rn and by Kn n the subset of convex bodies with interior points (thus, the lower index n stands for the dimension of the bodies). For ∅ A ⊂ Rn we write K(A) for the set of convex bodies contained in A and Kn(A) = K(A) ∩ Kn n . Further, Pn denotes the set of nonempty polytopes in Rn and Pn n = Pn ∩ Kn n is the subset of n-dimensional polytopes.
 
+- [ ] Make pictures of how `SofaDesigner` work
+	- [ ] Make `.crl` files translatable to JSON
+	- [ ] Make `mathematica` script plot out a good picture of such shape
+		- [ ] Make a script that can plot out a shape from any x coordinates
 
 - Take rest with NO internet
 	- Reward range
@@ -16,7 +19,6 @@ Goal Jan 9 - 12: Reduce bound of $h_K(t)$ to concrete calculations in `SofaDesin
 	- Notation
 	- Perfection of each sentence
 - Spend time on whole body
-	- 
 
 # How to sell it?
 
@@ -80,3 +82,14 @@ How to show that?
 - Part 1: We reduce the full Gerver's conjecture to a much weaker conjecture. We name it as _injectivity conjecture_. 
 - Part 2: We reduce injectivity conjecture using computer assistance. Basically, the conjecture will be reduced to a bunch of statements on finite angles, that can be verified by enumerating all possible combinations of .
 - Part 3: We describe the inner workings of `SofaDesigner` in full details.
+
+
+# Angle
+
+
+Ditch this strategy. We go with $d v_K^+(t) = \beta_K(dt)$.
+
+Let's not think too much about convex curves at this moment (part 3).
+
+Need: a curve from $C^+_K(t)$ to the intersection of $\mathbf{x}$ and envelope of $\mathbf{d}_K$.
+The envelope of $\mathbf{d}_K$ can be defined as a convex body.
