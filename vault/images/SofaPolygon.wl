@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-BeginPackage["SofaPolygon`",{"MaTeX`","MovingSofas`"}]
+BeginPackage["SofaPolygon`"]
 
 (* Package for producing figures and executing numerical experiments *)
 (* Not a part of SofaDesigner nor a part of a rigorous proof *)
@@ -26,6 +26,8 @@ NicheLines::usage = "Lines of the niche of sofa";
 NicheVertices::usage = "Vertices of the niche of sofa";
 
 CapVertices::usage = "Vertices of the cap of sofa";
+
+SofaVertices::usage = "All vertices of a sofa";
 
 Monotonize::usage = "Monotonize a sofa";
 
@@ -64,6 +66,7 @@ SofaLineD[sofa_Sofa,i_]:=HalfLine[SofaX[sofa,i],-SofaU[sofa,i]]
 (******** Computing niche ********)
 
 (* i==0 -> horizontal line, i==-1 -> the slanted side of parallelogram *)
+(* Bottleneck *)
 nicheLine[sofa_Sofa,i_]:=With[{n=SofaN[sofa]},
 	If[i>=0,
 	Replace[SofaLineD[sofa,i],HalfLine[p_,v_]:>InfiniteLine[p,-v]],
@@ -82,34 +85,66 @@ lineIntersection[nicheLine[sofa,i],nicheLine[sofa,j]];
 nodes[sofa_,polyline_]:=
 lineIntersection@@@Partition[nicheLine[sofa,#]&/@polyline,2,1];
 
-firstNode[_,{line_}]:={Infinity,0};
-firstNode[sofa_,polyline_]:=nicheIntersection[sofa,polyline[[1]],polyline[[2]]];
+reportIntervals[sofa_Sofa, pl1_, pl2_] :=
+  reportIntervalsLoopIterative[sofa, pl1, pl2]
+  
+firstNodeIterative[sofa_Sofa,i_,pl_,sz_]:=
+  If[i<sz,nicheIntersection[sofa,pl[[i]],pl[[i+1]]],{Infinity,0}]
 
-reportIntervals[_,prevX_,{aFirst_Integer},{bFirst_Integer}]:={{{prevX,Infinity},{aFirst,bFirst}}};
-reportIntervals[sofa_,prevX_,a:{aFirst_Integer,aRest___},b:{bFirst_Integer,bRest___}]:=
-With[{curX=Min[First@firstNode[sofa,a],First@firstNode[sofa,b]]},
-Prepend[
-If[First@firstNode[sofa,a]<First@firstNode[sofa,b],
-reportIntervals[sofa,curX,{aRest},b],
-reportIntervals[sofa,curX,a,{bRest}]
-],
-{{prevX,curX},{aFirst,bFirst}}
+(* Bottleneck *)
+lineTensors[sofa_Sofa]:=Module[{n,tensor},
+n=SofaN[sofa];
+tensor=Table[List@@nicheLine[sofa,i],{i,-n-1,n}];
+Transpose@N@{tensor[[All,1,1]],tensor[[All,1,2]],tensor[[All,2,1]],tensor[[All,2,2]]}
 ]
-];
 
-handleInterval[sofa_,{{t1_,t2_},{l1_Integer,l2_Integer}}]:=
-With[{inter=nicheIntersection[sofa,l1,l2],a=Min[l1,l2],b=Max[l1,l2]},
-Which[inter===Null,{b},
-First@inter<=t1,{b},
-First@inter<t2,{a,b},
-True,{a}
+nicheIntersectionFast = Compile[
+  {{T, _Real, 2},{n, _Integer},{ii, _Integer}, {jj, _Integer}},
+  Module[{i=ii+n+2,j=jj+n+2},
+  Module[{p=T[[i,1]],q=T[[i,2]],r=T[[i,3]],s=T[[i,4]],a=T[[j,1]],b=T[[j,2]],c=T[[j,3]],d=T[[j,4]]},
+  {(b c r-a d r-c q r+c p s)/(-d r+c s),(d q r-b c s+a d s-d p s)/(d r-c s)}
+  ]],CompilationTarget->"C",RuntimeOptions -> "Speed"
 ]
-];
 
-polylineUnion[sofa_,polyline1_,polyline2_]:=
-ReplaceRepeated[
-Flatten[handleInterval[sofa,#]&/@reportIntervals[sofa,-Infinity,polyline1,polyline2]],
-{{a___,x_,x_,b___}:>{a,x,b},{a___,x_,_,x_,b___}:>{a,x,b}}];
+nicheIntersectionFastX = Compile[
+  {{T, _Real, 2},{n, _Integer},{ii, _Integer}, {jj, _Integer}},
+  Module[{i=ii+n+2,j=jj+n+2},
+  Module[{p=T[[i,1]],q=T[[i,2]],r=T[[i,3]],s=T[[i,4]],a=T[[j,1]],b=T[[j,2]],c=T[[j,3]],d=T[[j,4]]},
+  ((b c -a d) r-c (q r- p s))/(-d r+c s)
+  ]],CompilationTarget->"C",RuntimeOptions -> "Speed"
+]
+
+reportIntervalsLoopFast = Compile[
+  {{T, _Real, 2},{n, _Integer},{pl1, _Integer, 1}, {pl2, _Integer, 1}},
+	Module[{curX=-$MaxMachineNumber, 
+    nxtX1=0.0, nxtX2=0.0, nxtX=0.0, inter=0.0,
+    i1=1, i2=1, l1=0, l2=0, a=0, b=0, sz1=Length[pl1], sz2=Length[pl2],
+    result=Table[0,{i,1,2*(Length[pl1]+Length[pl2]-1)}],
+    rsize=0},
+    (*Iterate thorugh intervals, for each the region is trapezoid*)
+    While[i1<=sz1 && i2<=sz2,
+      l1=pl1[[i1]];l2=pl2[[i2]];
+	  nxtX1=If[i1<sz1,nicheIntersectionFastX[T,n,l1,pl1[[i1+1]]],$MaxMachineNumber];
+	  nxtX2=If[i2<sz2,nicheIntersectionFastX[T,n,l2,pl2[[i2+1]]],$MaxMachineNumber];
+	  nxtX=Min[nxtX1,nxtX2];
+	  inter=nicheIntersectionFastX[T,n,l1,l2];
+	  {a,b}={Min[l1,l2],Max[l1,l2]};
+	  (*For each interval, determine which edges are on top*)
+	  Which[
+	    inter<=curX,result[[++rsize]]=b,
+		inter<nxtX,result[[++rsize]]=a;result[[++rsize]]=b,
+		True,result[[++rsize]]=a
+	  ];
+	  curX=nxtX;
+	  If[nxtX1<nxtX2,i1++,i2++];];
+	result[[;;rsize]]
+  ],
+  CompilationTarget->"C",RuntimeOptions -> "Speed",
+  CompilationOptions -> {"InlineExternalDefinitions" -> True,"InlineCompiledFunctions" -> True}]
+
+polylineUnion[T_,n_][{polyline1_,polyline2_}]:=
+  ReplaceRepeated[reportIntervalsLoopFast[T,n,polyline1,polyline2],
+    {{a___,x_,x_,b___}:>{a,x,b},{a___,x_,_,x_,b___}:>{a,x,b}}];
 
 drawPolyline[sofa_,{a_}]:=nicheLine[sofa,a];
 drawPolyline[sofa_,p:{a_,b___,c_}]:=
@@ -119,12 +154,14 @@ nds=nodes[sofa,p];
 
 mergeFold[_,{a_}]:=a
 mergeFold[f_,l_]:=If[Mod[Length[l],2]==0,
-mergeFold[f,f@@@Partition[l,2]],
-mergeFold[f,Append[f@@@Partition[Most@l,2],Last@l]]];
+  mergeFold[f,BlockMap[f,l,2]],
+  mergeFold[f,Append[BlockMap[f,l,2],Last@l]]];
 
-NicheIndices[sofa:Sofa[b_,_,_]]:=mergeFold[polylineUnion[sofa,#1,#2]&,
-Prepend[Table[{i,i-SofaN[sofa]-1},{i,1,SofaN[sofa]-1}],
-If[b===Pi/2,{0},{-1,0}]]];
+NicheIndices[sofa:Sofa[b_,_,_]]:=
+Module[{T=lineTensors[sofa],n=SofaN[sofa]},
+mergeFold[polylineUnion[T,n],
+Prepend[Table[{i,i-n-1},{i,1,n-1}],
+If[b===Pi/2,{0},{-1,0}]]]];
 
 NicheLines[sofa_Sofa]:=drawPolyline[sofa,NicheIndices[sofa]];
 
@@ -151,6 +188,8 @@ Table[SofaLineC[sofa,i],{i,If[b===Pi/2,1,0],n}],
 {InfiniteLine[{0,0},{-Sin[b],Cos[b]}]}]],
 2,1]]
 
+SofaVertices[sofa_Sofa]:=Join[CapVertices[sofa],NicheVertices[sofa]]
+
 support[points_,angle_]:=Max[# . {Cos[angle],Sin[angle]}&/@points]
 
 xFromCapVertices[points_,angle_]:=
@@ -167,6 +206,4 @@ Monotonize[sofa:Sofa[b_,angles_,xValues_]]:=
 
 End[]
 EndPackage[]
-
-
 
