@@ -1,5 +1,8 @@
 Goal Jan 9 - 14: Reduce bound of $h_K(t)$ to concrete calculations in `SofaDesinger`. The writing could be rough, but should be 'fixable' with only minor adjustments.
 
+- [ ] Check preliminary calculations on gap
+	- Simple and naive gap bound
+
 
 
 - [ ] Make pictures of how `SofaDesigner` work
