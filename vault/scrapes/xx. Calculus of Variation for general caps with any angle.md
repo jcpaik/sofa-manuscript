@@ -65,11 +65,11 @@ $$
  + \frac{1}{2}\left( p_K(0) + p_K(\omega + \pi/2) \right) + \left( I(\mathbf{y}_K) - I(\mathbf{x}_K) \right) 
 \end{gather}
 $$
-As $h^+_K, \tau_K$, and the last term are convex-linear with respect to $K$, $\mathcal{A}_1$ is negative semidefinite using [[01. Space of Caps#^lem-negative-semidefinite]]. □
+As $h^+_K, \tau_K$, and the last term are convex-linear with respect to $K$, $\mathcal{A}_1$ is negative semidefinite using [[02. Space of Caps#^lem-negative-semidefinite]]. □
 
 > __Theorem [maximum-presofa-a1].__ The cap $K_1 \in \mathcal{K}_{\omega}$ attains the maximum value of $\mathcal{A}_1$. ^thm-maximum-presofa-a1
 
-_Proof._ By [[01. Space of Caps#^thm-variation-maximizer]] and [[#^thm-variation-a1]] it suffice to check that $\beta_{K_1}(dt) = i_{K_1}(t)dt$ on $J_\omega$ except for the points $t = \omega, \pi/2$. Take any $t \in (0, \omega)$, then we have the following.
+_Proof._ By [[02. Space of Caps#^thm-variation-maximizer]] and [[#^thm-variation-a1]] it suffice to check that $\beta_{K_1}(dt) = i_{K_1}(t)dt$ on $J_\omega$ except for the points $t = \omega, \pi/2$. Take any $t \in (0, \omega)$, then we have the following.
 $$
 \begin{align*}
 g^+_K(t) & = \int_{u \in (t, t+\pi/2]} \cos (u-t)\, \beta(du) \\
