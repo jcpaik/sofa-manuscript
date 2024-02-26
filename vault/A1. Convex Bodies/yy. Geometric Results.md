@@ -97,9 +97,3 @@ The following theorem is a special case of Green's theorem.
 $$
 \left| \mathcal{B}(J) \right| = I(\mathbf{x})
 $$
-
-Any Jordan curve is either positively or negatively oriented. Although we won't provide the precise definition of the orientation of a Jordan curve (e.g. [[@apostolMathematicalAnalysisModern]]), we use the following lemma to determine the orientation of a Jordan curve.
-
-> __Lemma [orientation].__ Let $p$ and $q$ be two different points of $\mathbb{R}^2$. Define the closed half-planes $H_0$ and $H_1$ as the closed half-planes separated by the line $l$ connecting $p$ and $q$, so that for any point $x$ in the interior of $H_0$ (resp. $H_1$) the points $x, p, q$ are in clockwise (resp. counterclockwise) order. If a Jordan curve $J$ consists of the join of two arcs $\Gamma_0$ and $\Gamma_1$, where $\Gamma_0$ connects $p$ to $q$ inside $H_0$, and $\Gamma_1$ connects $q$ to $p$ inside $H_1$, then $J$ is positively oriented. ^lem-orientation
-
-_Proof._ (sketch) We first show that it is safe to assume the case where $J$ only intersects $l$ at two points $p$ and $q$. Observe that $H_i$ has a deformation retract to some subset $S_i \subseteq H_i$ with $S_i \cap l = \left\{ p, q \right\}$ (push the three segments of $l \setminus \{p, q\}$ towards the interior of $H_i$). Using the retracts, we may continuously deform the arcs $\Gamma_0$ and $\Gamma_1$ inside $S_0$ and $S_1$ respectively without chainging the orientation of $J$. Now take any point $r$ inside the segment connecting $p$ and $q$. Continuously move a point $x$ inside $J$ in the orientation of $J$ starting with $x = p$. As $x$ moves along $\Gamma_0$ from $p$ to $q$ the argument of $x$ with respect to $r$ increases by $\pi$. And as $x$ moves along $\Gamma_1$ the argument of $x$ with respect to $r$ again increases by $\pi$. So the total increase in the argument of $x \in J$ is $2\pi$ and $J$ is positively oriented. □
