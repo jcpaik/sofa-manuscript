@@ -1,5 +1,3 @@
-> __Definition [j-cap].__ For any $\omega \in [0, \pi/2]$, define the set $J_\omega = [0, \omega] \cup [\pi/2, \omega + \pi/2]$. ^def-j-cap
-
 > __Definition [i-cap].__ For any cap $K \in \mathcal{K}_\omega$, define measurable function $i_K : J_\omega \to \mathbb{R}$ as $i_K(t) = h_K^+(t) - 1$ and $i_K(t + \pi / 2) = g^+_K(t) - 1$ for every $t \in [0, \omega]$. Define $\iota_K$ as the measure on $J_\omega$ with the density function $i_K$. That is, $\iota_K(dt) = i_K(t) dt$. ^def-i-cap
 
 > __Theorem [variation-a1].__ Let $K_1$ and $K_2$ be two caps in $\mathcal{K}_\omega$. Then we have the following. ^thm-variation-a1

@@ -1,5 +1,20 @@
+- [ ] Fill out the details of normal angles of a convex body
+- [ ] Fix concavity of $\mathcal{A}_1$ to currently updated APIs
+- [ ] Fix maximization of $\mathcal{A}_1$ to arbitrary angles, using updated APIs
+- [ ] Fix Gauss-Minkowski on caps
+
+# Angle and Injectivity
+
 - [ ] Check preliminary calculations on gap
-	- Simple and naive gap bound
+	- [ ] Angle
+		- [x] Number check
+		- [ ] Write the check in words in detail
+	- [ ] Injectivity
+		- [ ] Write the explicit theorems
+		- [ ] Number check
+		- [ ] 
+
+# General
 
 - Take rest with NO internet
 	- Reward range
