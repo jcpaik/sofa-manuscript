@@ -1,5 +1,4 @@
 - [ ] Fix maximization of $\mathcal{A}_1$ to arbitrary angles, using updated APIs
-- [ ] Fix Gauss-Minkowski on caps
 
 # Angle and Injectivity
 
