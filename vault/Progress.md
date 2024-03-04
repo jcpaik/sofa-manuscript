@@ -1,4 +1,9 @@
-- [ ] Fix maximization of $\mathcal{A}_1$ to arbitrary angles, using updated APIs
+- [ ] Clearly define a sofa, so that it can admit multiple different movements and rotation angle $\omega$.
+	- [ ] Write ambiguity explicitly
+- [ ] Standard position -> translation
+	- [ ] Propositions without proof -> Write something that makes a first-time reader 
+- [ ] Angle Hypothesis and Injectivity Hypothesis relationship
+
 
 # Angle and Injectivity
 
