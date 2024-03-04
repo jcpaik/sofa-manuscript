@@ -1,5 +1,7 @@
 \documentclass{article}
 
+\usepackage[margin=1in]{geometry}
+
 \usepackage{textcomp}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -22,15 +24,15 @@
 \addbibresource{refs.bib}
 
 \theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{theorem}{Theorem}[subsection]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{proposition}[theorem]{Proposition}
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+\newtheorem{definition}{Definition}[subsection]
 \theoremstyle{remark}
-\newtheorem{remark}{Remark}[section]
+\newtheorem{remark}{Remark}[subsection]
 
 \floatplacement{figure}{h}
 
@@ -45,7 +47,7 @@
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
-\title{Moving a Sofa I: A New Upper Bound of Sofa Area}
+\title{On moving sofas I: A new area upper bound via calculus of variation on convex bodies}
 
 \author{Jineon Baek}
 % \address{University of Michigan, Department of Mathematics,
@@ -60,7 +62,7 @@
 \tableofcontents
 
 \begin{abstract}
-This is a work-in-progress draft. DO NOT DISTRIBUTE without the author's approval.
+This is a work-in-progress draft. \textcolor{red}{DO NOT DISTRIBUTE} without the author's approval.
 \end{abstract}
 
 \input{out.tex}
