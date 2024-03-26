@@ -1,0 +1,10 @@
+- [ ] Write introduction
+	- [ ] Describe piecewise-quadratic polynomial upper bound
+	- [ ] Show that we can compute each piece optimum by executing QP
+	- [ ] Say that its real use is to prove linear inequalities on the cap space. Its real application will be to show the angle and injectivity hypothesis.
+- [ ] Describe polygon upper bound
+	- [ ] The coordinate system of $\mathcal{K}_\Theta$
+- [ ] Describe `sprove`
+	- [ ] Say that the file formats are described in much detail in a github repository.
+- [ ] Describe `sbranch`
+	- [ ] So much details here...
