@@ -1,3 +1,9 @@
+What should be the focus of this paper?
+- (Hopefully) publish this at SoCG
+- Open up an API that subsequent papers can access and handle without much difficulty
+
+
+
 - [ ] Write introduction
 	- [ ] Describe piecewise-quadratic polynomial upper bound
 	- [ ] Show that we can compute each piece optimum by executing QP
