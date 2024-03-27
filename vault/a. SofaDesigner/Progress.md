@@ -1,5 +1,7 @@
 What should be the focus of this paper?
 - (Hopefully) publish this at SoCG
+	- Needs to be under 15 pages.
+	- What is the focus of SoCG? They seem to require only 'interesting' proofs.
 - Open up an API that subsequent papers can access and handle without much difficulty
 
 
