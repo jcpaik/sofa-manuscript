@@ -27,7 +27,17 @@ $$
 $$
 > ^thm-nef-polygon-area-diff
 
+> __Lemma [nef-polygon-half-plane].__ Let $H_0 = H(t, h)$ be a half-plane with boundary $l_0$. Let $X = \mathcal{E}_X(H_1, \dots, H_m)$ be a (not necessarily simple) Nef polygon defined with $m$ closed half-planes $H_i$ with boundaries $l_i$ different from $l_0$. Then there exists an absolute constant $\epsilon = \epsilon(H_0, X) > 0$ such that the following holds. Let $\delta$ be a real value with absolute value less than $\epsilon$. Let $H_0' = H(t, h + \delta)$. Then
+$$
+|H_0' \cap X| = |H_0 \cap X| + \mathcal{H}^1(l_0 \cap X) \delta + O(\delta^2)
+$$
+> ^lem-nef-polygon-half-plane
 
+_Proof._ Let $\mathcal{L}$ be the collection $\left\{ l_1, \dots, l_n \right\}$ of the boundaries of $H_i$ for all $1 \leq i \leq n$. Since no lines in $\mathcal{L}$ is equal to $l_0$, the line $l_0$ intersected with the union $\cup \mathcal{L}$ of all lines in $\mathcal{L}$ is a finite set of points. Thus, without loss of generality we can replace $X$ with $X \setminus \cup \mathcal{L}$. After doing so, $X$ is a disjoint union of at most $2^m$ open and convex polygons. Using additivity of measures, we can assume that each $X$ is an open convex polygon with boundaries different from $l_0$.
+
+Assuming this, we now have that the function $f(x) = \mathcal{H}^1(l(t, x) \cap X)$ is a Lipschitz function with respect to $x$ near $x = h$, since the boundaries of $X$ are not equal to $l_0 = l(t, h)$. Moreover, we have $|H(t, x)| = \int_{-\infty}^x f(u)\,du$. □
+
+The following [[b. Angle Hypothesis/Polygon#^lem-nef-polygon-single-edge]] is a special case of [[b. Angle Hypothesis/Polygon#^thm-nef-polygon-area-diff]] where we set $\delta_i = 0$ for all index $i$ except for $i=j$.
 
 > __Lemma [nef-polygon-single-edge].__ Let $P = \mathcal{E}_P(H_1, \dots, H_n)$ be a simple Nef polygon defined with $n$ closed half-planes $H_i = H(t_i, h_i)$ for $1 \leq i \leq n$, each of different boundary $l_i$. Take an arbitrary index $1 \leq j \leq n$. There exists an absolute constant $\epsilon_j = \epsilon_j(P, j) > 0$ such that the following holds. Let $\delta_j$ be a real value with absolute value less than $\epsilon_j$. Define $P'_j = \mathcal{E}_P(H_1, \dots, H_{j-1}, H_j', H_{j+1}, \dots, H_n)$ with $H_j' = H(t_j, h_j + \delta_j)$. 
 $$
@@ -35,12 +45,24 @@ $$
 $$
 > ^lem-nef-polygon-single-edge
 
-> __Lemma [nef-polygon-half-plane].__ Let $H_0 = H(t, h)$ be a half-plane with boundary $l_0$. Let $X = \mathcal{E}_X(H_1, \dots, H_m)$ be a (not necessarily simple) Nef polygon defined with $m$ closed half-planes $H_i$ with boundaries $l_i$ different from $l_0$. Then there exists an absolute constant $\epsilon = \epsilon(H_0, X) > 0$ such that the following holds. Let $\delta$ be a real value with absolute value less than $\epsilon$. Let $H_0' = H(t, h + \delta)$. Then
-$$
-|H_0' \cap X| = |H_0 \cap X| + \mathcal{H}^1(l_0 \cap X) \delta + O(\delta^2)
-$$
-> ^lem-nef-polygon-half-plane
+_Proof._ Let $\mathcal{L}$ be the collection of all boundaries $l_i$ for $i \neq j$. Then the union $\cup \mathcal{L}$ divides the plane $\mathbb{R}^2$ into open convex polygons $R_1, R_2, \dots, R_N$ with $N \leq 2^{n-1}$. Since 
 
-_Proof._ Let $\mathcal{L}$ be the collection $\left\{ l_1, \dots, l_n \right\}$ of the boundaries of $H_i$ for all $1 \leq i \leq n$. Since no lines in $\mathcal{L}$ is equal to $l_0$, the line $l_0$ intersected with the union $\bigcup \mathcal{L}$ of all lines in $\mathcal{L}$ is a finite set of points. Thus, without loss of generality we can replace $X$ with $X \setminus \bigcup \mathcal{L}$. After doing so, $X$ is a disjoint union of at most $2^m$ open and convex polygons. Using additivity of measures, we can assume that each $X$ is an open convex polygon with boundaries different from $l_0$.
+□
 
-Assuming this, we now have that the function $f(x) = \mathcal{H}^1(l(t, x) \cap X)$ is a Lipschitz function with respect to $x$ near $x = h$, since the boundaries of $X$ are not equal to $l_0 = l(t, h)$. Moreover, we have $|H(t, x)| = \int_{-\infty}^x f(u)\,du$. □
+> __Proposition [cap-nef-polygon].__ The cap $K \in \mathcal{K}_\Theta$ is a simple Nef polygon with expression
+$$
+K = H(\omega + \pi, 0) \cap H(3\pi/2, 0) \cap \bigcap_{t \in \Theta} H(p_K(t), t) \cap H(p_K(t + \pi/2), t + \pi/2).
+$$
+> ^pro-cap-nef-polygon
+
+> __Proposition [niche-nef-polygon].__ The niche $\mathcal{N}_\Theta(K)$ of cap $K \in \mathcal{K}_\Theta$ is a simple Nef polygon with expression
+$$
+\begin{align*}
+\mathcal{N}_\Theta(K) & = H(\omega + \pi, 0) \cap H(3\pi/2, 0) \cap \phantom{0} \\
+& \phantom{=} \bigcup_{t \in \Theta} (\mathbb{R}^2 \setminus H(p_K(t) - 1, t)) \cap H(p_K(t + \pi/2) - 1, t + \pi/2).
+\end{align*}
+$$
+> ^pro-niche-nef-polygon
+
+> __Theorem [polygon-upper-bound-continuous].__ The polygon 
+> ^thm-polygon-upper-bound-continuous
