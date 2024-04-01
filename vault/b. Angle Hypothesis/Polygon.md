@@ -1,6 +1,9 @@
 > __Definition [boolean-function].__ An _$n$-ary boolean function_ $\mathcal{E}$ is a function from $\left\{ 0, 1 \right\}^n$ to $\left\{ 0, 1 \right\}$.
 > ^def-boolean-function
 
+> __Definition [indicator-function].__ For any $X \subseteq \mathbb{R}^2$, define the indicator function $1_X : \mathbb{R}^2 \to \left\{ 0, 1 \right\}$ as $1_X(p) = 0$ if $p \not\in X$ and $1_X(p) = 1$ if $p \in X$.  
+> ^def-indicator-function
+
 > __Definition [nef-polygon].__ A _nef polygon_ is a set $X \subseteq \mathbb{R}^2$ such that there exists an $n$-ary boolean function $\mathcal{E}$ and $n$ closed half-planes, so that 
 $$
 \mathcal{E}(H_1, \dots, H_n) := \left\{ p \in \mathbb{R}^2 :  \right\} 
