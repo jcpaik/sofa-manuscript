@@ -1,4 +1,4 @@
-A _Nef polygon_ is a subset of $\mathbb{R}^2$ that can be obtained by applying a finite number of boolean operations (e.g. taking complement $X \mapsto \mathbb{R}^2 \setminus X$ or intersection $(X_1, X_2) \mapsto X_1 \cap X_2$) to a finite collection of given closed half-spaces.
+A _Nef polygon_ is a subset of $\mathbb{R}^2$ that can be obtained by applying a finite number of boolean operations (e.g. taking complement $\mathbb{R}^2 \setminus X$ of a set $X$, or taking the intersection $X_1 \cap X_2$ of two sets $X_1, X_2$) to a finite collection of given closed half-spaces.
 
 > __Definition [boolean-function].__ Let $\textsf{true}$ and $\textsf{false}$ be the constants denoting the truthness of a predicate (e.g. $1+1=2$ is $\textsf{true}$ but $1 + 2 = 4$ is $\textsf{false}$). An _$n$-ary boolean function_ $\mathcal{E}$ is a function from $\left\{ \textsf{true}, \textsf{false} \right\}^n$ to $\left\{ \textsf{true}, \textsf{false} \right\}$.
 > ^def-boolean-function
