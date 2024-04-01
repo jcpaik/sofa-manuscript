@@ -1,4 +1,4 @@
-A _Nef polygon_ is a subset of $\mathbb{R}^2$ that can be obtained by applying a finite number of boolean operations (e.g. taking complement $\mathbb{R}^2 \setminus X$ of a set $X$, or taking the intersection $X_1 \cap X_2$ of two sets $X_1, X_2$) to a finite collection of given closed half-spaces.
+Here, we rigorously justify a theorem ([[#^thm-nef-polygon-area-diff]]) that captures the balancedness argument of Gerver using Nef polygons. A _Nef polygon_ is a subset of $\mathbb{R}^2$ that can be obtained by applying a finite number of boolean operations (e.g. taking complement $\mathbb{R}^2 \setminus X$ of a set $X$, or taking the intersection $X_1 \cap X_2$ of two sets $X_1, X_2$) to a finite collection of given closed half-spaces.
 
 > __Definition [boolean-function].__ Let $\textsf{true}$ and $\textsf{false}$ be the constants denoting the truthness of a predicate (e.g. $1+1=2$ is $\textsf{true}$ but $1 + 2 = 4$ is $\textsf{false}$). An _$n$-ary boolean function_ $\mathcal{E}$ is a function from $\left\{ \textsf{true}, \textsf{false} \right\}^n$ to $\left\{ \textsf{true}, \textsf{false} \right\}$.
 > ^def-boolean-function
@@ -19,14 +19,21 @@ A line $l$ in $\mathbb{R}^2$ is a Nef polygon, since we can intersect the two cl
 
 We can spell out the idea used in balancedness condition rigorously.
 
-> __Theorem [nef-polygon-intersection-area].__ Let $P = \mathcal{E}_P(H_1, \dots, H_n)$ be a simple Nef polygon defined with $n$ closed half-planes $H_1, \dots, H_n$ of different boundaries $l_1, \dots, l_n$. Let $\mathcal{L}_P$ be the collection of boundaries of $H_i$.
+> __Theorem [nef-polygon-area-diff].__ Let $P = \mathcal{E}_P(H_1, \dots, H_n)$ be a simple Nef polygon defined with $n$ closed half-planes $H_i = H(t_i, h_i)$ for $1 \leq i \leq n$, each of different boundary $l_i$. Then there is an absolute constant $\epsilon = \epsilon(P) > 0$ such that the following holds.
 > 
-> Let $X = \mathcal{E}_X(G_1, \dots, G_m)$ be a Nef polygon which is not necessarily simple. Let $\mathcal{L}_X$ be the collection of boundaries of $H_j'$. Assume that $\mathcal{L}_P$ and $\mathcal{L}_X$ are disjoint.
-> 
-> There is an absolute constant $\epsilon = \epsilon(P, X) > 0$ such that the following holds. Let $\delta_1, \dots, \delta_n$ be real values with absolute value less than $\epsilon$. Define $P' = \mathcal{E}_P(H_1', \dots, H_n')$ where $H_i' = H(t_i, h_i + \delta_i)$. Then we have
+> Let $\delta_1, \dots, \delta_n$ be real values with absolute value less than $\epsilon$. Define $P' = \mathcal{E}_P(H_1', \dots, H_n')$ where $H_i' = H(t_i, h_i + \delta_i)$  for $1 \leq i \leq n$. Then we have
 $$
-\left| P' \cap X \right| = |P \cap X| + \sum_{i=1}^n \mathcal{H}^1(\partial P \cap l_i \cap X) \cdot \delta_i + O(\delta_1^2 + \delta_2^2 + \dots + \delta_n^2).
+\left| P' \right| = |P| + \sum_{i=1}^n \mathcal{H}^1(\partial P \cap l_i ) \cdot \delta_i + O(\delta_1^2 + \delta_2^2 + \dots + \delta_n^2).
 $$
-> ^thm-nef-polygon-intersection-area
+> ^thm-nef-polygon-area-diff
+
+> __Lemma [nef-polygon-single-edge].__ Let $P = \mathcal{E}_P(H_1, \dots, H_n)$ be a simple Nef polygon defined with $n$ closed half-planes $H_i = H(t_i, h_i)$ for $1 \leq i \leq n$, each of different boundary $l_i$. Take an arbitrary index $1 \leq j \leq n$. There exists an absolute constant $\epsilon_j = \epsilon_j(P, j) > 0$ such that the following holds. Let $\delta_j$ be a real value with absolute value less than $\epsilon_j$. Define $P'_j = \mathcal{E}_P(H_1, \dots, H_{j-1}, H_j', H_{j+1}, \dots, H_n)$ with $H_j' = H(t_j, h_j + \delta_j)$. 
+$$
+\left| P'_j \right| = |P| + \mathcal{H}^1(\partial P \cap l_j) + O(\delta_j^2)
+$$
+> ^lem-nef-polygon-single-edge
+
+> __Lemma [nef-polygon-half-plane].__ Let $H_0 = H(t, h)$ be a half-plane with boundary $l_0$. Let $X = \mathcal{E}_X(H_1, \dots, H_m)$ be a Nef polygon defined with $m$ closed half-planes $H_i$ with boundaries different from $l_0$. Then 
+> ^lem-nef-polygon-half-plane
 
 _Proof._  □
