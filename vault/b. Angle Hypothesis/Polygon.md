@@ -10,14 +10,14 @@ $$
 > Call any such set $X = \mathcal{E}(H_1, \dots, H_n)$ a _Nef polygon_.
 > ^def-nef-polygon
 
-We introduce the notion of a _simple_ Nef polygon. 
+For our use, we introduce the notion of a _simple_ Nef polygon.
 
 > __Definition [simple-nef-polygon].__ Call a Nef polygon $X$ _simple_ if $X = \mathcal{E}(H_1, \dots, H_n)$ for an $n$-ary boolean function $\mathcal{E}$ and closed half-planes $H_1, \dots, H_n$ with different boundaries $l_1, \dots, l_n$.
 > ^def-simple-nef-polygon
 
 A line $l$ in $\mathbb{R}^2$ is a Nef polygon, since we can intersect the two closed half-planes $H_l^+$ and $H_l^-$ with boundary $l$ to express $l = H_l^+ \cap H_l^-$. However, $l$ is not simple because the half-planes $H_l^+$ and $H_l^-$ used in the expression of $l$ use the same boundary. On the other hand, the cap $K$ and the polygon niche $\mathcal{N}_\Theta(K)$ of $K$ is are simple Nef polygons. 
 
-We can spell out the idea used in balancedness condition rigorously.
+Using [[b. Angle Hypothesis/Polygon#^def-simple-nef-polygon]], we can spell out the idea used in balancedness condition precisely.
 
 > __Theorem [nef-polygon-area-diff].__ Let $P = \mathcal{E}_P(H_1, \dots, H_n)$ be a simple Nef polygon defined with $n$ closed half-planes $H_i = H(t_i, h_i)$ for $1 \leq i \leq n$, each of different boundary $l_i$. Then there is an absolute constant $\epsilon = \epsilon(P) > 0$ such that the following holds.
 > 
@@ -27,13 +27,20 @@ $$
 $$
 > ^thm-nef-polygon-area-diff
 
+
+
 > __Lemma [nef-polygon-single-edge].__ Let $P = \mathcal{E}_P(H_1, \dots, H_n)$ be a simple Nef polygon defined with $n$ closed half-planes $H_i = H(t_i, h_i)$ for $1 \leq i \leq n$, each of different boundary $l_i$. Take an arbitrary index $1 \leq j \leq n$. There exists an absolute constant $\epsilon_j = \epsilon_j(P, j) > 0$ such that the following holds. Let $\delta_j$ be a real value with absolute value less than $\epsilon_j$. Define $P'_j = \mathcal{E}_P(H_1, \dots, H_{j-1}, H_j', H_{j+1}, \dots, H_n)$ with $H_j' = H(t_j, h_j + \delta_j)$. 
 $$
 \left| P'_j \right| = |P| + \mathcal{H}^1(\partial P \cap l_j) + O(\delta_j^2)
 $$
 > ^lem-nef-polygon-single-edge
 
-> __Lemma [nef-polygon-half-plane].__ Let $H_0 = H(t, h)$ be a half-plane with boundary $l_0$. Let $X = \mathcal{E}_X(H_1, \dots, H_m)$ be a Nef polygon defined with $m$ closed half-planes $H_i$ with boundaries different from $l_0$. Then 
+> __Lemma [nef-polygon-half-plane].__ Let $H_0 = H(t, h)$ be a half-plane with boundary $l_0$. Let $X = \mathcal{E}_X(H_1, \dots, H_m)$ be a (not necessarily simple) Nef polygon defined with $m$ closed half-planes $H_i$ with boundaries $l_i$ different from $l_0$. Then there exists an absolute constant $\epsilon = \epsilon(H_0, X) > 0$ such that the following holds. Let $\delta$ be a real value with absolute value less than $\epsilon$. Let $H_0' = H(t, h + \delta)$. Then
+$$
+|H_0' \cap X| = |H_0 \cap X| + \mathcal{H}^1(l_0 \cap X) \delta + O(\delta^2)
+$$
 > ^lem-nef-polygon-half-plane
 
-_Proof._  □
+_Proof._ Let $\mathcal{L}$ be the collection $\left\{ l_1, \dots, l_n \right\}$ of the boundaries of $H_i$ for all $1 \leq i \leq n$. Since no lines in $\mathcal{L}$ is equal to $l_0$, the line $l_0$ intersected with the union $\bigcup \mathcal{L}$ of all lines in $\mathcal{L}$ is a finite set of points. Thus, without loss of generality we can replace $X$ with $X \setminus \bigcup \mathcal{L}$. After doing so, $X$ is a disjoint union of at most $2^m$ open and convex polygons. Using additivity of measures, we can assume that each $X$ is an open convex polygon with boundaries different from $l_0$.
+
+Assuming this, we now have that the function $f(x) = \mathcal{H}^1(l(t, x) \cap X)$ is a Lipschitz function with respect to $x$ near $x = h$, since the boundaries of $X$ are not equal to $l_0 = l(t, h)$. Moreover, we have $|H(t, x)| = \int_{-\infty}^x f(u)\,du$. □
