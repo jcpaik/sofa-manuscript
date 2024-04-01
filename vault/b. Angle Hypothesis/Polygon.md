@@ -10,9 +10,9 @@ $$
 > Call any such set $X = \mathcal{E}(H_1, \dots, H_n)$ a _Nef polygon_.
 > ^def-nef-polygon
 
-We introduce the following 
+We introduce the notion of a _simple_ Nef polygon. 
 
-> __Definition [simple-nef-polygon].__ Call a nef polygon $X$ _simple_ if $X = \mathcal{E}(H_1, \dots, H_n)$ for an $n$-ary boolean function $\mathcal{E}$ and closed half-planes $H_1, \dots, H_n$ with different boundaries $l_1, \dots, l_n$.
+> __Definition [simple-nef-polygon].__ Call a Nef polygon $X$ _simple_ if $X = \mathcal{E}(H_1, \dots, H_n)$ for an $n$-ary boolean function $\mathcal{E}$ and closed half-planes $H_1, \dots, H_n$ with different boundaries $l_1, \dots, l_n$.
 > ^def-simple-nef-polygon
 
 A single line $l$ of $\mathbb{R}^2$ is a Nef polygon, since we can intersect the two half-planes $H_l^+$ and $H_l^-$ with boundary $l$ to express $l = H_l^+ \cap H_l^-$. However, $l$ is not simple because the half-planes $H_l^+$ and $H_l^-$ used in the expression of $l$ use the same boundary. On the other hand, the cap $K$ and the polygon niche $\mathcal{N}_\Theta(K)$ of $K$ is are simple Nef polygons. 
