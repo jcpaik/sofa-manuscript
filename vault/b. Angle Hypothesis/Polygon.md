@@ -3,7 +3,7 @@ Here, we rigorously justify a theorem ([[#^thm-nef-polygon-area-diff]]) that cap
 > __Definition [boolean-function].__ Let $\textsf{true}$ and $\textsf{false}$ be the constants denoting the truthness of a predicate (e.g. $1+1=2$ is $\textsf{true}$ but $1 + 2 = 4$ is $\textsf{false}$). An _$n$-ary boolean function_ $\mathcal{E}$ is a function from $\left\{ \textsf{true}, \textsf{false} \right\}^n$ to $\left\{ \textsf{true}, \textsf{false} \right\}$.
 > ^def-boolean-function
 
-> __Definition [nef-polygon].__ For any $n$-ary boolean function $\mathcal{E}$ and $n$ closed half-planes, define the set 
+> __Definition [nef-polygon].__ For any $n$-ary boolean function $\mathcal{E}$ and $n$ closed half-planes $H_1, \dots, H_n$ of $\mathbb{R}^2$, define the set 
 $$
 \mathcal{E}(H_1, \dots, H_n) := \left\{ p \in \mathbb{R}^2 : \mathcal{E}(p \in H_1, \dots,p \in H_n) \text{ is } \textsf{true} \right\}.
 $$
