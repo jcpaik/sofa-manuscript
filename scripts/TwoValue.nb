@@ -1,0 +1,319 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12196,        309]
+NotebookOptionsPosition[     11161,        286]
+NotebookOutlinePosition[     11557,        302]
+CellTagsIndexPosition[     11514,        299]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{"t1", "\[IndentingNewLine]", "t2"}], "Input",
+ CellChangeTimes->{{3.921102437105283*^9, 
+  3.921102438321889*^9}},ExpressionUUID->"34eb5297-950e-4800-af67-\
+71907c3def48"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"u", "[", "t_", "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Cos", "[", "t", "]"}], ",", 
+    RowBox[{"Sin", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v", "[", "t_", "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"Sin", "[", "t", "]"}]}], ",", 
+    RowBox[{"Cos", "[", "t", "]"}]}], "}"}]}]}], "Input",
+ CellChangeTimes->{{3.921102442829729*^9, 3.9211024538560762`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"9f2d95ba-1777-47e0-aecf-d72bcef536ff"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"x", "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "h"}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.921102476639214*^9, 3.921102478129171*^9}, {
+  3.921102629039504*^9, 3.921102630456522*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"1797ffe8-8dee-4d9d-9868-accd6f03a7de"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a0", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"x", ".", 
+         RowBox[{"u", "[", "t1", "]"}]}], "+", "1"}], ")"}], "/", 
+      RowBox[{"Cos", "[", "t1", "]"}]}], ",", "0"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a1", "=", 
+   RowBox[{"a0", "+", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"Tan", "[", "t1", "]"}]}], ",", "1"}], "}"}]}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.9211026707873898`*^9, 3.921102693356893*^9}, {
+  3.921102765645261*^9, 3.9211028432821007`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"c1c24baa-ddf8-4d68-adc9-23c704157e58"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c0", "=", 
+   RowBox[{"-", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"x", ".", 
+          RowBox[{"u", "[", 
+           RowBox[{
+            RowBox[{"Pi", "/", "2"}], "-", "t2"}], "]"}]}], "+", "1"}], ")"}],
+        "/", 
+       RowBox[{"Cos", "[", 
+        RowBox[{
+         RowBox[{"Pi", "/", "2"}], "-", "t2"}], "]"}]}], ",", "0"}], 
+     "}"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c1", "=", 
+   RowBox[{"c0", "+", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Tan", "[", 
+       RowBox[{
+        RowBox[{"Pi", "/", "2"}], "-", "t2"}], "]"}], ",", "1"}], "}"}]}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.921102872239415*^9, 3.9211028852656803`*^9}, {
+  3.9211029182408543`*^9, 3.921102935727146*^9}, {3.9211030336287203`*^9, 
+  3.921103040120088*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"e59578a6-9f46-4c07-b699-4b024cea54e8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Polygon", "[", 
+   RowBox[{"{", 
+    RowBox[{"a0", ",", "a1", ",", "c1", ",", "c0"}], "}"}], "]"}], "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"h", "->", "0"}], ",", 
+    RowBox[{"t1", "->", 
+     RowBox[{"Pi", "/", "6"}]}], ",", 
+    RowBox[{"t2", "->", 
+     RowBox[{"Pi", "/", "3"}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.921102973295092*^9, 3.921103013866077*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"da08754f-c5fd-4c88-a0a2-9ffd9ab7a41b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["Polygon",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = True, Typeset`embedState$$ = "Ready", 
+    Typeset`spolygon$$ = 
+    Polygon[{{2 3^Rational[-1, 2], 0}, {
+      3^Rational[-1, 2], 1}, {-3^Rational[-1, 2], 1}, {(-2) 3^Rational[-1, 2],
+        0}}]}, 
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"], 
+               ImageSizeCache -> {11.172421875, {0., 11.172421875}}], 
+              Appearance -> None, BaseStyle -> {}, 
+              ButtonFunction :> (Typeset`open$$ = True), Evaluator -> 
+              Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              Hue[0.6, 0.3, 0.85], 
+              EdgeForm[
+               Hue[0.6, 0.3, 0.85]], 
+              PolygonBox[
+               
+               NCache[{{2 3^Rational[-1, 2], 0}, {
+                 3^Rational[-1, 2], 1}, {-3^Rational[-1, 2], 1}, {(-2) 
+                  3^Rational[-1, 2], 0}}, {{1.1547005383792517`, 0}, {
+                 0.5773502691896258, 1}, {-0.5773502691896258, 
+                  1}, {-1.1547005383792517`, 0}}]]}, ImageSize -> 
+             Dynamic[{5.25, 3.5} (CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification])]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Number of points: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["4", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Embedding dimension: \"", "SummaryItemAnnotation"],
+                  "\[InvisibleSpace]", 
+                 TagBox["2", "SummaryItem"]}]}}, AutoDelete -> False, 
+             BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {
+              "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+          False, BaselinePosition -> {1, 1}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True -> 
+        GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"], 
+               ImageSizeCache -> {11.172421875, {0., 11.172421875}}], 
+              Appearance -> None, BaseStyle -> {}, 
+              ButtonFunction :> (Typeset`open$$ = False), Evaluator -> 
+              Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              Hue[0.6, 0.3, 0.85], 
+              EdgeForm[
+               Hue[0.6, 0.3, 0.85]], 
+              PolygonBox[
+               
+               NCache[{{2 3^Rational[-1, 2], 0}, {
+                 3^Rational[-1, 2], 1}, {-3^Rational[-1, 2], 1}, {(-2) 
+                  3^Rational[-1, 2], 0}}, {{1.1547005383792517`, 0}, {
+                 0.5773502691896258, 1}, {-0.5773502691896258, 
+                  1}, {-1.1547005383792517`, 0}}]]}, ImageSize -> 
+             Dynamic[{5.25, 3.5} (CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification])]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Number of points: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["4", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Embedding dimension: \"", "SummaryItemAnnotation"],
+                  "\[InvisibleSpace]", 
+                 TagBox["2", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[
+                    Quiet[
+                    Apply[Region`PolygonDump`polygonType, 
+                    Region`PolygonDump`computeType[Typeset`spolygon$$]]], 
+                    StandardForm], 
+                   ImageSizeCache -> {79.8515625, {2.47265625, 9.75}}, 
+                   SynchronousUpdating -> False, TrackedSymbols :> {}], 
+                  "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Bounds: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[
+                    Region`PolygonDump`iRegionBounds[Typeset`spolygon$$], 
+                    StandardForm], 
+                   ImageSizeCache -> {113.88671875, {2.203125, 7.79296875}}, 
+                   SynchronousUpdating -> False, TrackedSymbols :> {}], 
+                  "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Area: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[
+                    Region`PolygonDump`iArea[Typeset`spolygon$$], 
+                    StandardForm], 
+                   ImageSizeCache -> {23.3671875, {0.15234375, 7.79296875}}, 
+                   SynchronousUpdating -> False, TrackedSymbols :> {}], 
+                  "SummaryItem"]}]}}, AutoDelete -> False, 
+             BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {
+              "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+          False, BaselinePosition -> {1, 1}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  Polygon[{{2 3^Rational[-1, 2], 0}, {
+    3^Rational[-1, 2], 1}, {-3^Rational[-1, 2], 1}, {(-2) 3^Rational[-1, 2], 
+     0}}],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.921103006877041*^9, 3.921103041422371*^9}},
+ CellLabel->"Out[22]=",ExpressionUUID->"5b1e7eee-d910-430e-982e-dd1d5312b1f8"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.921102802266286*^9, 
+  3.921102803143229*^9}},ExpressionUUID->"ce0bbf5c-be8e-4496-90af-\
+693e8fcdb52b"]
+},
+WindowSize->{606, 455.25},
+WindowMargins->{{Automatic, -16.5}, {39, Automatic}},
+FrontEndVersion->"13.3 for Linux x86 (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"84d211d8-1204-4122-9653-6b5085f99f63"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 185, 3, 50, "Input",ExpressionUUID->"34eb5297-950e-4800-af67-71907c3def48"],
+Cell[746, 25, 550, 15, 50, "Input",ExpressionUUID->"9f2d95ba-1777-47e0-aecf-d72bcef536ff"],
+Cell[1299, 42, 309, 7, 29, "Input",ExpressionUUID->"1797ffe8-8dee-4d9d-9868-accd6f03a7de"],
+Cell[1611, 51, 706, 22, 50, "Input",ExpressionUUID->"c1c24baa-ddf8-4d68-adc9-23c704157e58"],
+Cell[2320, 75, 957, 30, 50, "Input",ExpressionUUID->"e59578a6-9f46-4c07-b699-4b024cea54e8"],
+Cell[CellGroupData[{
+Cell[3302, 109, 493, 13, 29, "Input",ExpressionUUID->"da08754f-c5fd-4c88-a0a2-9ffd9ab7a41b"],
+Cell[3798, 124, 7192, 154, 162, "Output",ExpressionUUID->"5b1e7eee-d910-430e-982e-dd1d5312b1f8"]
+}, Open  ]],
+Cell[11005, 281, 152, 3, 29, "Input",ExpressionUUID->"ce0bbf5c-be8e-4496-90af-693e8fcdb52b"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
