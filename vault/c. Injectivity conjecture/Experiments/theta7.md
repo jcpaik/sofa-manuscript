@@ -41,6 +41,9 @@ Properties:
 - Next goal: prove injectivity on [t1, t7]
 	- Needs Lipschitzness at least: prove g, h <= 2??
 	- Then need to make xi's close and get contradiction
+		- Just add a LOT of angles
+		- and add L2 constraints
+		- and derive contradiction (hopefully)
 
 - With this result, it seems that 20deg-70deg injectivity is trackable
 - With symmetry argument, WLOG might also extend the angle to 0-70deg
