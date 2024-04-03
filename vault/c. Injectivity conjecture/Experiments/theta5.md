@@ -36,4 +36,4 @@ Properties:
 - With this result, it seems that 20deg-70deg injectivity is trackable
 - With symmetry argument, WLOG might also extend the angle to 0-70deg
 - Then deploy the balancedness gap
-- 
+- Middle split -> 

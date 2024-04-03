@@ -4,6 +4,13 @@
 	- [ ] Propositions without proof -> Write something that makes a first-time reader 
 - [ ] Angle Hypothesis and Injectivity Hypothesis relationship
 
+# Progress -
+
+- [ ] Write leg lower bound explicitly
+- [ ] Write argument explicitly
+- [ ] Do experiment on bounding y-coord of corner x
+- [ ] Do experiment on distant gaps
+- [ ] 
 
 # Angle and Injectivity
 
