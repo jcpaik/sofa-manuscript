@@ -14,37 +14,16 @@ Properties:
 	- Upper bound equal to $\int_{t \in (t_1, t_2 + \pi/2]} \sin(t - t_1) \, \beta_K(dt)$
 	- 
 
-- Modify angle range
-	- 20,30,40,50,60,70
-- Add niche in cap condition
-	- Easy
-	- Don't know what improvement will this bring
-- Add more angles
-	- No branch (easiest to execute, but leads to much more angles)
-	- Simple branch (need some coding, but maybe quite worth it
-- Allow multiple inequality
-	- could help a lot in separting x of distance
-	- and give much more stronger constraints
-
-- Another strategy:
-	- Divide the intervals A LOT
-	- Assume a global constant $\delta$ so that for any $t_1, t_2$ with diff $< \delta$, we have injectivity
-	- Then the rest of x's can be bounded by just subdividing a LOT of intervals
-
-- $g_K(t_1, t_2)$ 
 - $hlb_i = (A_i - C_{i-2}) \cdot u_{i}$
 	- is a lower bound of $h_K(t)$ for $t \in [t_{i-1}, t_{i}]$
-	- 
 	- If $> 1$, then injectivity condition holds for $[t_i, t_{i+1}]$
 	- If $> 1 + d$, injectivity effective for $t_{\min} \in [t_i, t_{i+1}]$ with $t_{\max} - t_{\min} <2\arctan(d)$
-	- 
-
-t1, t2, t3, t4, t5, t6
 
 
 | t1       | t2       | t3       | t4       | t5       | t6       |
 | -------- | -------- | -------- | -------- | -------- | -------- |
 | 0.133136 | 0.283794 | 0.394791 | 0.532504 | 0.643501 | 0.781214 |
+- spans from 0 to 45 deg
 
 |        | hlb    | 2\*arctan(d) |
 | ------ | ------ | ------------ |
@@ -53,6 +32,7 @@ t1, t2, t3, t4, t5, t6
 | t3, t4 | 1+5/16 | 0.60577      |
 | t4, t5 | 1+1/4  | 0.489957     |
 | t5, t6 | 1+1/16 | 0.124838     |
+- Surely, we found uniform $\delta$ on some interval.
 - With this result, it seems that 20deg-70deg injectivity is trackable
 - With symmetry argument, WLOG might also extend the angle to 0-70deg
 - Then deploy the balancedness gap
