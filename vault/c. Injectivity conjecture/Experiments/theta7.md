@@ -39,6 +39,8 @@ Properties:
 | t5, t6 |         |              |              |                                                                                                                       |
 - Surely, we found uniform $\delta$ on some interval.
 - Next goal: prove injectivity on [t1, t7]
+	- Needs Lipschitzness at least: prove g, h <= 2??
+	- Then need to make xi's close and get contradiction
 
 - With this result, it seems that 20deg-70deg injectivity is trackable
 - With symmetry argument, WLOG might also extend the angle to 0-70deg
