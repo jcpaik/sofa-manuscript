@@ -11,3 +11,15 @@
 	- $W_K(t)$ -> $a_K(t) \cap a_K(\pi/2)$ has gap at least $d_\omega$ (more, but not more by an explicit constant)
 	- $a_K(t) \cap a_K(\pi/2)$ -> $a_K(\pi/3) \cap a_K(\pi/2)$
 	- $a_K(\pi/3) \cap a_K(\pi/2)$ -> $A_K^-(0)$ by constant $c$
+
+
+
+- Assume angle $\omega < 90$
+- Assume $p_K(0) > 1.1$
+- $p_\omega$, the point $A_K^-(0)$ already determines two points of $K$
+- What is the worst value of $w_K(t)$ you can get in this case? 
+	- Note that $A_K^-(0)$ is already determined, so it is the vertex $a_K(t) \cap \left\{ y=0 \right\}$ that matters
+	- More the value of $p_K(t)$ is, the worse the value of $w_K(t)$ is as well
+	- This will happen when the other vertex is $a_K(0) \cap a_K(\omega)$
+- This minimum $w_K(t)$ is still much larger than three times the gap length $d_\omega = \tan\left( (\pi/2 - \omega) / 2 \right)$
+	- So one can improve the angle one-shot!
