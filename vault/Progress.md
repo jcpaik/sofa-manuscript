@@ -1,3 +1,7 @@
+Issue
+- Existence of maximum-area sofa?????
+- I say that Gerver's proof is flawed. Then I can't use it to be precise.
+
 # Priortization
 
 1. Angle Hypothesis (likely no computers needed)
