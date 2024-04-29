@@ -1,10 +1,6 @@
-Issue
-- Existence of maximum-area sofa?????
-- I say that Gerver's proof is flawed. Then I can't use it to be precise.
-	- Check Gerver's proof again
-	- Do I agree with it?
-		- No on assuming angle continuity
-		- And a lot of statements are vague tbh.
+- Make explanation of convexity of A1 much easier
+- 
+
 
 # Priortization
 
