@@ -3,7 +3,6 @@
 	- Mamikon's theorem application
 	- 
 
-
 # Priortization
 
 1. Angle Hypothesis (likely no computers needed)
