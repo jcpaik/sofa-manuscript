@@ -1,5 +1,7 @@
-- Make explanation of convexity of A1 much easier
-- 
+- Draw figures
+	- Wedge gap $w_K$ and $z_K$
+	- Mamikon's theorem application
+	- 
 
 
 # Priortization
