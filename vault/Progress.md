@@ -1,7 +1,7 @@
 - Draw figures
 	- Wedge gap $w_K$ and $z_K$
 	- Mamikon's theorem application
-	- 
+	- Tangent hallway and parts
 
 # Priortization
 
