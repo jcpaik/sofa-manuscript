@@ -1,0 +1,56 @@
+%%% Packages included in thesis-umich class
+%\RequirePackage[margin=1in,footskip=8pt,headsep=0.4cm,headheight=\baselineskip]{geometry}
+%\RequirePackage{amsmath}
+%\RequirePackage{amsfonts}
+%\RequirePackage{amssymb}
+%\RequirePackage{graphicx}
+%\RequirePackage{subcaption}
+%\RequirePackage{times}
+%\RequirePackage{natbib}
+%\RequirePackage{verbatim}
+%\RequirePackage{upquote}
+%\RequirePackage{textcomp}
+%\RequirePackage{setspace}
+%\RequirePackage{ifthen}
+%\RequirePackage{soul}
+%\RequirePackage{float}
+%\RequirePackage{acronym}
+%\RequirePackage{makeidx}
+%\RequirePackage{fancyhdr}
+%\RequirePackage{multicol}
+
+% Include your packages here by including a \usepackage{<package_name>} command.
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{enumitem}
+\usepackage{svg}
+\svgsetup{inkscapearea=page,inkscapelatex=false}
+\usepackage{float}
+
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{refs.bib}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+\floatplacement{figure}{h}

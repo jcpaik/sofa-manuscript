@@ -1,96 +1,126 @@
-\documentclass[10pt]{article}
+% University of Michigan Dissertation LaTeX Template for 2023
+% Created by John Meluso and Shreyas Kousik
+% 9 Jul 2020
 
-\usepackage[margin=1in]{geometry}
+% Use the University of Michigan thesis class.
+\documentclass[thesis]{thesis-umich}
+\input{packages}
 
-\usepackage{textcomp}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amsfonts}
-\usepackage{hyperref}
-\usepackage{cleveref}
-\usepackage{enumitem}
-\usepackage{svg}
-\svgsetup{inkscapearea=page,inkscapelatex=false}
-\usepackage{float}
-\usepackage{gensymb}
+%--- Set the font styles -----
+% As of this writing, Rackham does not have strict font requirements, but they
+% suggest "standard fonts" such as Times, Arial, or Times New Roman.
+% In practice, they allow the default LaTeX font (Computer Modern).
+% The fonts available to you depend on the typesetting engine you use, e.g.
+% pdflatex (the overleaf default), xelatex, or lualatex.
+% Set the font to whatever you like, as long as it's compatible with the tex
+% engine you're using.
+% More information from Overleaf on font selection with:
+%     - pdflatex: https://www.overleaf.com/learn/latex/Font_typefaces
+%     - xelatex: https://www.overleaf.com/learn/latex/XeLaTeX
+% See examples below depending on your engine and uncomment the usepackage
+% commands and any subsequent commands as needed.
+%-------------------------------------------------------------------------------
+%--- pdflatex -----
+%\usepackage{times}
+%\usepackage{newtxtext}
+%\usepackage{newtxmath}
+%-------------------------------------------------------------------------------
+%--- xelatex / lualatex -----
+%\usepackage{fontspec}
+%\setromanfont{Times New Roman}
+%\setsansfont{Arial}
+%\setmonofont{Courier New}
+%-------------------------------------------------------------------------------
 
-\usepackage{xcolor}
-\hypersetup{
-    colorlinks,
-    linkcolor={red!50!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black}
-}
-
-\usepackage[backend=bibtex]{biblatex}
-\addbibresource{refs.bib}
-
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{proposition}[theorem]{Proposition}
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
-\theoremstyle{remark}
-\newtheorem{remark}{Remark}[section]
-
-\floatplacement{figure}{h}
-
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% If you are using the alpha bibliography style, keep these next three lines in your preamble, so that the references are left-aligned; or, you can comment it out and see what happens
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\renewcommand{\@biblabel}[1]{[#1]\hfill}
 \makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
+% Title of the thesis
 \title{A new conditional upper bound for the area of a moving sofa}
 
+% Author name
 \author{Jineon Baek}
-% \address{University of Michigan, Department of Mathematics,
-% 2074 East Hall,
-% 530 Church Street,
-% Ann Arbor, MI 48109-1043}
-% \email{jineon@umich.edu}
 
+% Department
+\department{Mathematics}
+
+% Year of completion
+\year=2024
+
+% Author email
+\email{jineon@umich.edu}
+
+% Author ORCID iD
+\orcid{0000-0000-0000-0000}
+
+% Frontispiece
+\frontispiece{\includegraphics[width=4in]{front_materials/frontispiece.png}}
+
+% Default style for front pages
+\frontpagestyle{7} % 7 is preferred by Rackham, but should be set individually for each front page
+
+% Dedication (the input [7] determines the style -- 7 is Rackham's preferred style)
+% \hidededication{%
+\dedication[7]{\input{front_materials/dedication}}
+
+% Acknowledgments (the input [7] determines the style -- 7 is Rackham's preferred style)
+\acknowledgments[7]{\input{front_materials/acknowledgments}}
+
+% Preface
+\preface[7]{\input{front_materials/preface}}
+
+% Committee
+\committee{ %
+Professor First Name, Chair \\
+Professor Second Name in Alphabetical Order \\
+Professor Third Name in Alphabetical Order \\
+Professor Fourth Name in Alphabetical Order
+}
+
+% Chair must be entered separately for formatting reasons.
+\chair{Professor First Name}
+%\cochair{Co-chair One \& Co-chair Two}
+
+
+% Definition of any acronyms used.
+% To add an acronym, add an \acro{}{} command on a new line within the \acronyms{} command. For \acro, field 1 is the acronym and field 2 is the corresponding expression. For example: \acro{TLA}{Three Letter Acronym}.
+\acronyms{
+    \acro{TLA}{Three Letter Acronym}
+    \acro{SOA}{Some Other Acronym}
+}
+
+% Definition of any symbols used.
+% To add an symbol, add an \item command with the symbol inside a [] bracket followed by explanations
+\symbols{
+    \item [$\alpha$] The greek letter alpha.
+    \item [$\Gamma$] \blindtext
+}
+
+% Commands to hide or show lists of figures, tables, etc.
+% To hide a list, change the word "show" in the command to "hide".
+\showlistoftables
+\showlistofprograms
+\showlistofappendices
+\showlistofacronyms
+\hidelistofsymbols
+
+
+% Some abstract text
+\abstract{
+\input{front_materials/abstract}
+}
+%\hideabstractpagenumber
+
+%% DOCUMENT AREA
 \begin{document}
-
-\maketitle
-
-\begin{abstract}
-The \emph{moving sofa problem}, first published by Leo Moser in 1966,
-asks for the connected shape with largest area $\mu_{\text{max}}$ that can move around the
-right-angled corner of a hallway $L$ with unit width.
-The best bounds currently known on $\mu_{\max}$ are summarized as
-$\mu_G := 2.2195\ldots \leq \mu_{\max} \leq 2.37$.
-The lower bound $2.2195\ldots \leq \mu_{\max}$ comes from Gerver's sofa $S_G$ of area $\mu_G :=
-2.2195\ldots$ constructed in 1994, with 18 analytic curves and segments constituting the boundary.
-The upper bound $\mu_{\max} \leq 2.37$ was proved by Kallus and Romik in 2018
-using extensive computer assistance.
-
-We prove that any moving sofa satisfying a certain property, named as the
-\emph{injectivity condition},
-has an area at most $1 + \pi^2/8 =
-2.2337\ldots$. This upper bound, while conditional, is much closer to the lower bound $2.2195\ldots$
-of Gerver than the upper bound $2.37$ of Kallus and Romik. Since Gerver's sofa $S_G$ satisfies the
-injectivity condition, our conditional upper bound is effective on the domain containing the
-conjectured optimum $S_G$. The proof does not rely on any computer assistance, and introduces a
-calculus of variation based on the Brunn-Minkowski theory on convex bodies as a new approach to the
-moving sofa problem. We also conjecture the \emph{injectivity hypothesis}
-that there exists a maximum-area moving sofa satisfying the injectivity
-condition. With our result, proving the injectivity hypothesis would imply the upper bound
-to $\mu_{\max} \leq 1 + \pi^2/8 = 2.2337\ldots$.
-\end{abstract}
-
-\tableofcontents
 
 \input{out.tex}
 
-\printbibliography
+\bibliographystyle{plain}
+
+% Give this command the relative path to the .bib file.
+\bibliography{refs.bib}
 
 \end{document}
