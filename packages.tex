@@ -20,16 +20,15 @@
 %\RequirePackage{multicol}
 
 % Include your packages here by including a \usepackage{<package_name>} command.
+
 \usepackage{textcomp}
-\usepackage{amsmath}
 \usepackage{amsthm}
-\usepackage{amsfonts}
 \usepackage{hyperref}
 \usepackage{cleveref}
 \usepackage{enumitem}
 \usepackage{svg}
+\usepackage{gensymb}
 \svgsetup{inkscapearea=page,inkscapelatex=false}
-\usepackage{float}
 
 \usepackage{xcolor}
 \hypersetup{
@@ -38,9 +37,6 @@
     citecolor={blue!50!black},
     urlcolor={blue!80!black}
 }
-
-\usepackage[backend=bibtex]{biblatex}
-\addbibresource{refs.bib}
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
@@ -54,3 +50,16 @@
 \newtheorem{remark}{Remark}[section]
 
 \floatplacement{figure}{h}
+
+\newcommand{\autocite}[1]{\citep{#1}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}

@@ -1,4 +1,4 @@
-%%
+
 %% This is the file thesis-umich.cls.
 %% It provides a LaTeX class that is consistent with the guidelines
 %% provided by the Rackham Graduate School as described at
@@ -277,7 +277,7 @@
 % The fields to be used for the title page
 \renewcommand{\@title}{Insert a Title!}
 \renewcommand{\@author}{Insert an Author!}
-\newcommand{\@degree}{Doctor of Philosophy}
+\newcommand{\@degreetitle}{Doctor of Philosophy}
 \newcommand{\@department}{Insert a Department Name!}
 \newcommand{\@committee}{Insert a Committee!}
 \newcommand{\@chair}{Insert a Chair!}
@@ -286,7 +286,7 @@
 % Commands to set the titlepage fields
 \renewcommand{\title}[1]{\renewcommand{\@title}{#1}}
 \renewcommand{\author}[1]{\renewcommand{\@author}{#1}}
-\newcommand{\degree}[1]{\renewcommand{\@degree}{#1}}
+\newcommand{\degreetitle}[1]{\renewcommand{\@degreetitle}{#1}}
 \newcommand{\department}[1]{\renewcommand{\@department}{#1}}
 \newcommand{\committee}[1]{\renewcommand{\@committee}{#1}}
 \newcommand{\chair}[1]{\renewcommand{\@chair}{#1}}
@@ -295,7 +295,7 @@
 % Commands for the user to be able to use the defined fields.
 \newcommand{\inserttitle}{\@title}
 \newcommand{\insertauthor}{\@author}
-\newcommand{\insertdegree}{\@degree}
+\newcommand{\insertdegreetitle}{\@degreetitle}
 \newcommand{\insertdepartment}{\@department}
 \newcommand{\insertcommittee}{\@committee}
 \newcommand{\insertchair}{\@chair}
@@ -328,9 +328,9 @@
    \vfill %
    % Text from guidelines
    A dissertation submitted in partial fulfillment \\ %
-   of the requirements for the degree of \\ %
-   % Name of degree
-   \insertdegree \\ %
+   of the requirements for the degreetitle of \\ %
+   % Name of degreetitle
+   \insertdegreetitle \\ %
    % Department
    (\insertdepartment) \\ %
    in the University of Michigan \\ %
