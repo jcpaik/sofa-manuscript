@@ -146,7 +146,6 @@
 
 % This loads the required math packages.
 \RequirePackage{amsmath}
-\RequirePackage{amsfonts}
 \RequirePackage{amssymb}
 
 % This loads the proper graphics package.
@@ -166,6 +165,9 @@
 
 % This package enables the use of proper single quotes in text.
 \RequirePackage{textcomp}
+
+% Sticking this in to use \degree (does not work for unknown reason if in packages.tex)
+\RequirePackage{gensymb}
 
 % This package is used to set line spacing.
 \RequirePackage{setspace}
