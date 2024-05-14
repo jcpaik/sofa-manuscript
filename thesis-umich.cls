@@ -330,7 +330,7 @@
    \vfill %
    % Text from guidelines
    A dissertation submitted in partial fulfillment \\ %
-   of the requirements for the degreetitle of \\ %
+   of the requirements for the degree of \\ %
    % Name of degreetitle
    \insertdegreetitle \\ %
    % Department
@@ -1491,6 +1491,8 @@
  % Do not use back references.
  \RequirePackage{hyperref}
 \fi
+% Sneak in cleveref
+\RequirePackage{cleveref}
 
 % This controls some settings that affect the appearance of links.
 \if@umich@thesis

@@ -1,6 +1,8 @@
 set -e
+setopt extendedglob
 
 rm -r out
+rm main.*~main.tex(.)
 mathmd vault out
 
 pdflatex -shell-escape main
