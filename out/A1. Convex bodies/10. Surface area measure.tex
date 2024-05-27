@@ -1,0 +1,179 @@
+\begin{definition}
+
+The \emph{surface area measure} \(\sigma_K\) of a planar convex body \(K\) is a measure on \(S^1\) defined in p214 of \cite{schneider_2013}, which is also denoted as \(S_1(K, -)\) or \(S_K\) in p464 of \cite{schneider_2013}.
+
+\label{def:surface-area-measure}
+\end{definition}
+
+For any convex body \(K\), the surface area measure \(\sigma_K\) essentially measures the side lengths of \(K\). For example, if \(K\) is a convex polygon, then \(\sigma_K\) is a discrete measure such that the measure \(\sigma_K\left( t \right)\) at point \(t\) is the length of the edge \(e_K(t)\). Assume the other case where for every \(t \in S^1\), the tangent line \(l_K(t)\) always meets \(K\) at a single point \(v(t)\), so that \(\partial K\) is parametrized smoothly by \(v_K(t)\) for \(t \in S^1\). Then it turns out that \(\sigma_K(dt) = R(t) dt\) where \(R(t) = \left\lVert v'(t) \right\rVert\) is the radius of curvature of \(\partial K\) at \(v(t)\).
+
+We now collect theorems on the surface area measure \(\sigma_K\).
+
+\begin{theorem}
+
+(Equation (8.23), p464 of \cite{schneider_2013}) The surface area measure \(\sigma_K\) is convex-linear with respect to \(K\).
+
+\label{thm:surface-area-measure-convex-linear}
+\end{theorem}
+
+Recall that the \emph{mixed volume} \(V(K_1, K_2)\) of any two planar convex bodies \(K_1\) and \(K_2\), defined in Theorem 5.1.7 in p280 of \cite{schneider_2013}, is a non-negative value with the following properties.
+
+\begin{theorem}
+
+(Theorem 5.1.7 and Equation 5.27 of \cite{schneider_2013}) The followings are true for any planar convex bodies \(K, K_1, K_2\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(V(K, K) = |K|\)
+\item
+  \(V(K_1, K_2)\) is bilinear in \(K_1\) and \(K_2\) (\Cref{def:convex-body-linear}).
+\item
+  \(V(K_1, K_2) = V(K_2, K_1)\)
+\end{enumerate}
+
+\label{thm:mixed-volume}
+\end{theorem}
+
+We have the following representation of mixed volume in terms of support function and surface area measure. Remark that for any measurable function \(f\) on a space \(X\) and a measure \(\sigma\) on \(X\), we denote the integral of \(f\) with respect to \(\sigma\) as \(\left< f, \sigma \right>_{X} = \int_{x \in X} f(x)\,\sigma(dx)\).
+
+\begin{theorem}
+
+(Equation 5.19 of \cite{schneider_2013}) The mixed volume \(V(K_1, K_2)\) of any two planar convex bodies \(K_1\) and \(K_2\) can be represented as the following.
+\[
+V(K_1, K_2) = \left< p_{K_1}, \sigma_{K_2} \right>_{S^1} / 2
+\]
+Consequently, the area \(|K|\) of any planar convex body \(K\) can be represented as the following.
+\[
+|K| = V(K, K) = \left< p_K, \sigma_K \right>_{S^1} / 2
+\]
+
+\label{thm:surface-area-measure-area}
+\end{theorem}
+
+We prove the following important \emph{vertex equality} of \(K\) using \(\sigma_K\).
+
+\begin{definition}
+
+For any measure \(\sigma\) on \(S^1\) and a Borel subset \(A\) of \(S^1\), define the \emph{restriction} \(\sigma|_A\) of \(\sigma\) to \(A\) as the measure on \(S^1\) defined as \(\sigma|_A(X) = \sigma(A \cap X)\).
+
+\label{def:measure-restriction}
+\end{definition}
+
+\begin{theorem}
+
+For every interval \((t_1, t_2]\) in \(S^1\) of length \(\leq 2\pi\), we have the following equality.
+\[
+v_K^+(t_2) - v_K^+(t_1) = \int_{t \in (t_1, t_2]} v_t \, \sigma_K(dt)
+\]
+
+\label{thm:boundary-measure}
+\end{theorem}
+
+\begin{proof}
+First we observe that the equality holds when \(K\) is a polygon. In this case, for every \(t\) the value \(\sigma_K(t)\) is nonzero if and only if it measures the length of a proper edge \(e_K(t)\). So the right-hand side measures the sum of all vectors from vertex \(v_K^-(t)\) to \(v_K^+(t)\) along the proper edges \(e_K(t)\) with angles \(t \in (t_1, t_2]\). The sum in the right-hand side is then the vector from \(v_K^+(t_1)\) to \(v_K^+(t_2)\), justifying the equality for polygon \(K\).
+
+Now we prove the equality for general \(K\). As in the proof of Theorem 8.3.3, p466 of \cite{schneider_2013}, we can take a series \(K_1, K_2, \dots\) of polygons converging to \(K\) in the Hausdorff distance such that \(e_{K_n}(t_i) = e_{K}(t_i)\) for all \(n = 1, 2, \dots\) and \(i = 1, 2\). In particular, we have \(v_{K_n}^{\pm}(t_i) = v_{K}^{\pm}(t_i)\) and \(\sigma_{K_n}(\{t_i\}) = \sigma_{K}(\{t_i\})\) for all \(n = 1, 2, \dots\) and \(i = 1, 2\). By Theorem 4.2.1, p212 of \cite{schneider_2013}, the measures \(\sigma_{K_n}\) converge to \(\sigma_K\) weakly as \(n \to \infty\).
+
+Define \(U\) as the open set \(S^1 \setminus \left\{ t_1, t_2 \right\}\) of \(S\), and \(V\) as the open interval \((t_1, t_2)\) of \(S^1\). Define \(\mu_n\) and \(\mu\) as the restriction of \(\sigma_{K_n}\) and \(\sigma_K\) to \(U\), then \(\mu_n\) converges to \(\mu\) weakly as \(n \to \infty\) because \(\sigma_{K_n}(\{t_i\}) = \sigma_{K}(\{t_i\})\) for \(i = 1, 2\). Define \(\lambda_n\) and \(\lambda\) as the restriction of \(\sigma_{K_n}\) and \(\sigma_K\) to \(V\). We want to prove that \(\lambda_n \to \lambda\) weakly as \(n \to \infty\). Take any continuity set \(X\) of \(\lambda\) so that \(\lambda(\partial X) = 0\) and thus \(\mu(\partial X \cap V) = 0\). Because \(\partial(X \cap V) \subseteq (\partial X \cap V) \cup \partial V\), and both \(\mu(\partial X \cap V)\) and \(\mu(\partial V)\) are zero, the set \(X \cap V\) is a continuity set of \(\mu\). So \(\mu_n(X \cap V) \to \mu(X \cap V)\) and thus \(\lambda_n(X) \to \lambda(X)\) as \(n \to \infty\). This completes the proof that \(\lambda_n \to \lambda\) weakly as \(n \to \infty\).
+
+We finally take the limit \(n \to \infty\) to the equality
+\[
+v_{K_n}^+(t_2) - v_{K_n}^+(t_1) = \int_{t \in (t_1, t_2]} v_t \, \sigma_{K_n}(dt)
+\]
+for polygons \(K_n\). The left-hand side is equal to \(v_K^+(t_2) - v_K^+(t_1)\) by the way how we took \(K_n\). The right-hand side is equal to
+\[
+(v_{K_n}^+(t_2) - v_{K_n}^-(t_2)) + \int_{t \in S^1} v_t \, \lambda_n(dt)
+\]
+and by \(v_{K_n}^{\pm}(t_i) = v_{K}^{\pm}(t_i)\) and the weak convergence \(\lambda_n \to \lambda\), the expression converges to
+\[
+(v_{K}^+(t_2) - v_{K}^-(t_2)) + \int_{t \in S^1} v_t \, \lambda(dt) = \int_{t \in (t_1, t_2]} v_t\, \sigma_{K}(dt)
+\]
+thus completing the proof for general \(K\).
+\end{proof}
+
+\Cref{thm:boundary-measure} has the following concise representation in differentials via the Lebesgue-Stieltjes measure. Note that \(v_t = (-\sin t, \cos t)\) is a unit vector, and \(v_K^+(t)\) is the vertex of \(K\).
+
+\begin{proposition}
+
+We have \(dv_K^+(t) = v_t \sigma_K(dt)\).
+
+\label{pro:boundary-measure-differential}
+\end{proposition}
+
+That is, if we write the coordinates of \(v_K^+(t)\) as \((x(t), y(t))\), then the Lebesgue-Stieltjes measure \(dx\) and \(dy\) of \(x(t)\) and \(y(t)\) are \(-\sin t \cdot \sigma_K(dt)\) and \(\cos t \cdot \sigma_K(dt)\) respectively. Note that \(dx\) and \(dy\) are well-defined because \(v_K^+(t)\) is of bounded variation (\Cref{thm:vertex-bounded-variation}) and right-continuous (\Cref{cor:vertex-right-continuous}).
+
+\begin{proof}[Proof of \Cref{pro:boundary-measure-differential}]
+Observe that the two pairs of measures \(dv_K^+(t)\) and \(v_t \sigma_K(dt)\) agree on any half-open intervals of \(S^1\) by \Cref{thm:boundary-measure}. Appeal to \Cref{lem:measure-interval-uniqueness} to show the equality.
+\end{proof}
+
+Surface area measure at a single point \(t\) measures the length of the edge \(e_K(t)\).
+
+\begin{theorem}
+
+\(\sigma_K(\left\{ t \right\})\) is equal to the length of the edge \(e_K(t)\). Moreover, \(v_K^+(t) = v_K^-(t) + \sigma_K( \left\{ t \right\} ) v_t\).
+
+\label{thm:surface-area-singleton}
+\end{theorem}
+
+\begin{proof}
+Let \(t_2 = t\) and send \(t_1 \to t^-\) in \Cref{thm:boundary-measure}. Then by \Cref{thm:limits-converging-to-vertex} we get the equation \(v_K^+(t) = v_K^-(t) + \sigma_K(\left\{ t \right\}) v_t\).
+\end{proof}
+
+\begin{proposition}
+
+Except for a countable number of values of \(t \in S^1\), we have \(v_K^-(t) = v_K^+(t)\).
+
+\label{pro:surface-area-singleton-almost-everywhere}
+\end{proposition}
+
+\begin{proof}
+Since \(\sigma_K\) is a finite measure on \(S^1\), \(\sigma_K(\left\{ t \right\})\) is zero except for a countable number of values of \(t \in S^1\). Apply \Cref{thm:surface-area-singleton} to such \(t\) with \(\sigma_K(\left\{ t \right\}) = 0\).
+\end{proof}
+
+We also have the following variants of \Cref{thm:boundary-measure} that work for closed and open intervals of \(S^1\) respectively.
+
+\begin{corollary}
+
+For every interval \([t_1, t_2]\) in \(S^1\) of length \(< 2\pi\), we have the following equality.
+\[
+v_K^+(t_2) - v_K^-(t_1) = \int_{t \in [t_1, t_2]} v_t \, \sigma_K(dt)
+\]
+
+\label{cor:boundary-measure-closed}
+\end{corollary}
+
+\begin{proof}
+Add \Cref{thm:surface-area-singleton} with \(t=t_1\) to \Cref{thm:boundary-measure}.
+\end{proof}
+
+\begin{corollary}
+
+For every interval \((t_1, t_2)\) in \(S^1\) of length \(\leq 2\pi\), we have the following equality.
+\[
+v_K^-(t_2) - v_K^+(t_1) = \int_{t \in (t_1, t_2)} v_t \, \sigma_K(dt)
+\]
+
+\label{cor:boundary-measure-open}
+\end{corollary}
+
+\begin{proof}
+Subtract \Cref{thm:surface-area-singleton} with \(t=t_2\) from \Cref{thm:boundary-measure}.
+\end{proof}
+
+We can also measure the width of \(K\) using the surface area measure \(\sigma_K\).
+
+\begin{corollary}
+
+For any angle \(t \in S^1\), the width \(p_K(t) + p_K(t + \omega)\) of \(K\) measured in the direction of \(u_t\) is equal to the following.
+\[
+\int_{u \in (t, t + \pi)} \sin(u - t) \, \sigma_K(dt)
+\]
+
+\label{cor:boundary-measure-width}
+\end{corollary}
+
+\begin{proof}
+Apply \(t_1 = t, t_2 = t + \pi\) to \Cref{thm:boundary-measure} and take the dot product with \(-u_t\).
+\end{proof}

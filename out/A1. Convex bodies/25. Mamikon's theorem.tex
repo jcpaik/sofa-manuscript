@@ -1,0 +1,81 @@
+We prove a generalized version of Mamikon’s theorem \autocite{mnatsakanianAnnularRingsEqual1997} that works for the boundary segment \(\mathbf{b}_K^{t_0, t_1}\) (\Cref{sec:parametrization-of-boundary}) of any convex body \(K\) with a potentially non-differentiable boundary.
+
+\begin{theorem}
+
+Let \(K\) be an arbitrary convex body. Let \(t_0, t_1 \in \mathbb{R}\) be any angles such that \(t_0 < t_1 \leq t_0 + 2 \pi\). Note that \(\mathbf{b}_K^{t_0, t_1}\) is the counterclockwise curve along \(\partial K\) from \(p := v_K^+(t_0)\) to \(q := v_K^+(t_1)\). Let \(\mathbf{y} : [t_0, t_1] \to \mathbb{R}^2\) be any curve that is continous and rectifiable, such that for all \(t \in [t_0, t_1]\) the point \(\mathbf{y}(t)\) is always on the tangent line \(l_K(t)\). Consequently, there is a measurable function \(f : [t_0, t_1] \to \mathbb{R}\) such that \(\mathbf{y}(t) = v_K^+(t) + f(t)v_t\) for all \(t \in [t_0, t_1]\). We have the equality
+\[
+\mathcal{I}(\mathbf{y}) + \mathcal{I}\left( \mathbf{y}(t_1), q \right) - \mathcal{I}\left( \mathbf{b}_K^{t_0, t_1} \right)  - \mathcal{I}\left( \mathbf{y}(t_0), p \right) =  \frac{1}{2}\int_{t_0}^{t_1} f(t) ^2 \, dt.
+\]
+
+\label{thm:mamikon}
+\end{theorem}
+
+\begin{proof}
+For this proof only, let \(\mathbf{x} := v_K^+\) be the alias of \(v_K^+ : [t_0, t_1] \to \mathbb{R}^2\). First, we prove a differential version of the theorem by calculating the differentials on the interval \((t_0, t_1]\). Note that \(\mathbf{y}\) is continuous by definition and \(\mathbf{x}\) is right-continuous by \Cref{thm:limits-converging-to-vertex}, so that \(f\) and \(\mathbf{y} \times \mathbf{x}\) are also right-continuous on \((t_0, t_1]\). So the differential \(d(\mathbf{y} \times \mathbf{x})\) makes sense as a Lebesgue-Stieltjes measure on \((t_0, t_1]\) (\Cref{sec:lebesgue-stieltjes-measure}). We have the chain of equalities
+
+\begin{align*}
+& \phantom{{} = .} \mathbf{y}(t) \times d \mathbf{y}(t) - \mathbf{x}(t) \times d \mathbf{x}(t) + d \left( \mathbf{y}(t) \times \mathbf{x}(t) \right)  \\
+& = \mathbf{y}(t) \times d \mathbf{y}(t) - \mathbf{x}(t) \times d \mathbf{x}(t) + \left( d \mathbf{y}(t) \times \mathbf{x}(t) + \mathbf{y}(t) \times d \mathbf{x} (t) \right)  \\
+& = \left( \mathbf{y}(t) - \mathbf{x}(t) \right) \times d\left( \mathbf{y}(t) + \mathbf{x}(t) \right)  \\
+& = \left( \mathbf{y}(t) - \mathbf{x}(t) \right) \times d\left( \mathbf{y}(t) - \mathbf{x}(t) \right)  \\
+& = f(t) u_t \times d\left( f(t) u_t \right) = f(t) u_t \times ( u_t df(t) + f(t) v_t dt) = f(t)^2 dt
+\end{align*}
+
+of measures on \((t_0, t_1]\). The first equality uses the product rule of differentials (\Cref{pro:lebesgue-stieltjes-product}). The second equality is bilinearity of \(\times\) (note that \(d \mathbf{y}(t) \times \mathbf{x}(t) = - \mathbf{x}(t) \times d \mathbf{y}(t)\) by antisymmetry of \(\times\)). As we have \(d \mathbf{x}(t) = \sigma(dt)v_t\) by \Cref{pro:boundary-measure-differential} and \(\mathbf{y}(t) - \mathbf{x}(t) = f(t)v_t\), they are parallel and we get \((\mathbf{y}(t) - \mathbf{x}(t)) \times d \mathbf{x}(t) = 0\) which is used in the third equality. The last chain of equalities are basic calculations.
+
+If we integrate the differential formula above on the whole interval \((t_0, t_1]\), the terms \(\mathbf{y}(t) \times d \mathbf{y}(t)\) and \(\mathbf{x}(t) \times d \mathbf{x}(t)\) becomes \(2 \mathcal{I}(\mathbf{y})\) and \(2 \mathcal{I}(\mathbf{x})\) by \Cref{def:curve-area-functional} and \Cref{thm:param-curve-area-functional} respectively. The Lebesgue-Stieltjes measure \(d(\mathbf{y}(t) \times \mathbf{x}(t))\) integrates to the difference \(2 \mathcal{I} \left( \mathbf{y}(t_1), v_K^+(t_1) \right) - 2 \mathcal{I} \left( \mathbf{y}(t_0), v_K^+(t_0) \right)\). So the integral matches twice the left-hand side of the claimed equality in \Cref{thm:mamikon}, completing the proof.
+\end{proof}
+
+We have the following variant of \Cref{thm:mamikon} on the curve \(\mathbf{b}_K^{t_0 -, t_1}\) (\Cref{def:closed-param}) as well.
+
+\begin{theorem}
+
+Let \(K\) be an arbitrary convex body. Let \(t_0, t_1 \in \mathbb{R}\) be any angles such that \(t_0 < t_1 < t_0 + 2 \pi\). Note that \(\mathbf{b}_K^{t_0 -, t_1}\) is a curve along \(\partial K\) from \(p := v_K^-(t_0)\) to \(q := v_K^+(t_1)\). Let \(\mathbf{y} : [t_0, t_1] \to \mathbb{R}^2\) and \(f : [t_0, t_1] \to \mathbb{R}\) be as in \Cref{thm:mamikon}. Then we have
+\[
+\mathcal{I}(\mathbf{y}) + \mathcal{I} \left( \mathbf{y}(t_1), q \right) - \mathcal{I}(\mathbf{b}_K^{t_0 -, t_1}) - \mathcal{I} \left( \mathbf{y}(t_0), p \right) =  \frac{1}{2}\int_{t_0}^{t_1} f(t) ^2 \, dt.
+\]
+
+\label{thm:mamikon-closed}
+\end{theorem}
+
+\begin{proof}
+Apply \Cref{thm:mamikon} to \(\mathbf{b}_K^{t_0, t_1}\), and use that \(\mathbf{b}_{K}^{t_0 -, t_1}\) is the join of \(e_{K}(t_0)\) and \(\mathbf{b}_K^{t_0, t_1}\) (\Cref{def:closed-param}).
+\end{proof}
+
+Now we prove a variant of \Cref{thm:mamikon} where the curve \(\mathbf{y}(t)\) parametrizes a segment of the tangent line \(l_K(t_1)\) of \(K\). To do so, we need to prepare some notation.
+
+\begin{definition}
+
+Let \(t, t' \in S^1\) be arbitrary such that \(t' \neq t, t + \pi\). Define \(\tau_K(t, t')\) as the unique value \(\alpha\) such that \(v_K(t, t') = v_K^+(t) + \alpha v_t\).
+
+\label{def:tangent-leg-length}
+\end{definition}
+
+Note that \(v_K(t, t')\) was defined as the intersection of \(l_K(t)\) and \(l_K(t')\) (\Cref{def:convex-body-tangent-lines-intersection}). So fixing the line \(l_K(t')\) at angle \(t'\), the value \(\tau_K(t, t')\) measures the distance from \(v_K^+(t)\) to \(v_K(t, t')\) along the line \(l_K(t)\) at angle \(t\). Such a value \(\alpha\) exists because the points \(v_K(t, t')\) and \(v_K^+(t)\) are on the line \(l_K(t)\). Linearity of \(\tau_K(t, t')\) comes from \Cref{lem:tangent-lines-intersection-linear} and \Cref{cor:vertex-linear}.
+
+\begin{corollary}
+
+Let \(t, t' \in S^1\) be arbitrary such that \(t' \neq t, t + \pi\). Then \(\tau_K(t, t')\) is linear with respect to \(K\).
+
+\label{cor:tangent-line-length-linear}
+\end{corollary}
+
+Now this variant of Mamikon’s theorem measures the area between a segment \(\mathbf{b}_K^{t_0, t_1}\) of \(\partial K\) and the tangent line \(l_K(t_1)\).
+
+\begin{theorem}
+
+Let \(K\) be an arbitrary convex body. Let \(t_0, t_1 \in \mathbb{R}\) be the angles such that \(t_0 < t_1 < t_0 + \pi\). Note that \(\mathbf{b}_K^{t_0, t_1}\) is the counterclockwise curve along \(\partial K\) from \(p := v_K^+(t_0)\) to \(q := v_K^+(t_1)\). Let \(r = l_K(t_0) \cap l_K(t_1)\). Then we have
+\[
+\mathcal{I}(r, q) - \mathcal{I}\left( \mathbf{b}_K^{t_0, t_1} \right) - \mathcal{I}\left(r, p \right) =  \frac{1}{2}\int_{t_0}^{t_1} \tau_{K}(t, t_1) ^2 \, dt.
+\]
+
+\label{thm:mamikon-tangent-line}
+\end{theorem}
+
+\begin{proof}
+Define \(\mathbf{y} : [t_0, t_1] \to \mathbb{R}^2\) as \(\mathbf{y}(t) = v_K(t, t_1)\) for every \(t < t_1\) and \(\mathbf{y}(t_1) = v_K^-(t_1)\). Then \(\mathbf{y}\) is absolutely continuous by \Cref{thm:tangent-line-parametrization} and parametrizes the line segment from \(r\) to \(v_K^-(t_1)\). By \Cref{def:tangent-leg-length}, the function \(f(t) = \tau_K(t, t_1)\) satisfies \(\mathbf{y}(t) = v_K^+(t) + f(t) v_t\). Now apply \Cref{thm:mamikon} to the curves \(\mathbf{b}_{K}^{t_0, t_1}\), \(\mathbf{y}\) and function \(f\) to get
+\[
+\mathcal{I}(\mathbf{y}) + \mathcal{I}\left( v_K^-(t_1), q \right) - \mathcal{I}\left( \mathbf{b}_K^{t_0, t_1} \right)  - \mathcal{I}\left( r, p \right) = \frac{1}{2}\int_{t_0}^{t_1} \tau_{K}(t, t_1) ^2 \, dt.
+\]
+Now use \(\mathcal{I}(\mathbf{y}) = \mathcal{I}(r, v_K^-(t_1))\) (see the remark before \Cref{def:curve-area-functional-segment}) to conclude the proof.
+\end{proof}
