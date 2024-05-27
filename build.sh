@@ -1,6 +1,7 @@
 set -e
 setopt extendedglob
 
+rm main.*~main.tex
 rm -r out
 rm main.*~main.tex(.)
 mathmd vault out
