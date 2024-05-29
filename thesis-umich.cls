@@ -1135,7 +1135,7 @@
  % Add blank space to table of contents
  \addtocontents{toc}{\vspace{3.9ex}}
  % Add the page to the table of contents.
- \addcontentsline{toc}{backchapter}{Appendices}
+ \addcontentsline{toc}{backchapter}{Appendix}
  % Stop adding sections to the table of contents.
  \addtocontents{toc}{\setcounter{tocdepth}{0}} %
  % Header for appendices.
