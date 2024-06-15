@@ -1,0 +1,30 @@
+Refer to \autocite{steinRealAnalysisMeasure2005} for the standard notion of \emph{Lipschitz}, \emph{bounded variation} and \emph{absolute continuity} of a single-variable, real-valued function. Recall that a continuous curve with parametrization \(\mathbf{x} : [a, b] \to \mathbb{R}^2\) is \emph{rectifiable} if and only if its \(x\) and \(y\) coordinates are both of bounded variation (Theorem 3.1 of \autocite{steinRealAnalysisMeasure2005}). We now define the \emph{curve area functional} \(\mathcal{I}(\mathbf{x})\) of \(\mathbf{x}\).
+
+\begin{definition}
+
+For two points \((a, b), (c, d) \in \mathbb{R}^2\), denote their cross product as \((a, b) \times (c, d) = ad - bc \in \mathbb{R}\).
+
+\label{def:planar-cross-product}
+\end{definition}
+
+\begin{definition}
+
+Let \(\Gamma\) be any curve equipped with a rectifiable parametrization \(\mathbf{x} : [a, b] \to \mathbb{R}^2\). With \(\mathbf{x}(t) = (x(t), y(t))\), define the \emph{curve area functional}
+\[
+\mathcal{I}(\mathbf{x}) := \frac{1}{2} \int_a^b \mathbf{x}(t) \times d\mathbf{x}(t) := \frac{1}{2} \int_a^b x(t) dy(t) - y(t) dx(t)
+\]
+of curve \(\Gamma\).
+
+\label{def:curve-area-functional}
+\end{definition}
+
+The integral in \Cref{def:curve-area-functional} is the Lebesgue-Stieltjes integral, for which we again refer to \autocite{steinRealAnalysisMeasure2005}. By change of variables (e.g.~Equation 2 of \autocite{falknerSubstitutionRuleLebesgue2012}), the value of \(\mathcal{I}(\mathbf{x}) = \mathcal{I}(\mathbf{x} \circ \alpha)\) is the same even if we replace \(\mathbf{x}\) with a reparametrization \(\mathbf{x} \circ \alpha : [a', b'] \to \mathbb{R}^2\) of curve \(\Gamma\), where \(\alpha : [a', b'] \to [a, b]\) is any monotonically increasing, continuous, and surjective function. In particular, for any parametrization \(\mathbf{x}\) of the line segment from point \(p\) to \(q\), its curve area functional \(\mathcal{I}(\mathbf{x})\) is equal to \(1/2 \cdot (p \times q)\).
+
+\begin{definition}
+
+Write \(\mathcal{I}(p, q)\) for the area functional of the line segment connecting the point \(p\) to \(q\), so that we have \(\mathcal{I}(p, q) = 1/2 \cdot (p \times q)\).
+
+\label{def:curve-area-functional-segment}
+\end{definition}
+
+For reference, the function \(\mathcal{A}(K)\) is the \emph{sofa area functional} on cap \(K\) defined in \Cref{def:sofa-area-functional}. \(\mathcal{A}_1(K)\) is a conditional upper bound of \(\mathcal{A}(K)\) defined in \Cref{def:a1}.

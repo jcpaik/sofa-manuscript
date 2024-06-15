@@ -1,0 +1,176 @@
+Here, we show that any monotone sofa \(S\) is always equal to a \emph{cap} \(K\) minus its \emph{niche} \(\mathcal{N}(K)\) (\Cref{thm:monotone-sofa-structure}; see \Cref{fig:monotone-sofa} in \Cref{sec:moving-hallway-problem}).
+
+Define a \emph{cap} as a convex body satisfying certain properties.
+
+\begin{definition}
+
+A \emph{cap} \(K\) with \emph{rotation angle} \(\omega \in (0, \pi/2]\) is a convex body such that the followings hold.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(p_K(\omega) = p_K(\pi/2) = 1\) and \(p_K(\pi + \omega) = p_K(3\pi/2) = 0\).
+\item
+  \(K\) is an intersection of closed half-planes with normal angles (\Cref{def:half-plane}) in \(J_\omega \cup \{\pi + \omega, 3\pi/2\}\).
+\end{enumerate}
+
+\label{def:cap}
+\end{definition}
+
+Geometrically, the first condition of \Cref{def:cap} states that \(K\) is contained in the parallelogram \(P_\omega\) making contact with all sides of \(P_\omega\). By \Cref{thm:convex-set-support}, the second condition of \Cref{def:cap} is equivalent to saying that the \emph{normal angles} \(\mathbf{n}(K)\) of \(K\) (\Cref{def:convex-set-support}) is contained in the set \(J_\omega \cup \{\pi + \omega, 3\pi/2\}\). See \Cref{sec:normal-angles} for a quick overview of \(\mathbf{n}(K)\).
+
+We will show that the set \(\mathcal{C}(S)\) in \Cref{def:cap-sofa} is a cap with rotation angle \(\omega\). This justifies calling \(\mathcal{C}(S)\) \emph{the cap of} \(S\) associated to \(S\).
+
+\begin{theorem}
+
+The set \(\mathcal{C}(S)\) in \Cref{def:cap-sofa} is a cap with rotation angle \(\omega\) as in \Cref{def:cap}. With this, call \(\mathcal{C}(S)\) the \emph{cap of the moving sofa} \(S\).
+
+\label{thm:cap-hallway-intersection}
+\end{theorem}
+
+We postpone the proof of \Cref{thm:cap-hallway-intersection} at the end of this \Cref{sec:structure-of-a-monotone-sofa}. Define the \emph{niche} \(\mathcal{N}(K)\) associated to any cap \(K\).
+
+\begin{definition}
+
+For any angle \(\omega \in [0, \pi/2]\), define the \emph{fan} \(F_\omega = H(\pi+\omega, 0) \cap H(3\pi/2, 0)\) with angle \(\omega\) as the convex cone pointed at the origin, bounded from below by the bottom edges \(l(\omega, 0)\) and \(l(3\pi/2, 0)\) of the parallelogram \(P_\omega\).
+
+\label{def:fan}
+\end{definition}
+
+\begin{definition}
+
+Let \(K\) be any cap with rotation angle \(\omega \in [0, \pi/2]\). Define the \emph{niche} of \(K\) as
+\[
+\mathcal{N}(K) := F_{\omega} \cap \bigcup_{0 \leq t \leq \omega} Q^-_K(t).
+\]
+
+\label{def:niche}
+\end{definition}
+
+Now we establish the structure of any monotonization of a sofa.
+
+\begin{theorem}
+
+Let \(S\) be a moving sofa with rotation angle \(\omega \in (0, \pi/2]\) in standard position. The monotonization \(\mathcal{M}(S)\) of \(S\) is equal to \(K \setminus \mathcal{N}(K)\), where \(K = \mathcal{C}(S)\) is the cap of sofa \(S\) and \(\mathcal{N}(K)\) is the niche of the cap \(K\).
+
+\label{thm:monotonization-structure}
+\end{theorem}
+
+\begin{proof}
+Let \(K = \mathcal{C}(S)\) be the cap of \(S\). By breaking down each \(L_S(t)\) into \(Q_S^+(t) \setminus Q_S^-(t)\), the monotonization \(\mathcal{M}(S)\) of \(S\) can be represented as the following subtraction of two sets.
+\begin{equation}
+\label{eqn:monotonization}
+\begin{split}
+\mathcal{M}(S) & = P_\omega \cap \bigcap_{0 \leq t \leq \omega} L_S(t) \\
+& = \left( P_\omega \cap \bigcap_{0 \leq t \leq \omega} Q^+_S(t) \right) \setminus \left( F_\omega \cap \bigcup_{0 \leq t \leq \omega} Q^-_S(t) \right)
+\end{split}
+\end{equation}
+By \Cref{pro:cap-same-tangent-hallway} we have \(Q_S^-(t) = Q_K^-(t)\). So we have \(\mathcal{M}(S) = K \setminus \mathcal{N}(K)\) by the definitions of \(K\) and \(\mathcal{N}(K)\).
+\end{proof}
+
+\begin{remark}
+
+\Cref{eqn:monotonization} can understood intuitively as the following (see \Cref{fig:monotone-sofa}). The cap \(K\) is a convex body bounded from below by the edges of fan \(F_\omega\), and from above by the outer walls \(a_S(t)\) and \(c_S(t)\) of \(L_S(t)\). Imagine the set \(K\) as a block of clay that rotates inside the hallway \(L\) in the clockwise angle of \(t \in [0, \omega]\) while always touching the outer walls \(a\) and \(c\) of \(L\). As \(K\) rotates inside \(L\), the inner corner of \(L\) carves out the niche \(\mathcal{N}(K)\) which is the regions bounded by inner walls \(b_S(t)\) and \(d_S(t)\) of \(L_S(t)\) from \(K\). After the full movement of \(K\), the final clay \(K \setminus \mathcal{N}(K)\) is a moving sofa \(\mathcal{M}(S)\).
+
+\label{rem:cap-niche-intuition}
+\end{remark}
+
+A moving sofa \(S\) and its monotonization \(\mathcal{M}(S)\) shares the same cap.
+
+\begin{proposition}
+
+For any moving sofa \(S\) with rotation angle \(\omega \in [0, \pi/2]\) in standard position, we have \(\mathcal{C}(\mathcal{M}(S)) = \mathcal{C}(S)\).
+
+\label{pro:monotonization-cap}
+\end{proposition}
+
+\begin{proof}
+By \Cref{def:cap-sofa} and \Cref{pro:rotating-hallway-parts}, the set \(\mathcal{C}(X)\) of \(X = S\) or \(\mathcal{M}(S)\) depend only on the values of the support function \(p_X\) on \(J_\omega\). The support functions of \(S\) and \(\mathcal{M}(S)\) match on \(J_\omega\) by \Cref{lem:cap-same-support-function}, completing the proof.
+\end{proof}
+
+We will use the following intrinsic variant of \Cref{thm:monotonization-structure} to represent any monotone sofa \(S\) as its cap minus niche.
+
+\begin{theorem}
+
+Let \(S\) be any monotone sofa with rotation angle \(\omega \in (0, \pi/2]\). Then \(S\) is in standard position and \(S = K \setminus \mathcal{N}(K)\), where \(K := \mathcal{C}(S)\) is the cap of \(S\) with rotation angle \(\omega\), and \(\mathcal{N}(K)\) is the niche of the cap \(K\).
+
+\label{thm:monotone-sofa-structure}
+\end{theorem}
+
+\begin{proof}
+Let \(S = \mathcal{M}(S')\) be any monotone sofa, so that it is the monotonization of a moving sofa \(S'\) in standard position. Then \(K := \mathcal{C}(S) = \mathcal{C}(S')\) by \Cref{pro:monotonization-cap}. Now apply \Cref{thm:monotonization-structure} to \(\mathcal{M}(S')\) to conclude that \(S = \mathcal{M}(S') = \mathcal{C}(S') \setminus \mathcal{N}(\mathcal{C}(S')) = K \setminus \mathcal{N}(K)\).
+\end{proof}
+
+Note that this variant does not mention anything about monotonization. In particular, by \Cref{thm:monotone-sofa-structure} any monotone sofa \(S\) can be recovered from its cap \(K = \mathcal{C}(S)\).
+
+Monotization \(S \mapsto \mathcal{M}(S)\) is a process that enlarges any moving sofa \(S\) by \Cref{thm:monotonization-is-sofa}. Moreover, if \(S\) is already monotone (so that \(S = \mathcal{M}(S')\) for some \(S'\)), then the monotonization fixes \(S\).
+
+\begin{theorem}
+
+For any monotone sofa \(S\), we have \(\mathcal{M}(S) = S\).
+
+\label{thm:monotonization-fixpoint}
+\end{theorem}
+
+\begin{proof}
+Since \(S\) is monotone, \(S = \mathcal{M}(S')\) for some other moving sofa \(S'\). Now check
+\[
+\mathcal{M}(S) = \mathcal{C}(S) \setminus \mathcal{N}(\mathcal{C}(S)) = \mathcal{C}(S') \setminus \mathcal{N}(\mathcal{C}(S')) = \mathcal{M}(S') = S
+\]
+which holds from \Cref{thm:monotonization-structure} and \Cref{pro:monotonization-cap}.
+\end{proof}
+
+Thus, the monotonization \(S \mapsto \mathcal{M}(S)\) can be said as a ‘projection’ from all moving sofas to monotone sofas, in the sense that \(\mathcal{M}\) is a surjective map that fixes monotone sofas.
+
+\subsubsection{\texorpdfstring{Proof of \Cref{thm:cap-hallway-intersection}}{Proof of }}
+
+If \(\omega = \pi / 2\), then the set \(P_\omega\) is the horizontal strip \(H\). If \(\omega < \pi/2\), \(P_\omega\) is a proper parallelogram with the following points as vertices.
+
+\begin{definition}
+
+Let \(O = (0, 0)\) be the origin. For any angle \(\omega \in (0, \pi/2]\), define the point \(o_\omega = (\tan(\omega/2), 1)\).
+
+\label{def:parallelogram-vertices}
+\end{definition}
+
+Note that if \(\omega < \pi/2\), then \(O\) is the lower-left corner of \(P_\omega\) and \(o_{\omega} = l(\omega, 1) \cap l(\pi/2, 1)\) is the upper-right corner of \(P_\omega\). Define the following subset of \(P_\omega\).
+
+\begin{definition}
+
+Let \(\omega \in (0, \pi/2]\) be arbitrary. Define \(M_\omega\) as the convex hull of the points \(O, o_\omega, o_\omega-u_\omega, o_\omega-v_0\).
+
+\label{def:middle-set}
+\end{definition}
+
+Geometrically, \(M_\omega\) is a subset of \(P_\omega\) enclosed by the perpendicular legs from \(o_\omega\) to the bottom sides \(l(\omega, 0)\) and \(l(\pi/2, 0)\) of \(P_\omega\). We also introduce the following terminology.
+
+\begin{definition}
+
+Say that a point \(p_1\) is \emph{further than} (resp. \emph{strictly further than}) the point \(p_2\) \emph{in the direction} of nonzero vector \(v \in \mathbb{R}^2\) if \(p_1 \cdot v \geq p_2 \cdot v\) (resp. \(p_1 \cdot v > p_2 \cdot v\)).
+
+\label{def:further-in-direction}
+\end{definition}
+
+We show the following lemma.
+
+\begin{lemma}
+
+If \(\omega < \pi/2\), then the set \(\mathcal{C}(S)\) in \Cref{def:cap-sofa} contains \(M_\omega\).
+
+\label{lem:cap-contains-middle-set}
+\end{lemma}
+
+\begin{proof}
+Since \(p_S(\omega) = p_S(\pi/2) = 1\), we can take points \(q\) and \(r\) of \(S\) so that \(q\) is on the line \(l(\pi/2, 1)\) further than \(o_\omega\) in the direction of \(-u_0\), and \(r\) is on the line \(l(\omega, 1)\) further than \(o_\omega\) in the direction of \(-v_\omega\). Take an arbitrary \(t \in [0, \omega]\). Because \(Q^+_S(t)\) is a right-angled convex cone with normal vectors \(u_t\) and \(v_t\) containing \(q\) and \(r\), \(Q_S^+(t)\) also contains \(o_\omega\). Because \(Q_S^+(t)\) contains \(o_\omega\) and is closed in the direction of \(-u_t\) and \(-v_t\) (\Cref{def:closed-in-direction}), \(Q_S^+(t)\) contains \(M_\omega\) as a subset. So the intersection \(\mathcal{C}(S)\) of \(P_\omega\) and \(Q_S^+(t)\) contains \(M_\omega\).
+\end{proof}
+
+We finish the proof of \Cref{thm:cap-hallway-intersection}.
+
+\begin{proof}[Proof of \Cref{thm:cap-hallway-intersection}]
+Let \(S\) be any moving sofa with rotation angle \(\omega \in (0, \pi/2]\) in standard position. Let \(K = \mathcal{C}(S)\). That \(S \subseteq K\) is an immediate consequence of the third condition of \Cref{thm:moving-sofa-iff-hallway-intersection}. We now show that \(K\) is a cap with rotation angle \(\omega\).
+
+Assume the case \(\omega < \pi/2\). Then by \Cref{def:cap-sofa} and \Cref{lem:cap-contains-middle-set} we have \(M_\omega \subseteq K \subseteq P_\omega\), and the support function of \(M_\omega\) and \(P_\omega\) agree on the angles \(\omega, \pi/2, \omega + \pi, 3\pi/2\). So the first condition of \Cref{def:cap} is satisfied. Now assume \(\omega = \pi/2\). Since \(S \subseteq K \subseteq H\) and \(S\) is in standard position we have \(p_S(\pi/2) = p_K(\pi/2) = 1\). With \(p_K(\pi/2) = 1\), take the point \(z \in K\) on the line \(y=1\). Let \(X := \bigcap_{t \in [0, \pi/2]} Q_S^+(t)\), then by the definition of \(K\) we have \(K = H \cap X\). Since \(X\) is closed in the direction of \(-v_0\) (\Cref{def:closed-in-direction}), the point \(z' := z - (0, 1)\) is also in \(X\). So \(z' \in H \cap X = K\) and \(z'\) is on the line \(y=0\). This implies that \(p_K(3\pi/2) = 0\). So the first condition of \Cref{def:cap} is true.
+
+The set \(P_\omega\) is the intersection of four half-planes with normal angles \(\omega, \pi/2, \pi + \omega, 3\pi/2\). The set \(Q_S^+(t)\) is an intersection of two half-planes with normal angles \(t\) and \(t + \pi/2\). Now the second condition of \Cref{def:cap} follows.
+\end{proof}
