@@ -27,7 +27,7 @@ Once we fix the rotation angle \(\omega \in (0, \pi/2]\) of a moving sofa \(S\),
   A translation of \(V_\omega\), where \(V_\omega\) is the vertical strip \(V = [0, 1] \times \mathbb{R}\) rotated counterclockwise by \(\omega\) around the origin.
 \end{enumerate}
 
-To observe (1) that \(S \subseteq L_t\) for every angle \(t \in [0, \omega]\), note that the sofa \(S\) is rotated initially by a clockwise angle of \(0\) and finally by \(\omega\) during its movement. By the intermediate value theorem, there is a moment where a copy of \(S\) is rotated clockwise by \(t\) inside \(L\). Push the rotated copy of \(S\) in \(L\) towards the positive \(x\) and \(y\) directions, until it makes contact with the outer walls \(x=1\) and \(y=1\) of \(L\). See this configuration in the perspective of \(S\) to conclude \(S \subseteq L_t\). To observe (2) and (3), note that the sofa \(S\) is initialy in \(L_H\) and finally in \(L_H\) rotated clockwise by \(\omega\); see the configurations in perspective of \(S\) ot conclude that \(S\) is in \(H\) and a translation of \(V_\omega\).
+To observe (1) that \(S \subseteq L_t\) for every angle \(t \in [0, \omega]\), note that the sofa \(S\) is rotated initially by a clockwise angle of \(0\) and finally by \(\omega\) during its movement. By the intermediate value theorem, there is a moment where a copy of \(S\) is rotated clockwise by \(t\) inside \(L\). Push the rotated copy of \(S\) in \(L\) towards the positive \(x\) and \(y\) directions, until it makes contact with the outer walls \(x=1\) and \(y=1\) of \(L\). See this configuration in the perspective of \(S\) to conclude \(S \subseteq L_t\). To observe (2) and (3), note that the sofa \(S\) is initialy in \(L_H\) and finally in \(V_H\) rotated clockwise by \(\omega\); see the configurations in perspective of \(S\) to conclude that \(S\) is in \(H\) and a translation of \(V_\omega\).
 
 \begin{figure}
 \centering
@@ -36,7 +36,7 @@ To observe (1) that \(S \subseteq L_t\) for every angle \(t \in [0, \omega]\), n
 \label{fig:monotone-sofa}
 \end{figure}
 
-Without loss of generality, we can translate the moving sofa \(S\) horizontally and assume that \(S\) is contained in \(V_\omega\), not its arbitrary translation.\footnote{Translating the moving sofa \(S\) may invalidate the initial condition \(S \subseteq L_H\). To resolve this, we relax the \Cref{def:sofa} of a moving sofa \(S\) in so that only some translation of \(S\) is required to be movable from \(L_H\) to \(L_V\) inside \(L\).} Then from (1), (2) and (3) above, we can always assume that \(S\) is contained in the intersection
+Without loss of generality, we can translate the moving sofa \(S\) horizontally and assume that \(S\) is contained in \(V_\omega\), not its arbitrary translation.\footnote{Translating the moving sofa \(S\) may invalidate the initial condition \(S \subseteq L_H\). To resolve this, we relax the \Cref{def:sofa} of a moving sofa \(S\) so that only some translation of \(S\) is required to be movable from \(L_H\) to \(L_V\) inside \(L\).} Then from (1), (2) and (3) above, we can always assume that \(S\) is contained in the intersection
 \begin{equation}
 \label{eqn:monotone}
 \mathcal{M}(S) := H \cap V_\omega \cap \bigcap_{0 \leq t \leq \omega} L_t
