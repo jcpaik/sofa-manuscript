@@ -1,4 +1,4 @@
-In this [[a. Angle hypothesis/05. Balanced Polygon Sofas|05. Balanced Polygon Sofas]], our goal is to show the [[a. Angle hypothesis/05. Balanced Polygon Sofas#^thm-balanced-polygon-sofa]] which states that the maximizing polygon cap $K \in \mathcal{K}_\Theta$ of the polygon sofa area $\mathcal{A}_\Theta(K)$ is _balanced_ in the sense of Gerver. We postpone its full statement and proof of [[a. Angle hypothesis/05. Balanced Polygon Sofas#^thm-balanced-polygon-sofa]] at the end as it involves a bit of technicalties.
+In this [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas|15. Balanced Polygon Sofas]], our goal is to show the [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^thm-balanced-polygon-sofa]] which states that the maximizing polygon cap $K \in \mathcal{K}_\Theta$ of the polygon sofa area $\mathcal{A}_\Theta(K)$ is _balanced_ in the sense of Gerver. We postpone its full statement and proof of [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^thm-balanced-polygon-sofa]] at the end as it involves a bit of technicalties.
 
 Our main idea is to use the balancing argument as described in [[a. Angle hypothesis/01. Introduction/05. Balancedness]], we circumvented the issue of preserving the connectedness by separtating the cap $K \in \mathcal{K}_\Theta$ from its polygon niche $\mathcal{N}_\Theta(K)$ in our polygon sofa area functional $\mathcal{A}_\Theta(K) = |K| - |\mathcal{N}_\Theta(K)|$. Consequently, we need to take account of both the cap $K$ and the niche $\mathcal{N}_\Theta(K)$ in our balancing strategy. 
 
@@ -17,9 +17,6 @@ Assume that $K$ is not balanced. We now execute the balancing strategy by tweaki
 
 The issue is that, as we tweak the values of $h$ to $h'$, there might not be a corresponding cap $K' \in \mathcal{K}_\Theta$ such that $h'$ is the support function $p_{K'}$. After making such an adjustment from $h$ to $h'$, we also need to construct back a cap $K'' \in \mathcal{K}_\Theta$ so that $\mathcal{A}_\Theta(K'') > \mathcal{A}_\Theta(K)$.
 
-- pushout -> preserves cap.
-- outer edges of K <= inner edges of niche => should be that the outer edge of something is strictly larger. for the 'bands', 
-
 We do this process by extending the polygon cap space $\mathcal{K}_\Theta$ to larger spaces $\mathcal{K}_\Theta'$ and $\mathcal{H}_\Theta$ successively. $\mathcal{K}_\Theta'$ is the space of _extended caps_ defined in XX. $\mathcal{H}_\Theta$ is the space of functions $h : \Theta^* \to \mathbb{R}$ that may or may not be . We will have a chain of injections $\mathcal{K}_\Theta \to \mathcal{K}_\Theta' \to \mathcal{H}_\Theta$ where the map $\mathcal{K}_\Theta \to \mathcal{H}_\Theta$ is the support function $K \mapsto h = p_K$. The area functional $\mathcal{A}_\Theta$ is then naturally extended from $\mathcal{K}_\Theta$ to $\mathcal{H}_\Theta$. Take any $K \in \mathcal{K}_\Theta$ which is not balanced. We will make small adjustment to $K$ to construct a $h \in \mathcal{H}_\Theta$ with larger $\mathcal{A}_\Theta(h)$ than $\mathcal{A}_\Theta(K)$. Then we will successively find $K' \in \mathcal{K}_\Theta'$ and $K'' \in \mathcal{K}_\Theta$ such that $\mathcal{A}_\Theta(h) \leq \mathcal{A}_\Theta(K') \leq \mathcal{A}_\Theta(K'')$, reducing the new example to while keeping the area. Consequently, we find a $K'' \in \mathcal{K}_\Theta$ with a larger $\mathcal{A}_\Theta$ than $K \in \mathcal{K}_\Theta$, completing the proof.
 
 # Extensions of the Cap Space
@@ -31,7 +28,7 @@ We first define the extension $\mathcal{K}_\Theta'$ of $\mathcal{K}_\Theta$.
 > 1. $K$ is a convex body with normal angles in the set $\Theta \cup (\Theta + \pi/2) \cup \left\{ \pi + \omega, 3\pi/2 \right\}$.
 > 2. The widths $p_K(\omega) + p_K(\omega + \pi)$ and $p_K(\pi/2) + p_K(3\pi/2)$ of $K$ along the angles $\omega$ and $\pi/2$ are at most 1.
 
-Note that only the condition 2 of [[a. Angle hypothesis/04. Polygon Sofas#^def-angled-cap-space]] is relaxed from [[a. Angle hypothesis/05. Balanced Polygon Sofas#^def-angled-cap-space-ext]] of a cap $K \in \mathcal{K}_\Theta$. In particular, any translation of a cap $K \in \mathcal{K}_\Theta$ is a member of $\mathcal{K}_{\Theta}'$. 
+Note that only the condition 2 of [[a. Angle hypothesis/10. Balanced Sofas/04. Polygon Sofas#^def-angled-cap-space]] is relaxed from [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^def-angled-cap-space-ext]] of a cap $K \in \mathcal{K}_\Theta$. In particular, any translation of a cap $K \in \mathcal{K}_\Theta$ is a member of $\mathcal{K}_{\Theta}'$. 
 
 > __Proposition [angled-cap-space-ext].__ We have $\mathcal{K}_\Theta \subseteq \mathcal{K}_\Theta'$. ^pro-angled-cap-space-ext
 
@@ -52,9 +49,9 @@ d_h(t) = l(t + \pi/2, h(t + \pi/2) - 1)
 $$
 > For any extended cap $K' \in \mathcal{K}_\Theta'$ with support function $h = p_{K'}$, define $?_{K'} = ?_{h}$ for $? = a, b, c, d$.
 
-> __Proposition [height-edges].__ [[a. Angle hypothesis/05. Balanced Polygon Sofas#^def-height-edges]] agrees with the definition of $a_K, b_K, c_K, d_K$ on cap. ^pro-height-edges
+> __Proposition [height-edges].__ [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^def-height-edges]] agrees with the definition of $a_K, b_K, c_K, d_K$ on cap. ^pro-height-edges
 
-Second, the cap and niche of a cap generalizes naturally to an arbitrary function $h \in \mathcal{H}_\Theta$. We only need to follow [[a. Angle hypothesis/05. Balanced Polygon Sofas#^eqn-cap-support-ftn]] and [[a. Angle hypothesis/05. Balanced Polygon Sofas#^eqn-niche-support-ftn]].
+Second, the cap and niche of a cap generalizes naturally to an arbitrary function $h \in \mathcal{H}_\Theta$. We only need to follow [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^eqn-cap-support-ftn]] and [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^eqn-niche-support-ftn]].
 
 > __Definition [height-cap].__ For any $h \in \mathcal{H}_\Theta$, define its _cap_ ^def-height-cap
 $$
@@ -100,13 +97,12 @@ For any $t \in \Theta$, the value $\kappa_h(t)$ (resp. $\kappa_h(t + \pi/2)$) is
 > 2. If $\omega < \pi/2$, then $\kappa_h(3\pi/2) - \nu_h(3\pi/2) = \kappa_h(\pi/2)$ and $\kappa_h(\omega + \pi) - \nu_h(\omega + \pi) = \kappa_h(\omega)$.
 > 3. If $\omega = \pi/2$, then $\kappa_h(3\pi/2) - \nu_h(3\pi/2) = \kappa_h(\pi/2)$.
 
-[[a. Angle hypothesis/05. Balanced Polygon Sofas#^def-height-balanced]] is really motivated from the following analysis of local adjustments.
+[[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^def-height-balanced]] is really motivated from the following analysis of local adjustments.
 
 > __Lemma [height-balancing].__ For any extended cap $K \in \mathcal{K}_\Theta$ and its support function $h = p_{K} \in \mathcal{H}_\Theta$. Let $g \in \mathcal{H}_\Theta$ be a slight adjustment of $h'$. ^lem-height-balancing
 > 
 > 1. (move to $u_t$ and $v_t$) Fix an arbitrary $t \in \Theta \cup (\Theta + \pi/2)$. If $g(t) = h(t) + \delta$ and $g = h$ on $\Theta^{*} \setminus \left\{ t \right\}$ then $\mathcal{A}_\Theta(g) = \mathcal{A}_\Theta(h) + (\kappa_h(t) - \nu_h(t)) \delta + O(\delta^2)$.
-> 2. (move only base down) If $g(3\pi/2) = h(3\pi/2) + \delta$ and $g = h$ on $\Theta^{*} \setminus \left\{ 3\pi/2 \right\}$, then 
-> 3. (move both down) If $g(\pi/2) = h(\pi/2) + \delta$ and $g($
+> 2. (move both down) If $g(\pi/2) = h(\pi/2) + \delta$ and $g($
 
 Now if some cap $K \in \mathcal{K}_\Theta$ is _not_ balanced, then we will show that there is some $h \in \mathcal{H}_\Theta$ with larger $\mathcal{A}_\Theta(h) > \mathcal{A}_\Theta(K)$.
 
@@ -114,7 +110,7 @@ Now if some cap $K \in \mathcal{K}_\Theta$ is _not_ balanced, then we will show 
 
 _Proof._ Appeal to the adjustment lemma. □
 
-Now we will take the $h \in \mathcal{H}_\Theta$ that we took in [[a. Angle hypothesis/05. Balanced Polygon Sofas#^pro-height-balanced]] and reduce it to larger cap.
+Now we will take the $h \in \mathcal{H}_\Theta$ that we took in [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^pro-height-balanced]] and reduce it to larger cap.
 
 > __Proposition [height-to-cap].__ For any $h \in \mathcal{H}_\Theta$ with $\mathcal{A}_\Theta(h) > 0$, take $K' = \mathcal{C}(h) \in \mathcal{K}_\Theta'$, then we have $\mathcal{A}_\Theta(h) \leq \mathcal{A}_\Theta(K')$. ^pro-height-to-cap
 
@@ -140,11 +136,11 @@ Recall that for a cap $K \in \mathcal{K}_\Theta$, the wedge gap is strictly posi
 > 
 > In particular, for any cap $K \in \mathcal{K}_\Theta$ we have $h_{\omega} = h_{\pi/2} = 1$ so both wedge gaps $w_K^{\circ}$ and $z_{K}^{\circ}$ are strictly positive.
 
-To prove [[a. Angle hypothesis/05. Balanced Polygon Sofas#^lem-wedge-gap-positive]], we will use the following terminology.
+To prove [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^lem-wedge-gap-positive]], we will use the following terminology.
 
 > __Definition [further-in-direction].__ Say that a point $p_1$ is _further than_ (resp. _strictly further than_) the point $p_2$ _in the direction_ of nonzero vector $v \in \mathbb{R}^2$ if $p_1 \cdot v \geq p_2 \cdot v$ (resp. $p_1 \cdot v > p_2 \cdot v$). ^def-further-in-direction
 
-We factor out a technical yet purely elementary geometric part of the proof of [[a. Angle hypothesis/05. Balanced Polygon Sofas#^lem-wedge-gap-positive]].
+We factor out a technical yet purely elementary geometric part of the proof of [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^lem-wedge-gap-positive]].
 
 > __Lemma [band-intersection].__ Let the angle $t \in [0, \pi/2)$, real values $a, b$, and nonnegative real values $h_\omega, h_{\pi/2} \geq 0$ be arbitrary. Define the points $O = l(t, a) \cap l(\pi/2, b)$ and $o = l(t, a + h_{t}) \cap l(\pi/2, b + h_{\pi/2})$. ^lem-band-intersection
 > 
@@ -153,16 +149,16 @@ We factor out a technical yet purely elementary geometric part of the proof of [
 
 _Proof._ Let $\mathbf{z} = O - o$ be the vector from $o$ to $O$. Then by the definition of $o$ and $O$, we have $\mathbf{z} \cdot u_t = h_t$ and $\mathbf{z} \cdot u_{\pi/2} = h_{\pi/2}$. Solving this, we get $\mathbf{z} = (h_t u_0 + h_{\pi/2} v_\omega) / \cos \omega$. If $h_t \geq h_{\pi/2}$, then we have $\cos \omega (\mathbf{z} \cdot u_0) = h_t + h_{\pi/2} (v_\omega \cdot u_0) > h_t - h_{\pi/2} \geq 0$. □
 
-We now prove [[a. Angle hypothesis/05. Balanced Polygon Sofas#^lem-wedge-gap-positive]].
+We now prove [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^lem-wedge-gap-positive]].
 
-_Proof._ (of [[a. Angle hypothesis/05. Balanced Polygon Sofas#^lem-wedge-gap-positive]]) Assume $h_\omega \geq h_{\pi/2}$. By [[a. Angle hypothesis/05. Balanced Polygon Sofas#^def-wedge-gap-polygon]] of wedge gap $w_K^{\circ}$, we only need to show the followings.
+_Proof._ (of [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^lem-wedge-gap-positive]]) Assume $h_\omega \geq h_{\pi/2}$. By [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^def-wedge-gap-polygon]] of wedge gap $w_K^{\circ}$, we only need to show the followings.
 
 1. We have $w_K(t) > 0$ for all $t \in \Theta \setminus \left\{ \pi/2 \right\}$.
 2. If $\omega < \pi/2$, then we have $\kappa_K(3\pi/2) > 0$.
 
-We prove (1). First, the point $q_0 = l_K(\pi/2) \cap l_K(t)$ is further than the point $W_K(t)$ which is $l_K(3\pi/2) \cap b_K(t)$ by (definition) in the direction of $u_0$ by [[a. Angle hypothesis/05. Balanced Polygon Sofas#^lem-band-intersection]]. Observe that $l_K(\pi/2)$ and $l_K(3\pi/2)$ has gap at most 1, and $l_K(t)$ and $b_K(t)$ has gap exactly 1. Now the point $A_K^-(0)$ is further than $q_0$ in the direction of $u_0$ by the convexity of $K$. So $A_K^-(0)$ is strictly further than $W_K(t)$ in the direction of $u_0$, and consequently $w_K(t) > 0$.
+We prove (1). First, the point $q_0 = l_K(\pi/2) \cap l_K(t)$ is further than the point $W_K(t)$ which is $l_K(3\pi/2) \cap b_K(t)$ by (definition) in the direction of $u_0$ by [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^lem-band-intersection]]. Observe that $l_K(\pi/2)$ and $l_K(3\pi/2)$ has gap at most 1, and $l_K(t)$ and $b_K(t)$ has gap exactly 1. Now the point $A_K^-(0)$ is further than $q_0$ in the direction of $u_0$ by the convexity of $K$. So $A_K^-(0)$ is strictly further than $W_K(t)$ in the direction of $u_0$, and consequently $w_K(t) > 0$.
 
-We also prove (2). $\kappa_K(3\pi/2)$ is the distance between the point $o = l_K(\omega + \pi) \cap l_K(3\pi/2)$ and $A_K^-(0)$ along the vector $u_0$. Compare $o$ with $O = l_K(\omega) \cap l_K(\pi/2)$. By the assumption $h_\omega \geq h_{\pi/2}$ and [[a. Angle hypothesis/05. Balanced Polygon Sofas#^lem-band-intersection]], $O$ is strictly further than $o$ in the direction $u_0$. By the convexity of $K$, the point $A_K^-(0)$ is further than $O$ in the direction of $u_0$. Consequently the proof is done. □
+We also prove (2). $\kappa_K(3\pi/2)$ is the distance between the point $o = l_K(\omega + \pi) \cap l_K(3\pi/2)$ and $A_K^-(0)$ along the vector $u_0$. Compare $o$ with $O = l_K(\omega) \cap l_K(\pi/2)$. By the assumption $h_\omega \geq h_{\pi/2}$ and [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^lem-band-intersection]], $O$ is strictly further than $o$ in the direction $u_0$. By the convexity of $K$, the point $A_K^-(0)$ is further than $O$ in the direction of $u_0$. Consequently the proof is done. □
 
 The wedge gap $w_K^{\circ}$ provides a lower bound for the difference between the lengths $\nu_h(3\pi/2)$, $\nu_h(3\pi/2)$ of the bottom edges of cap and niche.
 
@@ -208,15 +204,15 @@ Define the domain $\mathcal{D}$ as the set of elements in $\mathcal{K}_\Theta^0$
 
 # Balanced Polygon Sofa
 
-> __Theorem [balanced-polygon-sofa].__ Let $\Theta$ be an angle set with rotation angle $\omega \in (0, \pi/2]$. Then there exists a $K \in \mathcal{K}_\Theta$ attaining the maximum value of $\mathcal{A}_\Theta(K)$. Moreover, any such maximizer $K$ is balanced as in [[a. Angle hypothesis/05. Balanced Polygon Sofas#^def-height-balanced]]. In particular, any such $K$ satisfies the followings. ^thm-balanced-polygon-sofa
+> __Theorem [balanced-polygon-sofa].__ Let $\Theta$ be an angle set with rotation angle $\omega \in (0, \pi/2]$. Then there exists a $K \in \mathcal{K}_\Theta$ attaining the maximum value of $\mathcal{A}_\Theta(K)$. Moreover, any such maximizer $K$ is balanced as in [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^def-height-balanced]]. In particular, any such $K$ satisfies the followings. ^thm-balanced-polygon-sofa
 > 
 > - If $\omega < \pi/2$, then we have $w_K^{\circ} \leq \kappa_K(\pi/2)$ and $z_K^{\circ} \leq \kappa_K(\omega)$.
 > - If $\omega = \pi/2$, then we have $w_K^{\circ} + z_K^{\circ} \leq \kappa_K(\pi/2)$.
 
-_Proof._ The existence of such $K$ is guaranteed by [[a. Angle hypothesis/05. Balanced Polygon Sofas#^thm-extended-cap-maximizer]] and [[a. Angle hypothesis/05. Balanced Polygon Sofas#^thm-extended-cap-to-cap]].
+_Proof._ The existence of such $K$ is guaranteed by [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^thm-extended-cap-maximizer]] and [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^thm-extended-cap-to-cap]].
 
-Next, we show that $K$ is balanced. Assume otherwise. Then by [[a. Angle hypothesis/05. Balanced Polygon Sofas#^pro-height-balanced]], there exists a $h \in \mathcal{H}_\Theta$ such that $\mathcal{A}_\Theta(K) < \mathcal{A}_\Theta(h)$. By [[a. Angle hypothesis/05. Balanced Polygon Sofas#^pro-height-to-cap]], there exists an extended cap $K' \in \mathcal{K}_\Theta'$ with $\mathcal{A}_\Theta(h) \leq \mathcal{A}_\Theta(K')$ by [[a. Angle hypothesis/05. Balanced Polygon Sofas#^pro-height-to-cap]]. Finally, use [[a. Angle hypothesis/05. Balanced Polygon Sofas#^cor-extended-cap-to-cap]] to find another $K'' \in \mathcal{K}_\Theta$ such that $\mathcal{A}_\Theta(K') \leq \mathcal{A}_\Theta(K'')$. In conclusion, $K$ does not attain the maximum value. 
+Next, we show that $K$ is balanced. Assume otherwise. Then by [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^pro-height-balanced]], there exists a $h \in \mathcal{H}_\Theta$ such that $\mathcal{A}_\Theta(K) < \mathcal{A}_\Theta(h)$. By [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^pro-height-to-cap]], there exists an extended cap $K' \in \mathcal{K}_\Theta'$ with $\mathcal{A}_\Theta(h) \leq \mathcal{A}_\Theta(K')$ by [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^pro-height-to-cap]]. Finally, use [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^cor-extended-cap-to-cap]] to find another $K'' \in \mathcal{K}_\Theta$ such that $\mathcal{A}_\Theta(K') \leq \mathcal{A}_\Theta(K'')$. In conclusion, $K$ does not attain the maximum value. 
 
-- If $\omega < \pi/2$, then by balancedness we have $\kappa_h(3\pi/2) - \nu_h(3\pi/2) = \kappa_h(\pi/2)$. By [[a. Angle hypothesis/05. Balanced Polygon Sofas#^lem-height-gap]] we have $\nu_K(3\pi/2) + w_K^{\circ} \leq \kappa_K(3\pi/2)$. So we have $w_K^{\circ} \leq \kappa_K(\pi/2)$.
+- If $\omega < \pi/2$, then by balancedness we have $\kappa_h(3\pi/2) - \nu_h(3\pi/2) = \kappa_h(\pi/2)$. By [[a. Angle hypothesis/10. Balanced Sofas/15. Balanced Polygon Sofas#^lem-height-gap]] we have $\nu_K(3\pi/2) + w_K^{\circ} \leq \kappa_K(3\pi/2)$. So we have $w_K^{\circ} \leq \kappa_K(\pi/2)$.
 
 □
