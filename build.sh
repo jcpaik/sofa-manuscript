@@ -5,7 +5,7 @@ setopt no_nomatch
 rm -f main.*~main.tex
 setopt nomatch
 rm -r out
-mathmd vault out
+mathmd "vault/b. Angle Hypothesis" out
 
 pdflatex -shell-escape main
 bibtex main

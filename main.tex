@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{cleveref}
 \usepackage{enumitem}
@@ -49,7 +50,7 @@
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
-\title{A Conditional Upper Bound for the Moving Sofa Problem}
+\title{Rotation Angle of a Maximum Area Moving Sofa is $\pi/2$}
 
 \author{Jineon Baek}
 % \address{University of Michigan, Department of Mathematics,
@@ -63,9 +64,20 @@
 \maketitle
 
 \begin{abstract}
-The \emph{moving sofa problem} asks for the connected shape with the largest area $\mu_{\text{max}}$ that can move around the right-angled corner of a hallway $L$ with unit width. The best bounds currently known on $\mu_{\max}$ are summarized as $2.2195\ldots \leq \mu_{\max} \leq 2.37$. The lower bound $2.2195\ldots \leq \mu_{\max}$ comes from Gerver's sofa $S_G$ of area $\mu_G := 2.2195\ldots$. The upper bound $\mu_{\max} \leq 2.37$ was proved by Kallus and Romik using extensive computer assistance. It is conjectured that the equality $\mu_{\max} = \mu_G$ holds at the lower bound.
+The \emph{moving sofa problem} asks for the connected shape $S_{\text{max}}$
+with the largest area $\mu_{\text{max}}$
+that can move around the right-angled corner of a hallway $L$ with unit width.
+Call any such maneuverable shape a \emph{moving sofa}.
+While it is conjectured that Gerver's sofa $S_G$ attains the maximum area,
+not much is known about the moving sofa $S_{\max}$ that actually attains the
+maximum area $\mu_{\max}$.
 
-We develop a new approach to the moving sofa problem by approximating it as an infinite-dimensional convex quadratic optimization problem. The problem is then explicitly solved using a calculus of variation based on the Brunn-Minkowski theory. Consequently, we prove that any moving sofa satisfying a property named the \emph{injectivity condition} has an area of at most $1 + \pi^2/8 = 2.2337\dots$. The new conditional bound does not rely on any computer assistance, yet it is much closer to the lower bound $2.2195\ldots$ of Gerver than the computer-assisted upper bound $2.37$ of Kallus and Romik. Gerver's sofa $S_G$, the conjectured optimum, satisfies the injectivity condition in particular.
+The \emph{rotation angle} $\omega$ of a moving sofa is the clockwise angle that it rotates
+during its full movement inside $L$.
+Gerver assumed $\omega = \pi/2$ in order to derive his conjectually optimum sofa $S_G$.
+However, the best bound established on $\omega$ 
+
+We prove $\omega = \pi/2$.
 \end{abstract}
 
 \tableofcontents
@@ -74,7 +86,7 @@ We develop a new approach to the moving sofa problem by approximating it as an i
 
 \section*{Acknowledgements}
 
-The author is indebted to Dan Romik for thorough discussions during the research and for his thoughtful feedback on the draft, which made the presentation much more organized and clear. The author thanks Rolf Schneider for his suggestions on how to prove \Cref{thm:boundary-measure}. The author is also grateful to Joseph Gerver, Thomas Hales, Jeffrey Lagarias, and David Speyer for their useful discussions. The author acknowledges support from the Korea Foundation for Advanced Studies during the completion of this research.
+The author acknowledges support from the Korea Foundation for Advanced Studies during the completion of this research.
 \printbibliography
 
 \end{document}
