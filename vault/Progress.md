@@ -3,7 +3,8 @@
 
 - [ ] Introduction
 	- [ ] Tidy up main result (Only few minor edits needed)
-	- [ ] Tidy up monotone sofa (Need some minor edits to make it flow)
+	- [ ] Tidy up monotone sofa (Need some edits to make it flow)
+		- [ ] Motivate the core idea and the monotone sofa in a very simple way
 		- [ ] Say that hallways are in convex position.
 	- [ ] Draw main idea figure 
 	- [ ] Tidy up balancedness description (Needs a lot of work)
