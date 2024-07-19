@@ -1,6 +1,11 @@
-\documentclass[10pt]{article}
+\documentclass[11pt, letterpaper]{amsart}
 
-\usepackage[margin=1in]{geometry}
+\usepackage[dvips, hcentering,
+includehead,width=14.2cm,
+top=0.5cm,
+height=21.6cm,
+paperheight=23.8cm,paperwidth=17cm
+]{geometry}
 
 \usepackage{textcomp}
 \usepackage{amsmath}
@@ -50,7 +55,7 @@
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
-\title{Rotation Angle of a Maximum Area Moving Sofa is $\pi/2$}
+\title{Moving Sofas I: Rotation Angle of a Moving Sofa}
 
 \author{Jineon Baek}
 % \address{University of Michigan, Department of Mathematics,
@@ -64,29 +69,20 @@
 \maketitle
 
 \begin{abstract}
-The \emph{moving sofa problem} asks for the connected shape $S_{\text{max}}$
-with the largest area $\mu_{\text{max}}$
+The \emph{moving sofa problem} asks for the connected shape with the largest area $\mu_{\text{max}}$
 that can move around the right-angled corner of a hallway $L$ with unit width.
-Call any such maneuverable shape a \emph{moving sofa}.
-While it is conjectured that Gerver's sofa $S_G$ attains the maximum area,
-not much is known about the moving sofa $S_{\max}$ that actually attains the
-maximum area $\mu_{\max}$.
-
-The \emph{rotation angle} $\omega$ of a moving sofa is the clockwise angle that it rotates
-during its full movement inside $L$.
-Gerver assumed $\omega = \pi/2$ in order to derive his conjectually optimum sofa $S_G$.
-However, the best bound established on $\omega$ 
-
-We prove $\omega = \pi/2$.
+It is conjectured that Gerver's sofa $S_G$ attains the maximum area,
+but all known derivations of $S_G$ rely on the assumption that
+a maximum-area sofa should rotate clockwise by $\pi/2$ in its movement.
 \end{abstract}
-
-\tableofcontents
 
 \input{out.tex}
 
 \section*{Acknowledgements}
 
 The author acknowledges support from the Korea Foundation for Advanced Studies during the completion of this research.
+
+
 \printbibliography
 
 \end{document}
