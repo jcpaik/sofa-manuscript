@@ -1,9 +1,37 @@
+# Rough Ideas
+
+Tracks
+
+1. The original route: use balancedness and interval-wide upper and lower bounds on $g$ and $h
+		- Need to check a whole table of cases
+1. New route: Prove Right-Lipschitzness of h for well-behaving $g \leq 2
+		- Reduces computer check to 5ish I suppose
+		- Still need distance ineqaulities.
+1. Potential computer-free route: Prove lower estimate
+	- $h < 1$ -> previous angle has x above than the $d_K(t)$. $\sigma$ bounded from above by $1 - g$ (if g <  1) or 0 (if g > 1).
+	- $h \geq 1$ -> multiple cases... (may suddenly transition to $h < 1$) but if $g > 1$ then standard bound holds ($2 \sigma - 1 \leq g - 1$ (if $\sigma \leq 1$) or $\sigma \leq g - 1$ (if $\sigma > 1$). If $g < 1$ then absorbtion gives $\sigma = 0$.
+	- $-h' = g - \sigma$
+	- Note: $g=h=1$ corresponds to half-circle, which is well,, not balanced.
+	- $f(t) = h_K(t) - g_K'(t)$ and $f(t + \pi/2) = g_K(t) + h'_K(t)$ 
+	- Actually, better off collaobration?
+
+
+	- 
+
+
+- Pointwise measure diff bound -> Global bound?
+- $f' \geq 0$ : pointwise increasingness only
+	- Assume for any $x$, $f(x') < f(x)$ for $x'$ sufficiently close to $x$ from right (but band could be as small)
+	- Should $f$ beincreasing?
+	- Assume for any x, f increasing on an interval [x', x] for x' < x. Should f increase over all?
+		- NO. sawtooth.
+		- Is it increasing except finite number of breaks?
+		- 
+
 Our goal is this.
 
-> __Theorem [leg-right-lipschitz].__ If $h_K(t) > 1.1$ and $|g_K(t) - 1| \leq C$, then $h_K(t - \delta) \geq h_K(t) - C \delta$. 
+> __Theorem [leg-right-lipschitz].__ If $h_K(t) > 1.1$, then $h_K(t - \delta) \geq h_K(t) - \delta$. 
 > ^thm-leg-right-lipschitz
-
-Proof sketch. $h_K(t) > 1.1$ ensures that $\mathbf{x}$ only moves in upward direction of $v_t$. $|g_K(t) - 1| \leq C$ ensures that the movement of $\mathbf{x}$ along $u_t$ is controlled by Lipschitz $C$. 
 
 Need to only show this for approximate.
 

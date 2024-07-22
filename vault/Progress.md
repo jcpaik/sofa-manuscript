@@ -24,9 +24,6 @@
 - Reasonable way to measure what % have I completed
 	- List out all the steps & reasonable completion percent for each step
 - A fixed schedule that I can adhere to
-	- First-time
-		- Where to live?
-		- How to decorate that place?
 	- Daily
 		- What to eat?
 		- How to commute?
