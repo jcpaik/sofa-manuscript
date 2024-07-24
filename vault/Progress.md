@@ -1,23 +1,15 @@
 
 # Angle Hypothesis
 
-- [ ] Introduction
-	- [x] Tidy up main result (Only few minor edits needed)
-	- [x] Tidy up monotone sofa (Need some edits to make it flow)
-		- [x] Motivate the core idea and the monotone sofa in a very simple way
-		- [x] Say that hallways are in convex position.
-	- [ ] Draw main idea figure 
-	- [ ] Tidy up balancedness description (Needs a lot of work)
-		- [ ] Set up free hallways
-		- [ ] 
-	- [ ] Draw balancedness figure
-- [x] Monotone Sofas
-	- [x] Clean up writings
-	- [ ] Draw comprehensive picture of monotone sofa
-- [ ] Balanced Sofas
-	- [ ] Tidy up the writings
+- [ ] Drawing
+	- [ ] Main idea figure 
+	- [ ] Balancedness figure
+	- [ ] Comprehensive picture of monotone sofa
+- [ ] Tidy up
+	- [ ] Monotone Sofa
+	- [ ] Balanced Sofa
 - [ ] Main Proof
-	- [ ] Tidy up
+	- [ ] Get the numbers right
 
 # What I need
 
