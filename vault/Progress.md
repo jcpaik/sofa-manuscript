@@ -1,3 +1,7 @@
+- How to show injectivity hypothesis at ends?
+	- Bound $w_K^{\circ}$ and $z_{K}^{\circ}$, OR
+	- Show right-Lipschitzness of height function.
+
 
 # Angle Hypothesis
 
