@@ -14,7 +14,7 @@ Define $U$ as the following value. Note that the second equality holds by [[c. U
 $$
 U = (C^-_K(t_{i+1}) - A^-_K(t_{i})) \cdot v_{i+1} = \int_{[t_i, t_{i+1}+\pi/2]} \cos(u - t_{i+1}) \, \beta_K(du)
 $$
-Observe that $L \leq U \cdot (1/\cos(t_{i+1} - t_i))$ because $f(u) \leq \cos(u - t_{i+1}) / \cos(t_{i+1} - t_i)$ for all $u \in [t_i, t_{i+1}  + \pi/2]$. Then use [[d. Injectivity Conjecture/02. Bounding Leg Lengths#^lem-vertex-approximation]] to bound $U$ further from above by $(C_i - A_i) \cdot v_{t_{i+1}}$. □
+Observe that $L \leq U \cdot (1/\cos(t_{i+1} - t_i))$ because $f(u) \leq \cos(u - t_{i+1}) / \cos(t_{i+1} - t_i)$ for all $u \in [t_i, t_{i+1}  + \pi/2]$. Then use [[d. Injectivity Conjecture/xx. Bounding Arm Lengths (crude, old)#^lem-vertex-approximation]] to bound $U$ further from above by $(C_i - A_i) \cdot v_{t_{i+1}}$. □
 
 > __Theorem [lower-bound-leg-g].__ Fix an interval $[t_{i}, t_{i+1}]$. For any $t \in [t_i, t_{i+1}]$, we have $g_K^{\pm}(t)$ bounded from below by the following value. ^thm-lower-bound-leg-g
 $$
@@ -25,7 +25,7 @@ _Proof._ Note that $g_{K}^-(t) = \int_{(t, t+\pi/2]} \cos(u - t) \, \beta_K(du)$
 $$
 g_K^-(t) \geq \int_{(t_{i+1}, t_i+\pi/2]} \cos(u - t_{i}) \, \beta_K(du) = \left( C_K^+(t_i) - A^+_K(t_{i+1}) \right) \cdot v_i
 $$
-The equality holds by [[c. Upper Bound A1/25. Conditional upper bound A1/03. Boundary measure#^thm-surface-area-measure-vertex]]. Now use [[d. Injectivity Conjecture/02. Bounding Leg Lengths#^lem-vertex-approximation]] to bound it from below. □
+The equality holds by [[c. Upper Bound A1/25. Conditional upper bound A1/03. Boundary measure#^thm-surface-area-measure-vertex]]. Now use [[d. Injectivity Conjecture/xx. Bounding Arm Lengths (crude, old)#^lem-vertex-approximation]] to bound it from below. □
 
 $\mathbf{x}(t_1) = \mathbf{x}(t_2)$, $t_1 < t_2$, $t_2 - t_1 < d$
 'Local' inequality
