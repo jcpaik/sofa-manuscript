@@ -15,4 +15,9 @@
 		- [ ] 
 		- [ ] In sliding $t = \omega, \pi/2$, say that we apply the lemma twice. First pushing the hyperplane while fixing the other one. Then push the hyperplane while fixing the other one. They don't interfere with each other.
 	- [ ] 
-- [ ] 
+
+
+# Gerver's Conjecture
+
+- [ ] Solve one case
+	- [ ] GOAL: Make a Manipulate where controls of $\psi_L, \psi_R$ gives corresponding 'optimum sofa'.
