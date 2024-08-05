@@ -25,3 +25,6 @@
 		- [ ] Make boundary conditions clear
 		- [ ] Make a function that automatically solves ODEs from given order of cases
 		- [ ] Plot them in Graphics
+- [ ] Make all cases
+	- [ ] Make implementation of A2 more streamlined
+	- [ ] Check surface area measure, support function, etc. more clearly.
