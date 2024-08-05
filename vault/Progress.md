@@ -21,3 +21,7 @@
 
 - [ ] Solve one case
 	- [ ] GOAL: Make a Manipulate where controls of $\psi_L, \psi_R$ gives corresponding 'optimum sofa'.
+		- [x] Tabulate all ODE solutions
+		- [ ] Make boundary conditions clear
+		- [ ] Make a function that automatically solves ODEs from given order of cases
+		- [ ] Plot them in Graphics
