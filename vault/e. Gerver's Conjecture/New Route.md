@@ -1,0 +1,3 @@
+- Better the range of $\psi_L$ and $\psi_R$ smaller
+- Better the range of leg intersection larger (45 cutoff -> 60 or better)
+- 
