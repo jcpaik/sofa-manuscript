@@ -1,0 +1,5 @@
+- [ ] Make discrete inequality
+- [ ] Prove continuous inequality by sending discrete ineq to continuous
+	- [ ] Check magic function on Gerver's sofa
+- [ ] Use the continuous inequality to prove lower bound
+	- [ ] Send limit
