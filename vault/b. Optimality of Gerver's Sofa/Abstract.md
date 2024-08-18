@@ -1,1 +1,0 @@
-We prove the $x$-monotonicity of a maximum-area moving sofa. This is an important property that will be used to prove the optimality of Gerver's sofa in a subsequent work.
