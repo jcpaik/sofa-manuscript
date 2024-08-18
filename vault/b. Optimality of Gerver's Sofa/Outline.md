@@ -1,5 +1,5 @@
 - For a cap $K$, define $\mathbf{b}_K^{\varphi_R}$ and $\mathbf{d}_K^{\varphi_L}$.
-	- For any x-monotone $K$, the trajectory of $\mathbf{b}$ and $\mathbf{x}$ and $\mathbf{d}$ 
+	- For any x-monotone $K$, the trajectory $\mathbf{z}$ of $\mathbf{b}$ and $\mathbf{x}$ and $\mathbf{d}$ 
 - Define $\mathcal{A}_2^{\varphi_R, \varphi_L}$.
 	- Define the domain $\mathcal{K}^{\varphi_R, \varphi_L}$ as the extension of $\mathcal{K}_{\pi/2}$.
 		- A cap $K$ with extra information.
