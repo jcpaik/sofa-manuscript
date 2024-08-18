@@ -1,0 +1,2 @@
+- [ ] Figures
+	- [ ] Comprehensive notation figures
