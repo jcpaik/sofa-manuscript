@@ -12,4 +12,4 @@
 		- $v_K(\varphi_L, \pi/2)$ and $v_K(\pi/2, \varphi_L + \pi/2)$.
 	- Calculate derivative of $\mathcal{Q}$
 	- Show that $(K_G, \mathbf{b}_{K_G}, \mathbf{d}_{K_G})$ attains the maximum value of $\mathcal{Q}$.
-
+		- Derivation of Gerver's sofa in companion with 
