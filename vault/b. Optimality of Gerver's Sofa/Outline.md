@@ -13,3 +13,14 @@
 	- Calculate derivative of $\mathcal{Q}$
 	- Show that $(K_G, \mathbf{b}_{K_G}, \mathbf{d}_{K_G})$ attains the maximum value of $\mathcal{Q}$.
 		- Derivation of Gerver's sofa in companion with 
+
+- TWO ideas:
+	- Originally, everything was in cap
+	- Extend the space so that it's cap + two tails
+	- 
+
+
+
+- Insights
+	- The sofa area functional $\mathcal{K}$ itself is _not_ a quadratic function
+	- The cap $\mathcal{K}$, and the set of tails $\mathbf{b}$ and $\mathbf{d}$ (that could be more sub-optimal) _together_ forms a quadratic area upper bound.
