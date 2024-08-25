@@ -1,7 +1,0 @@
-- Rotation Angle of a Moving Sofa.
-	- Monotone sofa
-	- Balanced Sofa
-- x-monotonicity of maximum-area moving sofa I
-	- 
-- x-monotonicity of maximum-area moving sofa II
-- Optimality of Gerver's Sofa.
