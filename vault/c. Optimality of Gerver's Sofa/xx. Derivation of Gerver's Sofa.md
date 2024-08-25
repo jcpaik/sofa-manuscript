@@ -60,21 +60,21 @@ Derivation below.
 | D       | $r_C = r_D$                          | $A \cos t + B \sin t + 1/2$ | $- A \sin t + B \cos t$       | 0                         | 1/2               | $B \cos t$          | $A \cos t + 1/2$      |
 | x       | $r_A = h-1$<br>$r_C = g - 1$         | $t + A$                     | $- t + B$                     | $-t + B - 1$              | $t + A - 1$       | $B - 1 - t$         | $A - 1 + t$           |
 | Bx      | $r_A = h - 1 + r_B$<br>$r_C = g - 1$ | $-t^2/4+Bt/2+A$             | $- t + B$                     | $-t/2 - B/2$              | $-t^2/4+Bt/2+A-1$ | $-t/2 + B/2$        | $-t^2/4+Bt/2+A - 1/2$ |
-| Dx      | $r_A = h - 1$<br>$r_C = g - 1 + r_D$ | $t + A$                     | $-t^2/4 - At / 2 + B$         | $-t^2/4 - At / 2 + B - 1$ | $t/2 + A/2$       | $-t^2/4-At/2+B-1/2$ | $t/2+A/2$             |
+| Dx      | $r_A = h - 1$<br>$r_C = g - 1 + r_D$ | $t + A$                     | $-(t + A)^2/2 + B$<br>        | $-t^2/4 - At / 2 + B - 1$ | $t/2 + A/2$       | $-t^2/4-At/2+B-1/2$ | $t/2+A/2$             |
+|         |                                      |                             |                               |                           |                   |                     |                       |
 
-- Assume $n$ time intervals, each of fixed contact point sets.
-
-1. Assume endpoints of time intervals $0 = t_0 < t_1 < \dots < t_n = \pi/2$.
-2. Solve the coefficients $(A_i, B_i)$ determining $g, h, r_A, r_C$ for $i$'th interval.
-	- 2$n$ parameters $(A_i, B_i)$
-	- $2n-2$ equations at boundary (continuity of $g$ and $h$)
-	- Equation $g(0) = h(\pi/2) = 1$
-3. Solve the coefficients $(C_i, D_i)$ determining $p_K, q_K$ for $i$'th interval.
-	- $p_K(t) = (\mathrm{principal}) + C \cos t + D \sin t$
-	- $q_K(t) = (\mathrm{principal}) - C \sin t + D \cos t$
-	- $p_K(\pi/2) = q_K(0) = 1$
-4. At this stage, every other variables are determined by time variables. Determine time variables.
-	- $t_i = \psi_R, t_j = \psi_L$
-	- 
-
-FIVE intervals -> FOUR midpoint parameters -> TWO equations on point matching
+- $\varphi < \theta < \pi/2 - \theta < \pi/2 - \varphi$
+- Stages
+	- D $(0, \varphi)$
+		- $(g, h)$ from $(1, )$ to the point below.
+		- $g(0)=1$ $g(\varphi) = \varphi + C$
+		- $g(t) = 1/2 + 1/2 \cos t + \left( \varphi + C - 1/2 - 1/2 \cos \varphi \right)/(\sin \varphi) \sin t$
+		- Nasty equality on $C, \varphi, \theta$ on $h(\varphi)$.
+	- Dx $(\varphi, \theta)$
+		- $(g, h)$ from $(\varphi + C, \pi/2 - \theta + C - (\theta+C)^2/2 + (\varphi+C)^2/2)$ to $(\theta + C, \pi/2 - \theta + C)$.
+		- 
+	- x $(\theta, \pi/2 - \theta)$
+		- $(g, h)$ from $(\theta + C, \pi/2 - \theta + C)$ to $(\pi/2 - \theta + C, \theta + C)$.
+	- Bx
+	- B
+- x 

@@ -86,7 +86,7 @@ How to execute the full argument of right derivative of $\sigma$ at $t$ is at mo
 > ^lem-calccalc
 $$
 \begin{gather*}
-\mathbf{x}_K(t + \delta) - \mathbf{x}_K(t) = - (g_K(t, t + \delta) - (1 - \tan(\delta/2))) u_t +  (h_K(t, t + \delta) - (1 + \tan(\delta/2))) v_t \\
+\mathbf{x}_K(t + \delta) - \mathbf{x}_K(t) = - (g_K(t, t + \delta) - (1 - \tan(\delta/2))) \mu_t +  (h_K(t, t + \delta) - (1 + \tan(\delta/2))) \nu_t \\
 = 
 \end{gather*}
 $$
