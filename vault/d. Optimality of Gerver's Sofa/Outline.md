@@ -14,10 +14,10 @@
 	- Show that $(K_G, \mathbf{b}_{K_G}, \mathbf{d}_{K_G})$ attains the maximum value of $\mathcal{Q}$.
 		- Derivation of Gerver's sofa in companion with 
 
-- TWO ideas:
+- TWO ideas:.
 	- Originally, everything was in cap
 	- Extend the space so that it's cap + two tails
-	- 
+	- Something should be true in this case...
 
 
 
