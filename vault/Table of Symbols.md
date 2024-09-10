@@ -11,8 +11,8 @@ I did my best to make the symbols not overlap in meaning. The only compromise is
 | $V$                                  | Vertical strip                                                                                                                             |
 | $l(t, h)$                            | A line with normal angle $t$ and distance $h$ from the origin                                                                              |
 | $H_{\pm}(t, h)$                      | A hyperplane with normal angle                                                                                                             |
-| $a, b, c, d$                         | Edges of hallway $L$                                                                                                                       |
-| $\mathbf{x}, \mathbf{y}$             | Inner and outer corner of hallway $L$                                                                                                      |
+| $a_L, b_L, c_L, d_L$                 | Edges of hallway $L$                                                                                                                       |
+| $\mathbf{x}_L, \mathbf{y}_L$         | Inner and outer corner of hallway $L$                                                                                                      |
 | $R_t$                                | Rotation of $\mathbb{R}^2$ along the origin mapping $\mu_0$ to $\mu_t$                                                                     |
 | $\mu_t, \nu_t$                       | Orthogonal unit vectors of angle $t$ (following Romik)                                                                                     |
 | $L_S(t), L_K(t)$                     | Tangent hallway of cap $K$                                                                                                                 |
@@ -43,3 +43,4 @@ I did my best to make the symbols not overlap in meaning. The only compromise is
 | $\tau_K(t)$                          |                                                                                                                                            |
 | $\mathbf{b}, \mathbf{d}$             | Right and left tails of a moving sofa                                                                                                      |
 |                                      |                                                                                                                                            |
+While $\varphi_R$ and $\varphi_L$ will be set as $\varphi$ and $\pi/2 - \varphi$ at the end, the general argument holds for any 
