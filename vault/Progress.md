@@ -1,1 +1,6 @@
-- Go with 
+- Specific
+- Measurable
+- Attainable
+- Relevant
+- Timelined
+
