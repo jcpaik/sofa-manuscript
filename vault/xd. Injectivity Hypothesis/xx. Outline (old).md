@@ -15,9 +15,9 @@ Inequality of second kind will be
 
 Let us first try to prove the injectivity of $\mathbf{x}_K$ on a small fixed interval $[\theta_1, \theta_2]$. It is sufficient to provide a constant, nonzero vector $\mathbf{v}$ so that $\mathbf{x}_K'(t) \cdot \mathbf{v} > 0$ for any $t \in [\theta_1, \theta_2]$. That is, $\mathbf{x}_K$ strictly moves towards the direction of $\mathbf{v}$. Using [[01. Space of Caps#^thm-inner-corner-deriv]], this is equivalent to showing
 $$
--(g_K^+(t) - 1) (\mu_t \cdot \mathbf{v}) + (h_K^+(t) - 1) (\nu_t \cdot \mathbf{v}) > 0
+-(f_K^+(t) - 1) (\mu_t \cdot \mathbf{v}) + (g_K^+(t) - 1) (\nu_t \cdot \mathbf{v}) > 0
 $$
-for all $t \in [\theta_1, \theta_2]$. Then the values $\mu_t \cdot \mathbf{v}$ and $\nu_t \cdot \mathbf{v}$ are effectively bounded using only $\theta_1$ and $\theta_2$, and the question reduces to bounding the arm lengths $g_K^+(t)$ and $h_K^+(t)$ on the interval $[\theta_1, \theta_2]$.
+for all $t \in [\theta_1, \theta_2]$. Then the values $\mu_t \cdot \mathbf{v}$ and $\nu_t \cdot \mathbf{v}$ are effectively bounded using only $\theta_1$ and $\theta_2$, and the question reduces to bounding the arm lengths $f_K^+(t)$ and $g_K^+(t)$ on the interval $[\theta_1, \theta_2]$.
 
 # Using software `SofaDesigner` to bound arm lengths
 

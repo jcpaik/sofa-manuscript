@@ -4,9 +4,9 @@ If $K$ is a convex polygon, $\mathbf{n}(K)$ is the collection of all angles $t$ 
 
 We now collect theorems on $\mathbf{n}(K)$.
 
-> __Lemma [vertex-in-half-plane].__ Let $(t_1, t_2)$ be any open interval of $S^1$ of length $< \pi$. Then for every $t \in S^1 \setminus (t_1, t_2)$, we have $v_K(t_1, t_2) \in H_K(t)$. ^lem-vertex-in-half-plane
+> __Lemma [vertex-in-half-plane].__ Let $(t_1, t_2)$ be any open interval of $S^1$ of length $< \pi$. Then for every $t \in S^1 \setminus (t_1, t_2)$, we have $v_K(t_1, t_2) \in g_K(t)$. ^lem-vertex-in-half-plane
 
-_Proof._ Let $p = v_K(t_1, t_2)$. We can either assume $t_1 - \pi < t < t_1$ or $t_2 < t < t_2 + \pi$. In the first case, the points $v_K(t_1, t)$ and $p$ are on the line $l_K(t_1)$ and $p$ is further than $v_K(t_1, t)$ in the direction of $v_{t_1}$. Since $v_K(t_1, t) \in H_K(t)$ we now should have $p \in H_K(t)$. In the second case, the points $v_K(t, t_2)$ and $p$ are on the line $l_K(t_2)$ and $v_K(t, t_2)$ is further than $p$ in the direction of $v_{t_2}$. Since $v_K(t, t_2) \in H_K(t)$ we now have $p \in H_K(t)$. □
+_Proof._ Let $p = v_K(t_1, t_2)$. We can either assume $t_1 - \pi < t < t_1$ or $t_2 < t < t_2 + \pi$. In the first case, the points $v_K(t_1, t)$ and $p$ are on the line $l_K(t_1)$ and $p$ is further than $v_K(t_1, t)$ in the direction of $v_{t_1}$. Since $v_K(t_1, t) \in g_K(t)$ we now should have $p \in g_K(t)$. In the second case, the points $v_K(t, t_2)$ and $p$ are on the line $l_K(t_2)$ and $v_K(t, t_2)$ is further than $p$ in the direction of $v_{t_2}$. Since $v_K(t, t_2) \in g_K(t)$ we now have $p \in g_K(t)$. □
 
 > __Theorem [convex-set-support-disjoint].__ Let $K$ be a convex body, and let $(t_1, t_2)$ be any open interval of $S^1$ of length $< \pi$. The followings are equivalent. ^thm-convex-set-support-disjoint
 > 
@@ -21,20 +21,20 @@ _Proof._ (1 $\Rightarrow$ 2) Let $p = v_K^+(t_1)$. Then $v_K^-(t_2) = p$ as well
 
 (2 $\Rightarrow$ 3) follows from that every edge $e_K(t)  = l_K(t) \cap K$ is the segment connecting $v_K^-(t)$ to $v_K^+(t)$.
 
-(3 $\Rightarrow$ 4) The point $p$ that every tangent line $l_K(t)$ of $t \in [t_1, t_2]$ pass through should be $l_K(t_1) \cap l_K(t_2) = v_K(t_1, t_2)$. We have $p \in H_K(t)$ for all $t \in [t_1, t_2]$. We also have $p \in H_K(t)$ for all $t \in S^1 \setminus (t_1, t_2)$ by [[a. Mamikon's Theorem/xx. Normal angles#^lem-vertex-in-half-plane]]. Now $p \in \bigcap_{t \in S^1} H_K(t) = K$.
+(3 $\Rightarrow$ 4) The point $p$ that every tangent line $l_K(t)$ of $t \in [t_1, t_2]$ pass through should be $l_K(t_1) \cap l_K(t_2) = v_K(t_1, t_2)$. We have $p \in g_K(t)$ for all $t \in [t_1, t_2]$. We also have $p \in g_K(t)$ for all $t \in S^1 \setminus (t_1, t_2)$ by [[a. Mamikon's Theorem/xx. Normal angles#^lem-vertex-in-half-plane]]. Now $p \in \bigcap_{t \in S^1} g_K(t) = K$.
 
-(4 $\Rightarrow$ 2) Let $p := v_K(t_1, t_2)$ and define the cone $F = H_K(t_1) \cap H_K(t_2)$ pointed at $p$. Take any $t \in (t_1, t_2)$. Then the value of $z \cdot \mu_t$ over all $z \in F$ has a unique maximum at $z = p$. Because $p \in K \subseteq F$, the value of $z \cdot \mu_t$ over all $z \in K$ also has a unique maximum at $z = p$. This means that $e_K(t) = \left\{ p \right\}$, completing the proof. □
+(4 $\Rightarrow$ 2) Let $p := v_K(t_1, t_2)$ and define the cone $F = g_K(t_1) \cap g_K(t_2)$ pointed at $p$. Take any $t \in (t_1, t_2)$. Then the value of $z \cdot \mu_t$ over all $z \in F$ has a unique maximum at $z = p$. Because $p \in K \subseteq F$, the value of $z \cdot \mu_t$ over all $z \in K$ also has a unique maximum at $z = p$. This means that $e_K(t) = \left\{ p \right\}$, completing the proof. □
 
 > __Theorem [convex-set-support].__ Let $\Pi$ be any closed subset of $S^1$ such that $S^1 \setminus \Pi$ is a disjoint union of open intervals of length $< \pi$. Then for any convex body $K$, the followings are equivalent. ^thm-convex-set-support
 > 
-> 1. $K = \bigcap_{t \in \Pi} H_K(t)$
+> 1. $K = \bigcap_{t \in \Pi} g_K(t)$
 > 2. $\mathbf{n}(K)$ is contained in $\Pi$.
 
-_Proof._ (1 $\Rightarrow$ 2) Let $(t_1, t_2)$ be any connected component of $S^1 \setminus \Pi$. Then the interval has length $< \pi$ by assumption. Now take any $t \in (t_1, t_2)$. The vertex $v_K(t_1, t_2)$ is in $\bigcap_{t \in \Pi} H_K(t) = K$ by [[a. Mamikon's Theorem/xx. Normal angles#^lem-vertex-in-half-plane]]. So by [[a. Mamikon's Theorem/xx. Normal angles#^thm-convex-set-support-disjoint]], $(t_1, t_2)$ is disjoint from $\mathbf{n}(K)$. Since $(t_1, t_2)$ was an arbitrary connected component of $S^1 \setminus \Pi$, we are done.
+_Proof._ (1 $\Rightarrow$ 2) Let $(t_1, t_2)$ be any connected component of $S^1 \setminus \Pi$. Then the interval has length $< \pi$ by assumption. Now take any $t \in (t_1, t_2)$. The vertex $v_K(t_1, t_2)$ is in $\bigcap_{t \in \Pi} g_K(t) = K$ by [[a. Mamikon's Theorem/xx. Normal angles#^lem-vertex-in-half-plane]]. So by [[a. Mamikon's Theorem/xx. Normal angles#^thm-convex-set-support-disjoint]], $(t_1, t_2)$ is disjoint from $\mathbf{n}(K)$. Since $(t_1, t_2)$ was an arbitrary connected component of $S^1 \setminus \Pi$, we are done.
 
-(2 $\Rightarrow$ 1) It suffices to show that $\bigcap_{u \in \Pi} H_K(u) \subseteq H_K(t)$ for all $t \in S^1$. Once this is shown, we can take intersection over all $t \in S^1$ to conclude $K \subseteq \bigcap_{u \in \Pi} H_K(u) \subseteq K$.
+(2 $\Rightarrow$ 1) It suffices to show that $\bigcap_{u \in \Pi} g_K(u) \subseteq g_K(t)$ for all $t \in S^1$. Once this is shown, we can take intersection over all $t \in S^1$ to conclude $K \subseteq \bigcap_{u \in \Pi} g_K(u) \subseteq K$.
 
-If $t \in \Pi$, then we obviously have $\bigcap_{u \in \Pi} H_K(u) \subseteq H_K(t)$ so the proof is done. Now take any $t \in S^1 \setminus \Pi$ and let $(t_1, t_2)$ be the connected component of $S^1 \setminus \Pi$ containing $t$. By condition 4 of [[a. Mamikon's Theorem/xx. Normal angles#^thm-convex-set-support-disjoint]] the half-plane $H_K(t)$ contains the intersection $F := H_K(t_1) \cap H_K(t_2)$. Observe $t_1, t_2 \in \Pi$. So $\bigcap_{u \in \Pi} H_K(u) \subseteq F \subseteq H_K(t)$ for all $t \in S^1 \setminus \Pi$, completing the proof. □
+If $t \in \Pi$, then we obviously have $\bigcap_{u \in \Pi} g_K(u) \subseteq g_K(t)$ so the proof is done. Now take any $t \in S^1 \setminus \Pi$ and let $(t_1, t_2)$ be the connected component of $S^1 \setminus \Pi$ containing $t$. By condition 4 of [[a. Mamikon's Theorem/xx. Normal angles#^thm-convex-set-support-disjoint]] the half-plane $g_K(t)$ contains the intersection $F := g_K(t_1) \cap g_K(t_2)$. Observe $t_1, t_2 \in \Pi$. So $\bigcap_{u \in \Pi} g_K(u) \subseteq F \subseteq g_K(t)$ for all $t \in S^1 \setminus \Pi$, completing the proof. □
 
 The following theorem is known as the Gauss-Minkowski theorem ([@marckert2014compact]; Theorem 8.3.1, p465 of [[@schneider_2013]]). It gives a bijection between any convex body $K$ and its boundary measure $\sigma_K$.
 
@@ -68,14 +68,14 @@ Now for arbitrary $t \in [a, b]$, $v_K^+(a) \in l_K(t)$ if and only if $p_K(t) =
 > __Theorem [convex-set-support].__ Let $\Pi$ be any closed subset of $S^1$ such that $S^1 \setminus \Pi$ is a disjoint union of open intervals of length $< \pi$. The followings are equivalent for any subset $K$ of $\mathbb{R}^2$. ^thm-convex-set-support
 > 
 > 1. $K$ is an intersection of closed half-planes with normal angles in $\Pi$.
-> 2. $K$ is a convex body with $K = \bigcap_{t \in \Pi} H_K(t)$.
+> 2. $K$ is a convex body with $K = \bigcap_{t \in \Pi} g_K(t)$.
 > 3. $K$ is a convex body with normal angles $\mathbf{n}(K)$ contained in $\Pi$.
 
-_Proof._ The equivalence of (1) and (2) comes from that $H_K(t)$ is the minimal half-plane with normal angle $t$ containing $K$. We now show the equivalence of (2) and (3). By the property of $\Pi$, we can find three values $a, b, c \in \Pi$ such that $(0, 0)$ is contained in the interior of the convex hull of $u_a, u_b, u_c$. So (2) implies that $K \subseteq H_K(a) \cap H_K(b) \cap H_K(c)$ is bounded and $K$ is a convex body.
+_Proof._ The equivalence of (1) and (2) comes from that $g_K(t)$ is the minimal half-plane with normal angle $t$ containing $K$. We now show the equivalence of (2) and (3). By the property of $\Pi$, we can find three values $a, b, c \in \Pi$ such that $(0, 0)$ is contained in the interior of the convex hull of $u_a, u_b, u_c$. So (2) implies that $K \subseteq g_K(a) \cap g_K(b) \cap g_K(c)$ is bounded and $K$ is a convex body.
 
 ($2 \Rightarrow 3$) Take any conected component $I$ of $S^1 \setminus \Pi$ which is an open interval of length $< \pi$. Let $a, b \in \mathbb{R}$ with $a < b < a + \pi$ represent the endpoints of $I = (a, b)$. It suffices to show that $\sigma_K$ is zero on $I$, which is equivalent to 
 
-($3 \Rightarrow 2$) We have $K = \bigcap_{t \in S^1} H_K(t)$ by convexity of $K$. Take any conected component $I$ of $S^1 \setminus \Pi$ which is an open interval of length $< \pi$. Let $a, b \in \mathbb{R}$ with $a < b < a + \pi$ represent the endpoints of $I = (a, b)$. Then $a, b \in \Pi$ and it suffices to show that for any $t' \in (a, b) \subseteq S^1 \setminus \Pi$, the half-plane $H_K(t')$ contains $H_K(a) \cap H_K(b)$ so that $H_K(t')$ is redundent in the intersection $\bigcap_{t \in S^1} H_K(t)$. Since $\sigma_K$ is zero on $I$ by (3), by [[b. Angle Hypothesis/04. Notations/00. Preface#^lem-surface-area-measure-zero-interval]] the lines $l_K(a)$, $l_K(t')$, and $l_K(b)$ contains the same point $v_K^+(a)$. This implies $H_K(t') \supseteq H_K(a) \cap H_K(b)$ as we wanted.
+($3 \Rightarrow 2$) We have $K = \bigcap_{t \in S^1} g_K(t)$ by convexity of $K$. Take any conected component $I$ of $S^1 \setminus \Pi$ which is an open interval of length $< \pi$. Let $a, b \in \mathbb{R}$ with $a < b < a + \pi$ represent the endpoints of $I = (a, b)$. Then $a, b \in \Pi$ and it suffices to show that for any $t' \in (a, b) \subseteq S^1 \setminus \Pi$, the half-plane $g_K(t')$ contains $g_K(a) \cap g_K(b)$ so that $g_K(t')$ is redundent in the intersection $\bigcap_{t \in S^1} g_K(t)$. Since $\sigma_K$ is zero on $I$ by (3), by [[b. Angle Hypothesis/04. Notations/00. Preface#^lem-surface-area-measure-zero-interval]] the lines $l_K(a)$, $l_K(t')$, and $l_K(b)$ contains the same point $v_K^+(a)$. This implies $g_K(t') \supseteq g_K(a) \cap g_K(b)$ as we wanted.
 
 
 □

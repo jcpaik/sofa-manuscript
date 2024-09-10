@@ -1,6 +1,6 @@
 > __Lemma [vertex-approximation].__ $A_{i+1}= A^{\pm}_K(t_i) + \lambda v_i$ for some nonnegative $\lambda$. $A_{i}= A^{\pm}_K(t_i) - \lambda v_i$ for some nonnegative $\lambda$. $C_{i} = C^{\pm}_K(t_i) - \lambda u_i$ for some nonnegative $\lambda$. $C_{i-1} = C_K^{\pm}(t_i) + \lambda u_i$ for some nonnegative $\lambda$. ^lem-vertex-approximation
 
-> __Theorem [upper-bound-leg-g].__ Fix an interval $[t_{i}, t_{i+1}]$. For any $t \in [t_i, t_{i+1}]$, we have $g_K^{\pm}(t)$ bounded from above by the following value. ^thm-upper-bound-leg-g
+> __Theorem [upper-bound-leg-g].__ Fix an interval $[t_{i}, t_{i+1}]$. For any $t \in [t_i, t_{i+1}]$, we have $f_K^{\pm}(t)$ bounded from above by the following value. ^thm-upper-bound-leg-g
 $$
 \frac{(C_i - A_i) \cdot v_{i+1}}{\cos(t_{i+1} - t_i)}
 $$
@@ -16,14 +16,14 @@ U = (C^-_K(t_{i+1}) - A^-_K(t_{i})) \cdot v_{i+1} = \int_{[t_i, t_{i+1}+\pi/2]} 
 $$
 Observe that $L \leq U \cdot (1/\cos(t_{i+1} - t_i))$ because $f(u) \leq \cos(u - t_{i+1}) / \cos(t_{i+1} - t_i)$ for all $u \in [t_i, t_{i+1}  + \pi/2]$. Then use [[xd. Injectivity Hypothesis/xx. Bounding Arm Lengths (crude, old)#^lem-vertex-approximation]] to bound $U$ further from above by $(C_i - A_i) \cdot v_{t_{i+1}}$. □
 
-> __Theorem [lower-bound-leg-g].__ Fix an interval $[t_{i}, t_{i+1}]$. For any $t \in [t_i, t_{i+1}]$, we have $g_K^{\pm}(t)$ bounded from below by the following value. ^thm-lower-bound-leg-g
+> __Theorem [lower-bound-leg-g].__ Fix an interval $[t_{i}, t_{i+1}]$. For any $t \in [t_i, t_{i+1}]$, we have $f_K^{\pm}(t)$ bounded from below by the following value. ^thm-lower-bound-leg-g
 $$
 (C_i - A_{i+2}) \cdot v_{i}
 $$
 
 _Proof._ Note that $g_{K}^-(t) = \int_{(t, t+\pi/2]} \cos(u - t) \, \beta_K(du)$. So for all $t \in [t_i, t_{i+1}]$,
 $$
-g_K^-(t) \geq \int_{(t_{i+1}, t_i+\pi/2]} \cos(u - t_{i}) \, \beta_K(du) = \left( C_K^+(t_i) - A^+_K(t_{i+1}) \right) \cdot v_i
+f_K^-(t) \geq \int_{(t_{i+1}, t_i+\pi/2]} \cos(u - t_{i}) \, \beta_K(du) = \left( C_K^+(t_i) - A^+_K(t_{i+1}) \right) \cdot v_i
 $$
 The equality holds by [[xb. Upper Bound A1/25. Upper Bound A1/03. Boundary measure#^thm-surface-area-measure-vertex]]. Now use [[xd. Injectivity Hypothesis/xx. Bounding Arm Lengths (crude, old)#^lem-vertex-approximation]] to bound it from below. □
 

@@ -25466,12 +25466,12 @@ var require_utils3 = __commonJS({
       InvalidAlgorithmError,
       validateAlgorithm,
       sshKeyToPEM: function sshKeyToPEM(key) {
-        assert.string(key, "ssh_key");
+        assert.string(key, "ssg_Key");
         var k = sshpk.parseKey(key, "ssh");
         return k.toString("pem");
       },
       fingerprint: function fingerprint(key) {
-        assert.string(key, "ssh_key");
+        assert.string(key, "ssg_Key");
         var k = sshpk.parseKey(key, "ssh");
         return k.fingerprint("md5").toString("hex");
       },

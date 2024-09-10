@@ -30,7 +30,7 @@ I did my best to make the symbols not overlap in meaning. The only compromise is
 | $P_\omega$                           | Parallelogram                                                                                                                              |
 | $O$                                  | Origin $(0, 0)$                                                                                                                            |
 | $o_\omega$                           | Upper-right vertex of $P_\omega$                                                                                                           |
-| $g_K(t), h_K(t)$                     | Arm lengths of cap $K$ (distance from $\mathbf{y}_K(t)$ to $A_K(t)$ and $C_K(t)$ respectively).                                            |
+| $f_K(t), g_K(t)$                     | Arm lengths of cap $K$ (distance from $\mathbf{y}_K(t)$ to $A_K(t)$ and $C_K(t)$ respectively).                                            |
 | $\sigma_K$                           | Surface area measure of a planar convex body $K$                                                                                           |
 | $\tau_K$                             | Edge length of the niche of cap $K$                                                                                                        |
 | $K_G$                                | Cap of Gerver's Sofa                                                                                                                       |

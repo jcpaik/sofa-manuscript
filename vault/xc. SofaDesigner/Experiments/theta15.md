@@ -15,7 +15,7 @@ Properties:
 	- 
 
 - $hlb_i = (A_i - C_{i-2}) \cdot u_{i}$
-	- is a lower bound of $h_K(t)$ for $t \in [t_{i-1}, t_{i}]$
+	- is a lower bound of $g_K(t)$ for $t \in [t_{i-1}, t_{i}]$
 	- If $> 1$, then injectivity condition holds for $[t_i, t_{i+1}]$
 	- If $> 1 + d$, injectivity effective for $t_{\min} \in [t_i, t_{i+1}]$ with $t_{\max} - t_{\min} <2\arctan(d)$
 
