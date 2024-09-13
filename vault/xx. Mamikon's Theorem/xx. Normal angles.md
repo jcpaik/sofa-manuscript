@@ -48,7 +48,7 @@ By [[xx. Mamikon's Theorem/xx. Normal angles#^def-convex-set-support]], we immed
 
 > __Definition [normal-angle].__ In this paper, define the set of _normal angles_ $\mathbf{n}(K)$ of a convex body $K$ as the support of the surface area measure $\sigma_K$ on $S^1$. ^def-normal-angle
 
-If $K$ is a convex polygon, $\mathbf{n}(K)$ is the collection of all angles $t$ such that each $\mu_t$ is a normal vector of a proper edge of $K$. For another example, take the semicircle $K = \left\{ (x, y) : x^2 + y^2 \leq 1, y \geq 0 \right\}$, then $\mathbf{n}(K) = [0, \pi] \cup \{3\pi/2\}$. We establish [[b. Angle Hypothesis/04. Notations/00. Preface#^thm-convex-set-support]] that essentially expresses $K$ as the intersection of half-planes with normal angles in $\mathbf{n}(K)$.
+If $K$ is a convex polygon, $\mathbf{n}(K)$ is the collection of all angles $t$ such that each $\mu_t$ is a normal vector of a proper edge of $K$. For another example, take the semicircle $K = \left\{ (x, y) : x^2 + y^2 \leq 1, y \geq 0 \right\}$, then $\mathbf{n}(K) = [0, \pi] \cup \{3\pi/2\}$. We establish [[a. Angle Hypothesis/04. Notations/00. Preface#^thm-convex-set-support]] that essentially expresses $K$ as the intersection of half-planes with normal angles in $\mathbf{n}(K)$.
 
 > __Lemma [surface-area-measure-zero-interval].__ For any convex body $K$ and $a, b \in \mathbb{R}$ with $a < b < a + \pi$, the followings are equivalent. ^lem-surface-area-measure-zero-interval
 > 
@@ -59,7 +59,7 @@ _Proof._ By taking the orthonormal basis $(u_a, v_a)$ of $\mathbb{R}^2$, Theorem
 $$
 p_K(t) = v_K^-(a) \cdot \mu_t + \int_{u \in [a, t)} \sin(t - u) \, \sigma_K(du).
 $$
-for every $t \in [a, b]$. Using $v_K^+(a) = v_K^-(a) + \sigma_K(a) v_a$ in [[b. Angle Hypothesis/04. Notations/00. Preface#^thm-surface-area-measure-side-length]] we get
+for every $t \in [a, b]$. Using $v_K^+(a) = v_K^-(a) + \sigma_K(a) v_a$ in [[a. Angle Hypothesis/04. Notations/00. Preface#^thm-surface-area-measure-side-length]] we get
 $$
 p_K(t) = v_K^+(a) \cdot \mu_t + \int_{u \in (a, t)} \sin(t - u) \, \sigma_K(du).
 $$
@@ -75,7 +75,7 @@ _Proof._ The equivalence of (1) and (2) comes from that $g_K(t)$ is the minimal 
 
 ($2 \Rightarrow 3$) Take any conected component $I$ of $S^1 \setminus \Pi$ which is an open interval of length $< \pi$. Let $a, b \in \mathbb{R}$ with $a < b < a + \pi$ represent the endpoints of $I = (a, b)$. It suffices to show that $\sigma_K$ is zero on $I$, which is equivalent to 
 
-($3 \Rightarrow 2$) We have $K = \bigcap_{t \in S^1} g_K(t)$ by convexity of $K$. Take any conected component $I$ of $S^1 \setminus \Pi$ which is an open interval of length $< \pi$. Let $a, b \in \mathbb{R}$ with $a < b < a + \pi$ represent the endpoints of $I = (a, b)$. Then $a, b \in \Pi$ and it suffices to show that for any $t' \in (a, b) \subseteq S^1 \setminus \Pi$, the half-plane $g_K(t')$ contains $g_K(a) \cap g_K(b)$ so that $g_K(t')$ is redundent in the intersection $\bigcap_{t \in S^1} g_K(t)$. Since $\sigma_K$ is zero on $I$ by (3), by [[b. Angle Hypothesis/04. Notations/00. Preface#^lem-surface-area-measure-zero-interval]] the lines $l_K(a)$, $l_K(t')$, and $l_K(b)$ contains the same point $v_K^+(a)$. This implies $g_K(t') \supseteq g_K(a) \cap g_K(b)$ as we wanted.
+($3 \Rightarrow 2$) We have $K = \bigcap_{t \in S^1} g_K(t)$ by convexity of $K$. Take any conected component $I$ of $S^1 \setminus \Pi$ which is an open interval of length $< \pi$. Let $a, b \in \mathbb{R}$ with $a < b < a + \pi$ represent the endpoints of $I = (a, b)$. Then $a, b \in \Pi$ and it suffices to show that for any $t' \in (a, b) \subseteq S^1 \setminus \Pi$, the half-plane $g_K(t')$ contains $g_K(a) \cap g_K(b)$ so that $g_K(t')$ is redundent in the intersection $\bigcap_{t \in S^1} g_K(t)$. Since $\sigma_K$ is zero on $I$ by (3), by [[a. Angle Hypothesis/04. Notations/00. Preface#^lem-surface-area-measure-zero-interval]] the lines $l_K(a)$, $l_K(t')$, and $l_K(b)$ contains the same point $v_K^+(a)$. This implies $g_K(t') \supseteq g_K(a) \cap g_K(b)$ as we wanted.
 
 
 □

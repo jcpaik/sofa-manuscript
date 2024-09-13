@@ -1,16 +1,12 @@
-> __Definition [boundary-segment].__ For any convex body $K$, define $\mathbf{u}_K^I := \bigcup_{t \in I} e_K(t)$ as the segment of the boundary of $K$. ^def-boundary-segment
+# Why not approximation?
 
-> __Definition [convex-curve].__ For any open interval $(a, b)$ of $S^1$, define $\mathcal{U}_{a, b}$ as the collection of all sets of form $\mathbf{u}_K^I$ for some convex body $K$. ^def-convex-curve
-
-> __Proposition [convex-curve].__ The map $K \mapsto \bigcup_{t \in (a, b)} e_K(t)$ is a quotient from convex bodies to $\mathcal{U}_{a, b}$. ^pro-convex-curve
-
-> __Theorem [convex-curve-info].__ Take an arbitrary $\mathbf{u} \in \mathcal{U}^{(a, b)}$. For any $K$ such that $\mathbf{u} = \mathbf{u}_K^{(a, b)}$, the following values are independent of the choice of $K$. ^thm-convex-curve-info
-> 
-> - Values $v_K^+(a), v_K^-(b), v_K^{\pm}(t)$ for $t \in (a, b)$.
-> - Values $p_K(t)$ for $t \in [a, b]$.
-> - Surface area measure $\sigma_K$ restricted to $(a, b)$.
-
-> __Definition [convex-curve-info].__ With [[d. Optimality of Gerver's Sofa/07. Convex Curves/10. Outline#^thm-convex-curve-info]], define the _support function_ $h_\mathbf{u} : [a, b] \to \mathbb{R}$, the _vertices_ $v_{\mathbf{u}}^+(a), v_{\mathbf{u}}^-(b), v_{\mathbf{u}}^{\pm}(t)$ for $t \in (a, b)$, the _surface area measure_ $\sigma_{\mathbf{u}}$ on $(a, b)$ for their counterparts in $K$. ^def-convex-curve-info
+- Subtleties in approximation
+	- Need to make $h_{\mathbf{b}}$ and $h_{\mathbf{d}}$ smaller in approximation
+	- Need to approximate cap $K$ separately.
+		- Once we do this, we may hurt the injectivity principle.
+		- As $K$ have unique contact point, you don't need to worry about it.
+	- 
+# Scrapes
 
 > __Remark [smoothing].__ It is possible to execute the rest of the argument without this smoothing process. However, this comes at a cost. We need to define the curve area functional $\mathcal{I}(\mathbf{u}_K^I)$ for curves $\mathbf{u}_K^I$ that are not piecewisely smooth. Supplying an absolutely continuous parametrization of $\mathbf{p}$ such that $\mathcal{I}(\mathbf{p})$ is indeed equal to $\int_{I} p_K(t)\,\beta_K(dt)$ is possible, but requires a lot of rudimentary works ^rem-smoothing
 
@@ -21,6 +17,7 @@
 > 1. $v_{\mathbf{u}}^+(a) = v_{\mathbf{w}}^+(a)$ and $v_{\mathbf{u}}^-(b) = v_{\mathbf{w}}^-(b) + ss$ for some $\alpha \in [0, \epsilon]$.
 > 2. $\mathcal{R}_{\mathbf{w}} \subseteq \mathcal{R}_{\mathbf{u}}$ and the set $\mathcal{R}_\mathbf{u} \setminus \mathcal{R}_{\mathbf{w}}$ have Borel measure $< \epsilon$.
 > 3. $h_{\mathbf{u}}(t) \geq h_{\mathbf{w}}(t)$ for all $t \in [a, b]$.
+
 
 %%
 Piecewise $C^1$ approximation
