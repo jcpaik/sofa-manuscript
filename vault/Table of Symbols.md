@@ -40,7 +40,9 @@ I did my best to make the symbols not overlap in meaning. The only compromise is
 | $\mathcal{A}$                        | Sofa area functional on the space of caps $\mathcal{K}$                                                                                    |
 | $\Theta$                             | Finite set of angles                                                                                                                       |
 | $\mathcal{K}_\Theta$                 | Space of polygon caps with angles in $\Theta$                                                                                              |
-| $\tau_K(t)$                          |                                                                                                                                            |
+| $\alpha_K(t, t')$                    |                                                                                                                                            |
 | $\mathbf{b}, \mathbf{d}$             | Right and left tails of a moving sofa                                                                                                      |
+|                                      |                                                                                                                                            |
+|                                      |                                                                                                                                            |
 |                                      |                                                                                                                                            |
 While $\varphi_R$ and $\varphi_L$ will be set as $\varphi$ and $\pi/2 - \varphi$ at the end, the general argument holds for any $\varphi_R$ and $\varphi_L$.
