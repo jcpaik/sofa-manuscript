@@ -1,9 +1,3 @@
-
-Name changes
-
-- $\mu_t, \nu_t$ to $\m\mu_t, \n\mu_t$ following Romik completely.
-
-
 - [ ] Make discrete inequality
 - [ ] Prove continuous inequality by sending discrete ineq to continuous
 	- [ ] Check magic function on Gerver's sofa
