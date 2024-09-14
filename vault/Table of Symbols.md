@@ -1,4 +1,4 @@
-Some compromise had to be made. 
+Some compromise had to be made. Lower indices determine the thing.
 
 | Symbol                               | Meaning                                                                                                                                    |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
