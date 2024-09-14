@@ -1,4 +1,4 @@
-I did my best to make the symbols not overlap in meaning. The only compromise is $H$, which denotes the horizontal strip, and $H_{\pm}(t, h)$, denoting the half-planes.
+Some compromise had to be made. 
 
 | Symbol                               | Meaning                                                                                                                                    |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -36,7 +36,6 @@ I did my best to make the symbols not overlap in meaning. The only compromise is
 | $K_G$                                | Cap of Gerver's Sofa                                                                                                                       |
 | $\theta, \varphi$                    | Angle constants determining Gerver's sofa                                                                                                  |
 | $\varphi_R, \varphi_L$               | Arbitrary values of angles, that will be set as constants $\varphi_R = \varphi$ and $\varphi_L = \pi/2 - \varphi$ at the end of the proof. |
-| $\mathcal{K}^{\varphi_R, \varphi_L}$ | Space of caps extended with two tails                                                                                                      |
 | $\mathcal{A}$                        | Sofa area functional on the space of caps $\mathcal{K}$                                                                                    |
 | $\Theta$                             | Finite set of angles                                                                                                                       |
 | $\mathcal{K}_\Theta$                 | Space of polygon caps with angles in $\Theta$                                                                                              |
