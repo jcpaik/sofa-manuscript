@@ -1,0 +1,7 @@
+- Define $\mathcal{U}^{a, b}$ clearly
+	- For $a < b \leq a + \pi$.
+- Define curve area functionals
+- Have Mamikon's theorem
+	- Tangent lines
+	- 
+- 
