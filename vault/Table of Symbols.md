@@ -29,8 +29,8 @@ The general principle is that, a decorated superscript may mean completely diffe
 | $v_K^{\pm}(t)$                     | Vertex of a convex body $K$                                                                                                                |
 | $e_K(t)$                           | Edge (face) of a planar convex body $K$                                                                                                    |
 | $\mathcal{K}_{\omega}$             | The space of caps with rotation angle $\omega$                                                                                             |
-| $\mathcal{C}(S)$                   | The cap $K = \mathcal{C}(S)$ of a sofa                                                                                                     |
-| $\mathcal{N}(S)$                   | The niche of a monotone sofa                                                                                                               |
+| $\mathcal{C}_S$                   | The cap $K = \mathcal{C}_S$ of a sofa                                                                                                     |
+| $\mathcal{N}_S$                   | The niche of a monotone sofa                                                                                                               |
 | $T_K(t)$                           | Triangular sets                                                                                                                            |
 | $w_K(t), z_K(t)$                   | Wedge gap                                                                                                                                  |
 | $A_K^\pm(t), C_K^\pm(t)$           | Vertices of a cap (following Romik)                                                                                                        |
