@@ -1,6 +1,6 @@
 > __Definition [convex-set-support].__ Define the set of _normal angles_ $\mathbf{n}(K)$ as the support of the surface area measure $\sigma_K$ on $S^1$. ^def-convex-set-support
 
-If $K$ is a convex polygon, $\mathbf{n}(K)$ is the collection of all angles $t$ such that each $\mu_t$ is a normal vector of a proper edge of $K$. The notion $\mathbf{n}(K)$ generalizes this to arbitrary convex body $K$. For an example, take the semicircle $K = \left\{ (x, y) : x^2 + y^2 \leq 1, y \geq 0 \right\}$. Then the normal angles of $K$ is the set $[0, \pi] \cup \{3\pi/2\}$.
+If $K$ is a convex polygon, $\mathbf{n}(K)$ is the collection of all angles $t$ such that each $u_t$ is a normal vector of a proper edge of $K$. The notion $\mathbf{n}(K)$ generalizes this to arbitrary convex body $K$. For an example, take the semicircle $K = \left\{ (x, y) : x^2 + y^2 \leq 1, y \geq 0 \right\}$. Then the normal angles of $K$ is the set $[0, \pi] \cup \{3\pi/2\}$.
 
 We now collect theorems on $\mathbf{n}(K)$.
 
@@ -17,13 +17,13 @@ _Proof._ Let $p = v_K(t_1, t_2)$. We can either assume $t_1 - \pi < t < t_1$ or 
 
 _Proof._ (1 $\Rightarrow$ 2) Let $p = v_K^+(t_1)$. Then $v_K^-(t_2) = p$ as well by [[xx. Mamikon's Theorem/10. Surface area measure#^cor-boundary-measure-open]]. We also have $p = v_K^{\pm}(t)$ for every $t \in (t_1, t_2)$ by [[xx. Mamikon's Theorem/10. Surface area measure#^thm-boundary-measure]] on the interval $(t_1, t]$ and [[xx. Mamikon's Theorem/10. Surface area measure#^cor-boundary-measure-open]] on the interval $(t_1, t)$.
 
-(2 $\Rightarrow$ 1) By [[xx. Mamikon's Theorem/05. Vertex and support function#^thm-limits-converging-to-vertex]] we also have $v_K^+(t_1) = v_K^-(t_2) = p$. By [[xx. Mamikon's Theorem/10. Surface area measure#^cor-boundary-measure-open]] we have the integral $\int_{t \in (t_1, t_2)} \nu_t \, \sigma_K(dt) = v_K^-(t_2) - v_K^+(t_1)$ equal to $0$. Now $\sigma_K$ has to be zero on $(t_1, t_2)$, or otherwise the integral taken the dot product with $-u_{t_1}$ should be nonzero as well.
+(2 $\Rightarrow$ 1) By [[xx. Mamikon's Theorem/05. Vertex and support function#^thm-limits-converging-to-vertex]] we also have $v_K^+(t_1) = v_K^-(t_2) = p$. By [[xx. Mamikon's Theorem/10. Surface area measure#^cor-boundary-measure-open]] we have the integral $\int_{t \in (t_1, t_2)} v_t \, \sigma_K(dt) = v_K^-(t_2) - v_K^+(t_1)$ equal to $0$. Now $\sigma_K$ has to be zero on $(t_1, t_2)$, or otherwise the integral taken the dot product with $-u_{t_1}$ should be nonzero as well.
 
 (2 $\Rightarrow$ 3) follows from that every edge $e_K(t)  = l_K(t) \cap K$ is the segment connecting $v_K^-(t)$ to $v_K^+(t)$.
 
 (3 $\Rightarrow$ 4) The point $p$ that every tangent line $l_K(t)$ of $t \in [t_1, t_2]$ pass through should be $l_K(t_1) \cap l_K(t_2) = v_K(t_1, t_2)$. We have $p \in g_K(t)$ for all $t \in [t_1, t_2]$. We also have $p \in g_K(t)$ for all $t \in S^1 \setminus (t_1, t_2)$ by [[xx. Mamikon's Theorem/xx. Normal angles#^lem-vertex-in-half-plane]]. Now $p \in \bigcap_{t \in S^1} g_K(t) = K$.
 
-(4 $\Rightarrow$ 2) Let $p := v_K(t_1, t_2)$ and define the cone $F = g_K(t_1) \cap g_K(t_2)$ pointed at $p$. Take any $t \in (t_1, t_2)$. Then the value of $z \cdot \mu_t$ over all $z \in F$ has a unique maximum at $z = p$. Because $p \in K \subseteq F$, the value of $z \cdot \mu_t$ over all $z \in K$ also has a unique maximum at $z = p$. This means that $e_K(t) = \left\{ p \right\}$, completing the proof. □
+(4 $\Rightarrow$ 2) Let $p := v_K(t_1, t_2)$ and define the cone $F = g_K(t_1) \cap g_K(t_2)$ pointed at $p$. Take any $t \in (t_1, t_2)$. Then the value of $z \cdot u_t$ over all $z \in F$ has a unique maximum at $z = p$. Because $p \in K \subseteq F$, the value of $z \cdot u_t$ over all $z \in K$ also has a unique maximum at $z = p$. This means that $e_K(t) = \left\{ p \right\}$, completing the proof. □
 
 > __Theorem [convex-set-support].__ Let $\Pi$ be any closed subset of $S^1$ such that $S^1 \setminus \Pi$ is a disjoint union of open intervals of length $< \pi$. Then for any convex body $K$, the followings are equivalent. ^thm-convex-set-support
 > 
@@ -38,17 +38,17 @@ If $t \in \Pi$, then we obviously have $\bigcap_{u \in \Pi} g_K(u) \subseteq g_K
 
 The following theorem is known as the Gauss-Minkowski theorem ([@marckert2014compact]; Theorem 8.3.1, p465 of [[@schneider_2013]]). It gives a bijection between any convex body $K$ and its boundary measure $\sigma_K$.
 
-> __Theorem [gauss-minkowski].__ (Gauss-Minkowski) For any finite Borel measure $\sigma$ on $S^1$ with $\int_{S^1} \nu_t \, \sigma (dt) = 0$ there is a unique convex body $K$ with $\sigma_K = \sigma$ up to translations of $K$. ^thm-gauss-minkowski
+> __Theorem [gauss-minkowski].__ (Gauss-Minkowski) For any finite Borel measure $\sigma$ on $S^1$ with $\int_{S^1} v_t \, \sigma (dt) = 0$ there is a unique convex body $K$ with $\sigma_K = \sigma$ up to translations of $K$. ^thm-gauss-minkowski
 
 By [[xx. Mamikon's Theorem/xx. Normal angles#^def-convex-set-support]], we immediately get the following restriction of [[xx. Mamikon's Theorem/xx. Normal angles#^thm-gauss-minkowski]] in normal angles.
 
-> __Corollary [supported-gauss-measure].__ Let $\Pi$ be any closed subset of $S^1$. For any finite Borel measure $\sigma$ on $\Pi$ such that $\int_{\Pi} \nu_t\,\sigma(dt) = 0$, there is a convex body $K$ with normal angles $\mathbf{n}(K)$ in $\Pi$ such that $\sigma_K|_{\Pi} = \sigma$ ([[xx. Mamikon's Theorem/10. Surface area measure#^def-measure-restriction]]), which is unique up to translations of $K$. ^cor-supported-gauss-measure
+> __Corollary [supported-gauss-measure].__ Let $\Pi$ be any closed subset of $S^1$. For any finite Borel measure $\sigma$ on $\Pi$ such that $\int_{\Pi} v_t\,\sigma(dt) = 0$, there is a convex body $K$ with normal angles $\mathbf{n}(K)$ in $\Pi$ such that $\sigma_K|_{\Pi} = \sigma$ ([[xx. Mamikon's Theorem/10. Surface area measure#^def-measure-restriction]]), which is unique up to translations of $K$. ^cor-supported-gauss-measure
 
 %%
 
 > __Definition [normal-angle].__ In this paper, define the set of _normal angles_ $\mathbf{n}(K)$ of a convex body $K$ as the support of the surface area measure $\sigma_K$ on $S^1$. ^def-normal-angle
 
-If $K$ is a convex polygon, $\mathbf{n}(K)$ is the collection of all angles $t$ such that each $\mu_t$ is a normal vector of a proper edge of $K$. For another example, take the semicircle $K = \left\{ (x, y) : x^2 + y^2 \leq 1, y \geq 0 \right\}$, then $\mathbf{n}(K) = [0, \pi] \cup \{3\pi/2\}$. We establish [[a. Angle Hypothesis/04. Notations/00. Preface#^thm-convex-set-support]] that essentially expresses $K$ as the intersection of half-planes with normal angles in $\mathbf{n}(K)$.
+If $K$ is a convex polygon, $\mathbf{n}(K)$ is the collection of all angles $t$ such that each $u_t$ is a normal vector of a proper edge of $K$. For another example, take the semicircle $K = \left\{ (x, y) : x^2 + y^2 \leq 1, y \geq 0 \right\}$, then $\mathbf{n}(K) = [0, \pi] \cup \{3\pi/2\}$. We establish [[a. Angle Hypothesis/04. Notations/00. Preface#^thm-convex-set-support]] that essentially expresses $K$ as the intersection of half-planes with normal angles in $\mathbf{n}(K)$.
 
 > __Lemma [surface-area-measure-zero-interval].__ For any convex body $K$ and $a, b \in \mathbb{R}$ with $a < b < a + \pi$, the followings are equivalent. ^lem-surface-area-measure-zero-interval
 > 
@@ -57,13 +57,13 @@ If $K$ is a convex polygon, $\mathbf{n}(K)$ is the collection of all angles $t$ 
 
 _Proof._ By taking the orthonormal basis $(u_a, v_a)$ of $\mathbb{R}^2$, Theorem 8.3.3. of [[@schneider_2013]] proves the equality
 $$
-p_K(t) = v_K^-(a) \cdot \mu_t + \int_{u \in [a, t)} \sin(t - u) \, \sigma_K(du).
+p_K(t) = v_K^-(a) \cdot u_t + \int_{u \in [a, t)} \sin(t - u) \, \sigma_K(du).
 $$
 for every $t \in [a, b]$. Using $v_K^+(a) = v_K^-(a) + \sigma_K(a) v_a$ in [[a. Angle Hypothesis/04. Notations/00. Preface#^thm-surface-area-measure-side-length]] we get
 $$
-p_K(t) = v_K^+(a) \cdot \mu_t + \int_{u \in (a, t)} \sin(t - u) \, \sigma_K(du).
+p_K(t) = v_K^+(a) \cdot u_t + \int_{u \in (a, t)} \sin(t - u) \, \sigma_K(du).
 $$
-Now for arbitrary $t \in [a, b]$, $v_K^+(a) \in l_K(t)$ if and only if $p_K(t) = v_K^+(a) \cdot \mu_t$ if and only if $\sigma_K$ is zero on $(a, t)$. □
+Now for arbitrary $t \in [a, b]$, $v_K^+(a) \in l_K(t)$ if and only if $p_K(t) = v_K^+(a) \cdot u_t$ if and only if $\sigma_K$ is zero on $(a, t)$. □
 
 > __Theorem [convex-set-support].__ Let $\Pi$ be any closed subset of $S^1$ such that $S^1 \setminus \Pi$ is a disjoint union of open intervals of length $< \pi$. The followings are equivalent for any subset $K$ of $\mathbb{R}^2$. ^thm-convex-set-support
 > 

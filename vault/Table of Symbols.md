@@ -20,8 +20,8 @@ The general principle is that, a decorated superscript may mean completely diffe
 | $H_{\pm}(t, h)$                    | A half-plane with normal angle $t$ and distance $h$ from the origin.                                                                       |
 | $a_L, b_L, c_L, d_L$               | Edges of hallway $L$                                                                                                                       |
 | $\mathbf{x}_L, \mathbf{y}_L$       | Inner and outer corner of hallway $L$                                                                                                      |
-| $R_t$                              | Rotation of $\mathbb{R}^2$ along the origin mapping $\mu_0$ to $\mu_t$                                                                     |
-| $\mu(t), \nu(t)$                   | Orthogonal unit vectors of angle $t$ (following Romik)                                                                                     |
+| $R_t$                              | Rotation of $\mathbb{R}^2$ along the origin mapping $u_0$ to $u_t$                                                                     |
+| $u(t), v(t)$                   | Orthogonal unit vectors of angle $t$ (following Romik)                                                                                     |
 | $L_S(t), L_K(t)$                   | Tangent hallway of cap $K$                                                                                                                 |
 | $a_K(t), b_K(t), c_K(t), d_K(t)$   | Walls of tangent hallway $L_K(t)$                                                                                                          |
 | $\mathbf{x}_K(t), \mathbf{y}_K(t)$ | Inner and outer corner of tangent hallway $L_K(t)$                                                                                         |

@@ -27,8 +27,8 @@ The following equations come from balancing conditions.
 
  - $r_B = 1 - r_A$
  - $r_D = 1 - r_C$
- - $r_A = (r_B) + (\mathbf{x}' \cdot \nu_t) = (r_B)_B + (h - 1)_\mathbf{x}$
- - $r_C = (r_D) + (-\mathbf{x}' \cdot \mu_t) = (r_D)_D + (g - 1)_\mathbf{x}$
+ - $r_A = (r_B) + (\mathbf{x}' \cdot v_t) = (r_B)_B + (h - 1)_\mathbf{x}$
+ - $r_C = (r_D) + (-\mathbf{x}' \cdot u_t) = (r_D)_D + (g - 1)_\mathbf{x}$
 	- Bracket means it is only active when it's in contact point set.
 
 # Arm Length -> Boundary Measure
@@ -47,9 +47,9 @@ Here $q_K(t) = p_K(t + \pi/2)$.
 
 Derivation below.
 
-1. Assume $v_K'(t) = r(t) \nu_t$
-2. $p_K(t) = v_K(t) \cdot \mu_t$
-3. $p_K'(t) = v_K'(t) \cdot \mu_t + v_K(t) \cdot \nu_t = v_K(t) \cdot \nu_t$
+1. Assume $v_K'(t) = r(t) v_t$
+2. $p_K(t) = v_K(t) \cdot u_t$
+3. $p_K'(t) = v_K'(t) \cdot u_t + v_K(t) \cdot v_t = v_K(t) \cdot v_t$
 
 # Function Table
 

@@ -3,7 +3,7 @@ Our goal is this.
 > __Theorem [leg-right-lipschitz].__ If $g_K(t) > 1.1$ and $|f_K(t) - 1| \leq C$, then $g_K(t - \delta) \geq g_K(t) - C \delta$. 
 > ^thm-leg-right-lipschitz
 
-Proof sketch. $g_K(t) > 1.1$ ensures that $\mathbf{x}$ only moves in upward direction of $\nu_t$. $|f_K(t) - 1| \leq C$ ensures that the movement of $\mathbf{x}$ along $\mu_t$ is controlled by Lipschitz $C$. 
+Proof sketch. $g_K(t) > 1.1$ ensures that $\mathbf{x}$ only moves in upward direction of $v_t$. $|f_K(t) - 1| \leq C$ ensures that the movement of $\mathbf{x}$ along $u_t$ is controlled by Lipschitz $C$. 
 
 Need to only show this for approximate.
 
@@ -58,7 +58,7 @@ How to execute the full argument of right derivative of $\sigma$ at $t$ is at mo
 > ^lem-calccalc
 $$
 \begin{gather*}
-\mathbf{x}_K(t + \delta) - \mathbf{x}_K(t) = - (f_K(t, t + \delta) - (1 - \tan(\delta/2))) \mu_t +  (g_K(t, t + \delta) - (1 + \tan(\delta/2))) \nu_t \\
+\mathbf{x}_K(t + \delta) - \mathbf{x}_K(t) = - (f_K(t, t + \delta) - (1 - \tan(\delta/2))) u_t +  (g_K(t, t + \delta) - (1 + \tan(\delta/2))) v_t \\
 = 
 \end{gather*}
 $$

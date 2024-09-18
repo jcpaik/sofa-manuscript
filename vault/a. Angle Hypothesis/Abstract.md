@@ -1,6 +1,6 @@
 \textcolor{red}{This is a draft in progress. Do not cite this yet as details can change drastically over time. DO NOT DISTRIBUTE WITHOUT PERMISSION FROM THE AUTHOR.}
 
-The _moving sofa problem_ asks for the connected shape with the largest area $\mu_{\text{max}}$ that can move around the right-angled corner of a hallway $L$ with unit width. It is conjectured that Gerver's sofa $S_G$ attains the maximum area, but all known derivations of $S_G$ assumes without proof that a maximum-area sofa should rotate clockwise by $\pi/2$ in its movement.
+The _moving sofa problem_ asks for the connected shape with the largest area $u_{\text{max}}$ that can move around the right-angled corner of a hallway $L$ with unit width. It is conjectured that Gerver's sofa $S_G$ attains the maximum area, but all known derivations of $S_G$ assumes without proof that a maximum-area sofa should rotate clockwise by $\pi/2$ in its movement.
 
 We prove this assumption that there is a maximum-area sofa rotating clockwise by $\pi/2$ in its movement. Along the way, we use an important theorem of Gerver stating that there exists a maximum-area moving sofa $S_{\omega}$ with rotation angle $\omega$ as the limit of polygons with balanced side lengths. We address logical gaps in his proof and restate it in our terminology. This is a part of a bigger project.
 
