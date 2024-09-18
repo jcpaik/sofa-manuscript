@@ -5,7 +5,9 @@
 	- Need to approximate cap $K$ separately.
 		- Once we do this, we may hurt the injectivity principle.
 		- As $K$ have unique contact point, you don't need to worry about it.
-	- 
+
+> __Remark [smoothing].__ There are many constraints that forces the approximation to be subtle. First, the injectivity condition need to be preserved. Second, need to make $h$ only smaller in approximation. ^rem-smoothing
+
 # Scrapes
 
 > __Remark [smoothing].__ It is possible to execute the rest of the argument without this smoothing process. However, this comes at a cost. We need to define the curve area functional $\mathcal{I}(\mathbf{u}_K^I)$ for curves $\mathbf{u}_K^I$ that are not piecewisely smooth. Supplying an absolutely continuous parametrization of $\mathbf{p}$ such that $\mathcal{I}(\mathbf{p})$ is indeed equal to $\int_{I} p_K(t)\,\beta_K(dt)$ is possible, but requires a lot of rudimentary works ^rem-smoothing
