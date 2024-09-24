@@ -1,5 +1,0 @@
-- [ ] Mathematica
-	- [ ] Make common code that every scripts use
-	- [ ] Modify each file to use common code
-- [ ] LaTeX
-	- [ ] Figure environment -> Locate pdf
