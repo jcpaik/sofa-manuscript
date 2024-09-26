@@ -21,6 +21,21 @@
 > 3. $h_{\mathbf{u}}(t) \geq h_{\mathbf{w}}(t)$ for all $t \in [a, b]$.
 
 
+
+- That $\sigma_K$ for balanced maximum $K$ is supressed by some measurable function
+	- Use dyadic -> interval bounded. So $\sigma_K \leq \mu$.
+- So $v_K$ integrable.
+	- Lipschitz continuous by supression above.
+- Approximating lower boundary is harder...
+- $B_K$ and $D_K$ have strictly positive edges. on $y=0$ and $\varphi^\textrm{R}$ and $\varphi^\textrm{L}$.
+
+
+Convex body $K$
+
+Approximate by strictly convex whatever..
+
+Strictly convex body $v_K$ is absolutely continuous.
+
 %%
 Piecewise $C^1$ approximation
 
@@ -35,3 +50,8 @@ Another route: Define curve area functional for convex bodies separately. Just d
 
 What we need: triangular region outside
 %%
+
+> __Remark [tails].__ Only the tail part of $B$ and $D$ matters really. 
+> ^rem-tails
+
+Take point $a$. Take endpoint $b$. Go from $a$ . Take distance 
