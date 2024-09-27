@@ -54,4 +54,6 @@ The general principle is that, a decorated superscript may mean completely diffe
 | $\mathcal{K}_\omega^\mathrm{c}$    |                                                                                                                                            |
 | $\mathcal{K}^\mathrm{c}$           |                                                                                                                                            |
 | $\mathcal{K}_{a, b}$               | $p_K(t)$ for $t \in [a, b]$                                                                                                                |
+| $\mathcal{I}(S)$                   | Intersection coming from sofa $S$                                                                                                          |
+| $\mathcal{G}$                      |                                                                                                                                            |
 While $\varphi_R$ and $\varphi_L$ will be set as $\varphi$ and $\pi/2 - \varphi$ at the end, the general argument holds for any $\varphi_R$ and $\varphi_L$.

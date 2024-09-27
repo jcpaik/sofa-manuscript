@@ -1,4 +1,0 @@
-- $\mathbf{p}_K^c$: Parametrization of half-ray $(c - \pi, c]$
-- is rectifiable parametrization.
-- $\mathcal{M}_K\left(a, b ; \mathbf{p}_K^{t} \right)$
-- 

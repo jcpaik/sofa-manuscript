@@ -43,3 +43,22 @@ $$
 $$
 
 _Proof._ Define $H'$ as the half-plane with boundary passing through the endpoints of the convex curve $\mathbf{u}$. Define the intersection $K \cap H'$. Its boundary is $\mathbf{u}_K^{a, b}$ followed by the line segment connecting $v_K^+(b)$ to $v_K^-(a)$ □
+
+
+
+
+
+> __Proposition [convex-curve-parametrization].__ The set $\mathbf{u}_K^{a, b}$ in [[c. Optimality of Gerver's Sofa/07. Geometric Notions/20. Convex Curve#^def-convex-curve]] is a rectifiable Jordan curve from $v_K^+(a)$ to $v_K^-(b)$. ^pro-convex-curve-parametrization
+
+_Proof._ It suffices to supply a rectifiable parametrization of $\mathbf{u}_K^{a, b}$ (talk about basics of Jordan arcs).
+
+By rotating $K$ by a clockwise angle of $t$, we can change the interval from $(a, b)$ to $(a - t, b - t)$ without loss of generality. Now by setting $t = (a+b)/2$, we can assume $a = -b$ and $-\pi/2 < a < 0 < b < \pi/2$ without loss of generality.
+
+Define $c$ as the $y$-coordinate of $v_K^+(a)$, and $d$ as the $y$-coordinate of $v_K^-(b)$. By XX, the points $v_K^+(a), v_K(a, b), v_K^-(b)$ are listed in a monotonically increasing order of its $y$-coordinates. So we have $c \leq d$ in particular. For any $s \in [c, d]$, define $x(s)$ as the largest $x$-coordinate of the horizontal segment $K \cap l(\pi/2, s)$. Define $X := \left\{ (s, x(s)) : s \in [c, d] \right\}$. We will show that the set $X$ is the set $\mathbf{u}_K^{a, b}$ we want to parametrize, and that $(s, x(s))$ is a rectifiable parametrization.
+
+Endpoint conditions $v_K^+(a) = (c, x(c))$ and $v_K^-(b) = (d, x(d))$. The line $l(\pi/2, c)$ passes through $v_K^+(a)$ by the definition of $c$. Since $v_K^+(a) \in K \subseteq H_K(a)$, the line segment $K \cap l(\pi/2, s) \subseteq H_K(a) \cap l(\pi/2, s)$, and the latter one have $v_K^+(a)$ at the rightmost point. 
+
+We first show $X = \mathbf{u}_K^{a, b}$. Show $X \subseteq \partial K$. It confines to definition of boundary. Now take any $p \in X$ so that $p \in e_K(t)$ for some $t \in S^1$. 
+
+
+Take any point $p = (x(s), s)$. This is on the boundary of $K$. By the property of $K$, it has a supporting line passing through $p$.  □
