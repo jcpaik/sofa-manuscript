@@ -27,7 +27,7 @@
 - So $v_K$ integrable.
 	- Lipschitz continuous by supression above.
 - Approximating lower boundary is harder...
-- $B_K$ and $D_K$ have strictly positive edges. on $y=0$ and $\varphi^\textrm{R}$ and $\varphi^\textrm{L}$.
+- $B_K$ and $D_K$ have strictly positive edges. on $y=0$ and $\varphi^\mathrm{R}$ and $\varphi^\mathrm{L}$.
 
 
 Convex body $K$
