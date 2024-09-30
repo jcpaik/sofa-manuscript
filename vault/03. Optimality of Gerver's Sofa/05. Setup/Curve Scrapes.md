@@ -9,7 +9,7 @@ A convex curve $\mathbf{u} = \mathbf{u}_K^{a, b}$ from a convex body $K$ shares 
 
 _Proof._ (1) Recover $h_K$ from support □
 
-> __Definition [convex-curve-info].__ With [[03. Optimality of Gerver's Sofa/07. Geometric Notions/20. Convex Curve#^thm-convex-curve-info]], define the _support function_ $h_\mathbf{u} : [a, b] \to \mathbb{R}$, the _vertices_ $v_{\mathbf{u}}^+(a), v_{\mathbf{u}}^-(b), v_{\mathbf{u}}^{\pm}(t)$ for $t \in (a, b)$, the _surface area measure_ $\sigma_{\mathbf{u}}$ on $(a, b)$ for their counterparts in $K$. ^def-convex-curve-info
+> __Definition [convex-curve-info].__ With [[03. Optimality of Gerver's Sofa/05. Setup/20. Convex Curve#^thm-convex-curve-info]], define the _support function_ $h_\mathbf{u} : [a, b] \to \mathbb{R}$, the _vertices_ $v_{\mathbf{u}}^+(a), v_{\mathbf{u}}^-(b), v_{\mathbf{u}}^{\pm}(t)$ for $t \in (a, b)$, the _surface area measure_ $\sigma_{\mathbf{u}}$ on $(a, b)$ for their counterparts in $K$. ^def-convex-curve-info
 
 
 Define the following convex curve segment of the boundary of a convex body $K$ (see ).
@@ -22,7 +22,7 @@ $$
 
 > __Proposition [convex-curve-triangle].__ If $v_K^+(a) = v_K^-(b)$, then $\mathbf{u}_K^{a, b}$ is the single point $v_K^+(a)$. Otherwise, the three points $v_K^+(a), v_K^-(b), v_K(a, b)$ are different from each other and the set $\mathbf{u}_K^{a, b}$ is inside the triangle formed by three points. ^pro-convex-curve-triangle
 
-> __Proposition [convex-curve-parametrization].__ The set $\mathbf{u}_K^{a, b}$ in [[03. Optimality of Gerver's Sofa/07. Geometric Notions/20. Convex Curve#^def-convex-curve]] is a rectifiable Jordan curve from $v_K^+(a)$ to $v_K^-(b)$. ^pro-convex-curve-parametrization
+> __Proposition [convex-curve-parametrization].__ The set $\mathbf{u}_K^{a, b}$ in [[03. Optimality of Gerver's Sofa/05. Setup/20. Convex Curve#^def-convex-curve]] is a rectifiable Jordan curve from $v_K^+(a)$ to $v_K^-(b)$. ^pro-convex-curve-parametrization
 
 _Proof._ It suffices to supply a rectifiable parametrization of $\mathbf{u}_K^{a, b}$. By rotating $K$, we can assume $a = -b$ and $a < 0 < b < \pi/2$ without loss of generality. Define $c$ as the $y$-coordinate of $v_K^+(a)$, and $d$ as the $y$-coordinate of $v_K^-(b)$. For $s \in [c, d]$, define $x(s)$ as the largest $x$-coordinate of the segment $K \cap l(\pi/2, s)$. $X$ be the parametrizing set. Take any point $p = (x(s), s)$. This is on the boundary of $K$. By the property of $K$, it has a supporting line passing through $p$.  □
 
@@ -33,7 +33,7 @@ _Proof._ Define $H'$ as the half-plane with boundary passing through the endpoin
 
 > __Proposition [convex-curve-triangle].__ If $v_K^+(a) = v_K^-(b)$, then $\mathbf{u}_K^{a, b}$ is the single point $v_K^+(a)$. Otherwise, the three points $v_K^+(a), v_K^-(b), v_K(a, b)$ are different from each other and the set $\mathbf{u}_K^{a, b}$ is inside the triangle formed by three points. ^pro-convex-curve-triangle
 
-> __Proposition [convex-curve-parametrization].__ The set $\mathbf{u}_K^{a, b}$ in [[03. Optimality of Gerver's Sofa/07. Geometric Notions/20. Convex Curve#^def-convex-curve]] is a rectifiable Jordan curve from $v_K^+(a)$ to $v_K^-(b)$. ^pro-convex-curve-parametrization
+> __Proposition [convex-curve-parametrization].__ The set $\mathbf{u}_K^{a, b}$ in [[03. Optimality of Gerver's Sofa/05. Setup/20. Convex Curve#^def-convex-curve]] is a rectifiable Jordan curve from $v_K^+(a)$ to $v_K^-(b)$. ^pro-convex-curve-parametrization
 
 _Proof._ It suffices to supply a rectifiable parametrization of $\mathbf{u}_K^{a, b}$. By rotating $K$, we can assume $a = -b$ and $a < 0 < b < \pi/2$ without loss of generality. Define $c$ as the $y$-coordinate of $v_K^+(a)$, and $d$ as the $y$-coordinate of $v_K^-(b)$. For $s \in [c, d]$, define $x(s)$ as the largest $x$-coordinate of the segment $K \cap l(\pi/2, s)$. $X$ be the parametrizing set. Take any point $p = (x(s), s)$. This is on the boundary of $K$. By the property of $K$, it has a supporting line passing through $p$.  □
 
@@ -48,7 +48,7 @@ _Proof._ Define $H'$ as the half-plane with boundary passing through the endpoin
 
 
 
-> __Proposition [convex-curve-parametrization].__ The set $\mathbf{u}_K^{a, b}$ in [[03. Optimality of Gerver's Sofa/07. Geometric Notions/20. Convex Curve#^def-convex-curve]] is a rectifiable Jordan curve from $v_K^+(a)$ to $v_K^-(b)$. ^pro-convex-curve-parametrization
+> __Proposition [convex-curve-parametrization].__ The set $\mathbf{u}_K^{a, b}$ in [[03. Optimality of Gerver's Sofa/05. Setup/20. Convex Curve#^def-convex-curve]] is a rectifiable Jordan curve from $v_K^+(a)$ to $v_K^-(b)$. ^pro-convex-curve-parametrization
 
 _Proof._ It suffices to supply a rectifiable parametrization of $\mathbf{u}_K^{a, b}$ (talk about basics of Jordan arcs).
 
