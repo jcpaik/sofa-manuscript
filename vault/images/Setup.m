@@ -9,6 +9,7 @@ width=404;
 fontSize=11; 
 SetOptions[MaTeX,FontSize->fontSize];
 SetDirectory[NotebookDirectory[]];
+Needs["SofaPolygon`"];
 Needs["MovingSofas`"->"MS`"];
 SetAttributes[save,HoldFirst];
 save[x_]:=Module[{name=SymbolName@Unevaluated[x]},
