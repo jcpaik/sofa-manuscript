@@ -28,7 +28,7 @@ paperheight=23.8cm,paperwidth=17cm
     urlcolor={blue!80!black}
 }
 
-\usepackage[backend=bibtex]{biblatex}
+\usepackage{biblatex}
 \addbibresource{refs.bib}
 
 \theoremstyle{plain}
@@ -56,15 +56,22 @@ paperheight=23.8cm,paperwidth=17cm
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
 \title{Moving Sofas}
+\author{Jineon Baek}
+\date{\today}
 
-% \author{Jineon Baek}
 % \address{Yonsei University, Department of Mathematics}
 % \email{jineon@umich.edu}
 
 \begin{document}
 
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
 \input{out.tex}
 
+\backmatter
 \printbibliography
 
 \end{document}
