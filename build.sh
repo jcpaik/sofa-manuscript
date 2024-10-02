@@ -5,7 +5,7 @@ setopt no_nomatch
 rm -f main.*~main.tex
 setopt nomatch
 rm -r out
-mathmd "vault/a. Rotation Angle of Maximum-area Sofas" out
+mathmd vault/ out
 
 pdflatex -shell-escape main
 biber main
