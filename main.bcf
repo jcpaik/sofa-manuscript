@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.8" bltxversion="3.17" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.10" bltxversion="3.19" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -37,6 +37,11 @@
     <bcf:option type="singlevalued">
       <bcf:key>alphaothers</bcf:key>
       <bcf:value>+</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
@@ -135,6 +140,10 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>nosortothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>pluralothers</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -272,6 +281,11 @@
   </bcf:options>
   <!-- online -->
   <bcf:options component="biblatex" type="online">
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
+    </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
       <bcf:value>0</bcf:value>
@@ -372,11 +386,11 @@
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skiplab</bcf:key>
+      <bcf:key>skipbiblist</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skipbiblist</bcf:key>
+      <bcf:key>skiplab</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -491,6 +505,7 @@
     <bcf:option datatype="xml">sortingnamekeytemplate</bcf:option>
     <bcf:option datatype="xml">sortingtemplate</bcf:option>
     <bcf:option datatype="xml">extradatespec</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -599,6 +614,7 @@
     <bcf:option datatype="boolean">labeltitle</bcf:option>
     <bcf:option datatype="boolean">labeltitleyear</bcf:option>
     <bcf:option datatype="boolean">labeldateparts</bcf:option>
+    <bcf:option datatype="boolean">pluralothers</bcf:option>
     <bcf:option datatype="boolean">nohashothers</bcf:option>
     <bcf:option datatype="boolean">nosortothers</bcf:option>
     <bcf:option datatype="boolean">noroman</bcf:option>
@@ -713,6 +729,7 @@
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">sortexclusion</bcf:option>
     <bcf:option datatype="xml">sortinclusion</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -1043,7 +1060,7 @@
     <bcf:namepart order="3">given</bcf:namepart>
   </bcf:uniquenametemplate>
   <!-- SORTING NAME KEY TEMPLATES -->
-  <bcf:sortingnamekeytemplate name="global">
+  <bcf:sortingnamekeytemplate name="global" visibility="sort">
     <bcf:keypart order="1">
       <bcf:part type="namepart" order="1" use="1">prefix</bcf:part>
       <bcf:part type="namepart" order="2">family</bcf:part>
@@ -2344,80 +2361,64 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">refs.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">moser1966problem</bcf:citekey>
-    <bcf:citekey order="2">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="3">kallusImprovedUpperBounds2018</bcf:citekey>
-    <bcf:citekey order="4">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="5">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="6">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="6">croft2012unsolved</bcf:citekey>
-    <bcf:citekey order="7">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="8">gibbsComputationalStudySofas2014</bcf:citekey>
-    <bcf:citekey order="9">batschNumericalApproachAnalysing2022</bcf:citekey>
-    <bcf:citekey order="10">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="11">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="12">kallusImprovedUpperBounds2018</bcf:citekey>
-    <bcf:citekey order="13">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="14">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="15">kallusImprovedUpperBounds2018</bcf:citekey>
-    <bcf:citekey order="16">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="17">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="17">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="18">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="18">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="18">kallusImprovedUpperBounds2018</bcf:citekey>
-    <bcf:citekey order="19">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="20">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="21">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="22">kallusImprovedUpperBounds2018</bcf:citekey>
-    <bcf:citekey order="23">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="24">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="25">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="26">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="27">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="28">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="29">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="30">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="31">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="32">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="33">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="34">schneider_2013</bcf:citekey>
-    <bcf:citekey order="35">schneider_2013</bcf:citekey>
-    <bcf:citekey order="36">voneitzenAnswerConnectednessBoundary2015</bcf:citekey>
-    <bcf:citekey order="37">schneider_2013</bcf:citekey>
-    <bcf:citekey order="38">bieriNefPolyhedra1995</bcf:citekey>
-    <bcf:citekey order="39">kallusImprovedUpperBounds2018</bcf:citekey>
-    <bcf:citekey order="40">moser1966problem</bcf:citekey>
-    <bcf:citekey order="41">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="42">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="43">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="44">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="45">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="46">revuz2013continuous</bcf:citekey>
-    <bcf:citekey order="47">revuzContinuousMartingalesBrownian1999</bcf:citekey>
-    <bcf:citekey order="48">schneider_2013</bcf:citekey>
-    <bcf:citekey order="49">schneider_2013</bcf:citekey>
-    <bcf:citekey order="50">stonePostulatesBarycentricCalculus1949</bcf:citekey>
-    <bcf:citekey order="51">nlab-convex-space</bcf:citekey>
-    <bcf:citekey order="52">apostolMathematicalAnalysisModern</bcf:citekey>
-    <bcf:citekey order="53">mnatsakanianAnnularRingsEqual1997</bcf:citekey>
-    <bcf:citekey order="54">mnatsakanianAnnularRingsEqual1997</bcf:citekey>
-    <bcf:citekey order="55">moser1966problem</bcf:citekey>
-    <bcf:citekey order="56">gerverMovingSofaCorner1992</bcf:citekey>
-    <bcf:citekey order="57">kallusImprovedUpperBounds2018</bcf:citekey>
-    <bcf:citekey order="58">romikDifferentialEquationsExact2018</bcf:citekey>
-    <bcf:citekey order="59">croft2012unsolved</bcf:citekey>
-    <bcf:citekey order="60">gibbsComputationalStudySofas2014</bcf:citekey>
-    <bcf:citekey order="61">batschNumericalApproachAnalysing2022</bcf:citekey>
-    <bcf:citekey order="62">schneider_2013</bcf:citekey>
-    <bcf:citekey order="63">voneitzenAnswerConnectednessBoundary2015</bcf:citekey>
-    <bcf:citekey order="64">bieriNefPolyhedra1995</bcf:citekey>
-    <bcf:citekey order="65">revuz2013continuous</bcf:citekey>
-    <bcf:citekey order="66">revuzContinuousMartingalesBrownian1999</bcf:citekey>
-    <bcf:citekey order="67">stonePostulatesBarycentricCalculus1949</bcf:citekey>
-    <bcf:citekey order="68">nlab-convex-space</bcf:citekey>
-    <bcf:citekey order="69">apostolMathematicalAnalysisModern</bcf:citekey>
-    <bcf:citekey order="70">mnatsakanianAnnularRingsEqual1997</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">moser1966problem</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">kallusImprovedUpperBounds2018</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">romikDifferentialEquationsExact2018</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">romikDifferentialEquationsExact2018</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">romikDifferentialEquationsExact2018</bcf:citekey>
+    <bcf:citekey order="6" intorder="2">croft2012unsolved</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">gibbsComputationalStudySofas2014</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">batschNumericalApproachAnalysing2022</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">romikDifferentialEquationsExact2018</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">romikDifferentialEquationsExact2018</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">kallusImprovedUpperBounds2018</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">kallusImprovedUpperBounds2018</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="17" intorder="2">romikDifferentialEquationsExact2018</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="18" intorder="2">romikDifferentialEquationsExact2018</bcf:citekey>
+    <bcf:citekey order="18" intorder="3">kallusImprovedUpperBounds2018</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">romikDifferentialEquationsExact2018</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">kallusImprovedUpperBounds2018</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">schneider_2013</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">schneider_2013</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">voneitzenAnswerConnectednessBoundary2015</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">schneider_2013</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">bieriNefPolyhedra1995</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">kallusImprovedUpperBounds2018</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">moser1966problem</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">gerverMovingSofaCorner1992</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">romikDifferentialEquationsExact2018</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">romikDifferentialEquationsExact2018</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">romikDifferentialEquationsExact2018</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">romikDifferentialEquationsExact2018</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">revuz2013continuous</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">revuzContinuousMartingalesBrownian1999</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">schneider_2013</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">schneider_2013</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">stonePostulatesBarycentricCalculus1949</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">nlab-convex-space</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">apostolMathematicalAnalysisModern</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">mnatsakanianAnnularRingsEqual1997</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">mnatsakanianAnnularRingsEqual1997</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
