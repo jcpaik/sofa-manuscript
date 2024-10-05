@@ -10,7 +10,7 @@ The general principle is that, a decorated superscript may mean completely diffe
 | Symbol                             | Meaning                                                                                                                                    |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | $S$                                | Sofa                                                                                                                                       |
-| $S_G$                              | Gerver's Sofa                                                                                                                              |
+| $G$                              | Gerver's Sofa                                                                                                                              |
 | $\alpha$                           | Area of a sofa                                                                                                                             |
 | $\omega$                           | Rotation angle of a sofa                                                                                                                   |
 | $L$                                | Hallway                                                                                                                                    |

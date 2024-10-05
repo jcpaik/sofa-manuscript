@@ -5,7 +5,7 @@ $\mathcal{M}_\omega$ is a proper subset of $\mathcal{K}_\omega^\mathrm{c}$ by [[
 
 We will, however, try to optimize the sofa area functional $\mathcal{A} : \mathcal{K}_\omega^\mathrm{c} \to \mathbb{R}$ over the whole $\mathcal{K}_\omega^\mathrm{c}$, not the subspace $\mathcal{M}_\omega$ of $\mathcal{K}_\omega^\mathrm{c}$. This is because the space $\mathcal{K}_\omega^\mathrm{c}$ of all caps is turns out to be a convex space ([[old/xb. Upper Bound A1/25. Upper Bound A1/02. Calculus of variation#^def-convex-space]]) which is easier to understand than the subspace $\mathcal{M}_\omega$. By extending the domain of optimization of $\mathcal{A}$ from $\mathcal{M}_\omega$ to $\mathcal{K}_\omega^\mathrm{c}$, we get a counterpart of every statement on maximum-area monotone sofas. To start, we have the following strenghtening of Gerver's conjecture $u_{\max} = u_G$.
 
-> __Conjecture [gerver-cap].__ The cap $K = K_G$ of Gerver's sofa $S_G$ attains the maximum value $\mathcal{A}(K)$ of the sofa area functional $\mathcal{A} : \mathcal{K}_\omega^\mathrm{c} \to \mathbb{R}$ over all rotation angle $\omega \in (0, \pi/2]$. ^con-gerver-cap
+> __Conjecture [gerver-cap].__ The cap $K = K_G$ of Gerver's sofa $G$ attains the maximum value $\mathcal{A}(K)$ of the sofa area functional $\mathcal{A} : \mathcal{K}_\omega^\mathrm{c} \to \mathbb{R}$ over all rotation angle $\omega \in (0, \pi/2]$. ^con-gerver-cap
 
 While we cannot prove [[b. Upper Bound A1/20. Sofa area functional A/00. Preface#^con-gerver-cap]], we expect it to be true. The rest of the paper proves the following strenghtening of main [[old/xb. Upper Bound A1/01. Introduction/03. Main result#^thm-main]] that extends the domain from $\mathcal{M}_\omega$ to $\mathcal{K}_\omega^\mathrm{c}$.
 
