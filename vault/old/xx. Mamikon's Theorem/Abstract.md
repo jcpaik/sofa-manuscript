@@ -1,3 +1,0 @@
-_Mamikon's theorem_ expresses the region swept out by tangent segments of a curve. We rigorously prove this for  We argue that using the theorem, the mixed volume can be written as an explicit _integral-of-squares_ expression, showing that the mixed volume on planar convex bodies is a hyperbolic 2-form. An immediate consequence of this is 
-
-This is the first part of a series of papers resolving the _moving sofa problem_.

@@ -5,7 +5,6 @@ The general principle is that, a decorated superscript may mean completely diffe
 - $l(t, h)$ is the line determined by two parameters $t \in S^1$ and $h \in \mathbb{R}$.
 - $l_K$ is the supporting line determined by $K$.
 - $l_0$ may denote some specific line in a proof.
-- 
 
 | Symbol                             | Meaning                                                                                                                                    |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
