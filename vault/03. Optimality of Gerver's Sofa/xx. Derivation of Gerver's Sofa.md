@@ -40,7 +40,7 @@ Mix this with balancing equations above to solve for $(g, h)$ and $(r_A, r_C)$.
 
 # Arm Length -> Support Function
 
-Here $q_K(t) = p_K(t + \pi/2)$.
+Here $q_K(t) = h_K(t + \pi/2)$.
 
 - $q - p' = g$
 - $p + q' = h$
