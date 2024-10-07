@@ -4,5 +4,5 @@
 - Relevant
 - Timelined
 
-- [ ] Niche boundary is boundary relative to fan $F_\omega$. Rewrite part A.
-- [ ] Heading level screwed up --- How to fix????
+- [ ] Define $\overline{b}_K$ and $\overline{d}_K$ as extensions in the very beginning.
+- [ ] 
