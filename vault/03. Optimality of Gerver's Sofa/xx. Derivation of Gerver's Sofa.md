@@ -53,16 +53,6 @@ Derivation below.
 
 # Function Table
 
-| Contact | Equation                             | $g$                         | $h$                           | $r_A$                     | $r_C$             | $p_K$               | $q_K$                 |
-| ------- | ------------------------------------ | --------------------------- | ----------------------------- | ------------------------- | ----------------- | ------------------- | --------------------- |
-| (none)  |                                      | $A \cos t + B \sin t$       | $- A \sin t + B \cos t$       | 0                         | 0                 | $B \cos t$          | $A \cos t$            |
-| B       | $r_A = r_B$                          | $A \cos t + B \sin t$       | $- A \sin t + B \cos t + 1/2$ | 1/2                       | 0                 | $B \cos t + 1/2$    | $A \cos t$            |
-| D       | $r_C = r_D$                          | $A \cos t + B \sin t + 1/2$ | $- A \sin t + B \cos t$       | 0                         | 1/2               | $B \cos t$          | $A \cos t + 1/2$      |
-| x       | $r_A = h-1$<br>$r_C = g - 1$         | $t + A$                     | $- t + B$                     | $-t + B - 1$              | $t + A - 1$       | $B - 1 - t$         | $A - 1 + t$           |
-| Bx      | $r_A = h - 1 + r_B$<br>$r_C = g - 1$ | $-t^2/4+Bt/2+A$             | $- t + B$                     | $-t/2 - B/2$              | $-t^2/4+Bt/2+A-1$ | $-t/2 + B/2$        | $-t^2/4+Bt/2+A - 1/2$ |
-| Dx      | $r_A = h - 1$<br>$r_C = g - 1 + r_D$ | $t + A$                     | $-(t + A)^2/2 + B$<br>        | $-t^2/4 - At / 2 + B - 1$ | $t/2 + A/2$       | $-t^2/4-At/2+B-1/2$ | $t/2+A/2$             |
-|         |                                      |                             |                               |                           |                   |                     |                       |
-
 - $\varphi < \theta < \pi/2 - \theta < \pi/2 - \varphi$
 - Stages
 	- D $(0, \varphi)$
