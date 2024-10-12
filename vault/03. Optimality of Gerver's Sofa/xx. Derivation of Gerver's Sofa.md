@@ -78,3 +78,8 @@ Derivation below.
 | x       | $r_A = h-1$<br>$r_C = g - 1$         | $t + A$                     | $- t + B$                     | $-t + B - 1$              | $t + A - 1$       | $B - 1 - t$         | $A - 1 + t$           |
 | Bx      | $r_A = h - 1 + r_B$<br>$r_C = g - 1$ | $-t^2/4+Bt/2+A$             | $- t + B$                     | $-t/2 - B/2$              | $-t^2/4+Bt/2+A-1$ | $-t/2 + B/2$        | $-t^2/4+Bt/2+A - 1/2$ |
 | B       | $r_A = r_B$                          | $A \cos t + B \sin t$       | $- A \sin t + B \cos t + 1/2$ | 1/2                       | 0                 | $B \cos t + 1/2$    | $A \cos t$            |
+
+> 1. $A(\cos \theta - \cos \varphi) - 2B \sin \varphi + (\theta -\varphi - 1) \cos \theta - \sin \theta + \cos \varphi + \sin \varphi = 0$
+> 2. $A(3 \sin \theta + \sin \varphi) - 2 B \cos \varphi + 3( \theta - \varphi - 1) \sin \theta + 3 \cos \theta - \sin \varphi + \cos \theta = 0$
+> 3. $A \cos \varphi - \left( \sin \varphi +1/2 - (\cos \varphi)/2 + B \sin \varphi \right) = 0$
+> 4. $\left( A + \pi/2 - \varphi - \theta \right) - \left( ( \right)$
