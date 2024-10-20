@@ -14,3 +14,7 @@ It is possible that the inequality holds
 $\left< \mathbf{A}'(t) - \mathbf{B}'(t) , u_t \right> = 0$ 
 
 It is hard to establish the differential right away. Instead, we establish the inequality for maximum polygon sofas first. Then, we carefully take the limit. As the differentiablity assumptions freely used by Romik is not available here, 
+
+
+
+TODO: find a systematic way to talk about ODEs. Make a big table...
