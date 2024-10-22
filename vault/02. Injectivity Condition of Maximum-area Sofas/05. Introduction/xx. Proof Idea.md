@@ -1,3 +1,12 @@
+- [ ] Write an initial draft of this introduction.
+	- [ ] Describe the balancing argument again.
+	- [ ] Say that the _contact type_ determines the exact equality.
+	- [ ] Our idea is to establish a differential _inequality_ that works regardless of contact types.
+		- From now on, we assume the familiarity of Gerver's derivation of the moving sofa problem by [@romik].
+		- We will bound $\sigma_K$ from above. That is, the side $\mathbf{A}'$. There might or might not be contributions from $\mathbf{B}$ or $\mathbf{x}$. $\left< \mathbf{A}'(t), u_t \right> \leq \left< -\mathbf{B}'(t), u_t \right> + \left| \left< \mathbf{x}'(t), u_t \right> \right|$
+		- $\left| \mathbf{A}'(t) \right| \geq 1$ then it is guaranteed that $\mathbf{B}'(t)$ does not contribute.
+		- $\left| \mathbf{A}'(t) \right| < 1$ then it may or may not 
+
 
 A _maximum polygon sofa_ is the maximum area of the discretized problem. A _maximum balanced sofa_ is the limit of maximum polygon sofas.
 
